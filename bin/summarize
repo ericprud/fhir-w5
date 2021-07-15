@@ -55,7 +55,7 @@ const names = resources.reduce( (names, entry) => {
     const hier = f.id.split(/\./)
     const name = hier.pop()
     if (!(name in names))
-      names[name] = {w5: [], bare: []}
+      names[name] = {w5: {}, bare: []}
 
     let w5 = null
     if ('mapping' in f) {
@@ -64,23 +64,27 @@ const names = resources.reduce( (names, entry) => {
         w5 = m.map
     }
 
-    if (w5)
-      names[name].w5.push([w5, hier.join('.')])
-    else
+    if (w5) {
+      if (!(w5 in names[name].w5))
+        names[name].w5[w5] = []
+      names[name].w5[w5].push(hier.join('.'))
+    } else {
       names[name].bare.push(hier.join('.'))
+    }
   })
   return names
 }, {})
 
 const [all, some, none, singles] = Object.keys(names).reduce(([all, some, none, singles], name) => {
-  if (names[name].bare.length === 0) {
-    if (names[name].w5.length === 1) {
+  const entry = names[name]
+  if (entry.bare.length === 0) {
+    if (Object.keys(entry.w5).length === 1) {
       singles.push(name)
     } else {
       all.push(name)
     }
-  } else if (names[name].w5.length === 0) {
-    if (names[name].bare.length === 1) {
+  } else if (Object.keys(entry.w5).length === 0) {
+    if (entry.bare.length === 1) {
       singles.push(name)
     } else {
       none.push(name)
@@ -107,7 +111,7 @@ JSON.stringify(names[name], null, 2)
 }`).join('\n'))
 
 console.log('\n\nsingles:')
-console.log(some.map(name => `${name}: ${
+console.log(singles.map(name => `${name}: ${
 JSON.stringify(names[name], null, 2)
 }`).join('\n'))
 
