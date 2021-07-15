@@ -3,7 +3,7 @@
 ## summarize
 
 1. read `profiles-resources.json`
-2. emits four groups:
+2. emits four groups into [`summary.yaml`](blob/main/summary.yaml)
 
 
 ### All mapped
