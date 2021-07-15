@@ -1,0 +1,148 @@
+#!/usr/bin/env node
+
+const Fs = require('fs')
+
+const STRUC_DEF = 'http://hl7.org/fhir/StructureDefinition/'
+const META_DEFS = [
+  'Bundle',
+  'DomainResource',
+  'Resource',
+  'StructureDefinition',  
+]
+const WRITE_TRIMMED_FILE = false // 'trimmed.json'
+
+const inFile = process.argv[2]
+const outFile = process.argv[3]
+
+// profiles-resources.json is a bundle with ~150 regular-use resources
+const rootBundle = JSON.parse(Fs.readFileSync(inFile, 'utf-8'))
+// resources will become a those regular-use resources
+let resources = rootBundle.entry
+const lastUpdated = rootBundle.meta.lastUpdated
+
+// trim to regular-use resources 
+console.warn(`starting with ${resources.length} entries`)
+resources = resources.filter(
+  e => e.fullUrl.startsWith(STRUC_DEF)
+    && e.resource.resourceType !== 'CapabilityStatement'
+    && e.resource.resourceType !== 'CompartmentDefinition'
+    && e.resource.id !== 'CompartmentDefinition'
+    && META_DEFS.indexOf(e.resource.id) === -1
+)
+console.warn(`trimmed to ${resources.length} entries`)
+
+// trim extra stuff that takes a lot of space
+resources.forEach(e => {
+  delete e.resource.text
+  delete e.resource.snapshot
+})
+
+if (WRITE_TRIMMED_FILE) {
+  rootBundle.entry = resources
+  Fs.writeFileSync(WRITE_TRIMMED_FILE, JSON.stringify(rootBundle, null, 2))
+}
+delete rootBundle
+
+// console.warn(resources.map(e => `${e.resource.id} / ${e.fullUrl}`).join('\n'))
+
+const names = resources.reduce( (names, entry) => {
+  const r = entry.resource
+  const fields = r.differential.element
+  const root = fields.shift()
+  if (!root.id.match(/^[A-Za-z]+2?$/))
+    throw Error(`${root.id} unexpected in ${root}`)
+  fields.forEach(f => {
+    const hier = f.id.split(/\./)
+    const name = hier.pop()
+    if (!(name in names))
+      names[name] = {w5: [], bare: []}
+
+    let w5 = null
+    if ('mapping' in f) {
+      const m = f.mapping.find(m => m.identity === 'w5')
+      if (m && 'map' in m)
+        w5 = m.map
+    }
+
+    if (w5)
+      names[name].w5.push([w5, hier.join('.')])
+    else
+      names[name].bare.push(hier.join('.'))
+  })
+  return names
+}, {})
+
+const [all, some, none] = Object.keys(names).reduce(([all, some, none], name) => {
+  if (names[name].bare.length === 0) {
+    return [all.concat([name]), some, none]
+  } else if (names[name].w5.length === 0) {
+    return [all, some, none.concat([name])]
+  } else {
+    return [all, some.concat([name]), none]
+  }
+}, [[], [], []])
+
+console.log('All mapped:')
+console.log(all.map(name => `${name}: ${
+JSON.stringify(names[name].w5, null, 2)
+}`).join('\n'))
+
+console.log('\n\nnone mapped:')
+console.log(none.map(name => `${name}: ${
+JSON.stringify(names[name].bare, null, 2)
+}`).join('\n'))
+
+console.log('\n\nsome mapped:')
+console.log(some.map(name => `${name}: ${
+JSON.stringify(names[name], null, 2)
+}`).join('\n'))
+
+// visit(rootBundle)
+// Fs.writeFileSync(outFile, JSON.stringify(obj, null, 2))
+
+function visit (ob) {
+  if (typeof ob === 'object') {
+    if (Array.isArray(ob)) {
+      let ret = false
+      for (let i = 0; i < ob.length; ) {
+        const hasMapping = visit(ob[i])
+        if (hasMapping) {
+          ++i
+          ret = true
+        } else {
+          ob.splice(i, 1)
+        }
+      }
+      return ret
+    } else {
+      return Object.keys(ob).reduce( (acc, k) => {
+        if (REMOVE_SNAPSHOTS && k === 'snapshot') {
+          delete ob.snapshot
+          return false
+        } else if (k === 'mapping') {
+          if (keepers.length === 0)
+            return true
+          let ret = false
+          for (let i = 0; i < ob.mapping.length; ) {
+            const keep = keepers.indexOf(ob.mapping[i].identity) !== -1
+            if (keep) {
+              ++i
+              ret = true
+            } else {
+              ob.mapping.splice(i, 1)
+            }
+          }
+          return ret
+        } else {
+          const hasMapping = visit(ob[k])
+          if (!hasMapping && ['id', 'resourceType'].indexOf(k) === -1) {
+            delete ob[k]
+          }
+          return acc || hasMapping
+        }
+      }, false)
+    }
+  } else {
+    return false
+  }
+}
