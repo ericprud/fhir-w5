@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const Fs = require('fs')
+const Yaml = require('js-yaml')
 
 const STRUC_DEF = 'http://hl7.org/fhir/StructureDefinition/'
 const META_DEFS = [
@@ -75,7 +76,7 @@ const names = resources.reduce( (names, entry) => {
   return names
 }, {})
 
-const [all, some, none, singles] = Object.keys(names).reduce(([all, some, none, singles], name) => {
+const [all, some, none, singles] = Object.keys(names).sort().reduce(([all, some, none, singles], name) => {
   const entry = names[name]
   if (entry.bare.length === 0) {
     if (Object.keys(entry.w5).length === 1) {
@@ -95,72 +96,24 @@ const [all, some, none, singles] = Object.keys(names).reduce(([all, some, none, 
   return [all, some, none, singles]
 }, [[], [], [], []])
 
-console.log('All mapped:')
-console.log(all.map(name => `${name}: ${
-JSON.stringify(names[name].w5, null, 2)
-}`).join('\n'))
+const summary = { }
+summary[`All mapped (${all.length})`] = all.reduce(
+  (acc, name) => appendObj(acc, name, names[name].w5), {}
+)
+summary[`None mapped (${none.length})`] = none.reduce(
+  (acc, name) => appendObj(acc, name, names[name].bare), {}
+)
+summary[`Some mapped (${some.length})`] = some.reduce(
+  (acc, name) => appendObj(acc, name, names[name]), {}
+)
+summary[`Singles (${singles.length})`] = singles.reduce(
+  (acc, name) => appendObj(acc, name, names[name]), {}
+)
+console.log(Yaml.dump(summary))
 
-console.log('\n\nnone mapped:')
-console.log(none.map(name => `${name}: ${
-JSON.stringify(names[name].bare, null, 2)
-}`).join('\n'))
-
-console.log('\n\nsome mapped:')
-console.log(some.map(name => `${name}: ${
-JSON.stringify(names[name], null, 2)
-}`).join('\n'))
-
-console.log('\n\nsingles:')
-console.log(singles.map(name => `${name}: ${
-JSON.stringify(names[name], null, 2)
-}`).join('\n'))
-
-// visit(rootBundle)
-// Fs.writeFileSync(outFile, JSON.stringify(obj, null, 2))
-
-function visit (ob) {
-  if (typeof ob === 'object') {
-    if (Array.isArray(ob)) {
-      let ret = false
-      for (let i = 0; i < ob.length; ) {
-        const hasMapping = visit(ob[i])
-        if (hasMapping) {
-          ++i
-          ret = true
-        } else {
-          ob.splice(i, 1)
-        }
-      }
-      return ret
-    } else {
-      return Object.keys(ob).reduce( (acc, k) => {
-        if (REMOVE_SNAPSHOTS && k === 'snapshot') {
-          delete ob.snapshot
-          return false
-        } else if (k === 'mapping') {
-          if (keepers.length === 0)
-            return true
-          let ret = false
-          for (let i = 0; i < ob.mapping.length; ) {
-            const keep = keepers.indexOf(ob.mapping[i].identity) !== -1
-            if (keep) {
-              ++i
-              ret = true
-            } else {
-              ob.mapping.splice(i, 1)
-            }
-          }
-          return ret
-        } else {
-          const hasMapping = visit(ob[k])
-          if (!hasMapping && ['id', 'resourceType'].indexOf(k) === -1) {
-            delete ob[k]
-          }
-          return acc || hasMapping
-        }
-      }, false)
-    }
-  } else {
-    return false
-  }
+function appendObj (obj, key, value) {
+  if (key in obj) throw new Error(`${key} already bound to ${obj[key]}`)
+  obj[key] = value
+  return obj
 }
+
