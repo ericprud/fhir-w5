@@ -1993,7 +1993,7 @@ amount: [
   "NutritionProduct.ingredient",
   "PaymentNotice",
   "PaymentReconciliation.detail",
-  "SubstanceDefinition.structure.isotope.molecularWeight",
+  "SubstanceDefinition.molecularWeight",
   "SubstancePolymer.monomerSet.startingMaterial",
   "SubstancePolymer.repeat.repeatUnit",
   "VisionPrescription.lensSpecification.prism"
@@ -4138,8 +4138,7 @@ dosageInstruction: [
 substitution: [
   "MedicationDispense",
   "MedicationKnowledge.regulatory",
-  "MedicationRequest",
-  "SubstanceDefinition.structure.isotope"
+  "MedicationRequest"
 ]
 wasSubstituted: [
   "MedicationDispense.substitution"
@@ -4731,9 +4730,6 @@ containedItemQuantity: [
 copackagedIndicator: [
   "PackagedProductDefinition"
 ]
-marketingAuthorization: [
-  "PackagedProductDefinition"
-]
 alternateMaterial: [
   "PackagedProductDefinition.package"
 ]
@@ -5266,19 +5262,12 @@ definingSubstance: [
 referenceInformation: [
   "SubstanceDefinition"
 ]
+molecularWeight: [
+  "SubstanceDefinition",
+  "SubstanceDefinition.structure"
+]
 molecularFormulaByMoiety: [
   "SubstanceDefinition.structure"
-]
-isotope: [
-  "SubstanceDefinition.structure"
-]
-halfLife: [
-  "SubstanceDefinition.structure.isotope"
-]
-molecularWeight: [
-  "SubstanceDefinition.structure.isotope",
-  "SubstanceDefinition.structure",
-  "SubstanceDefinition"
 ]
 technique: [
   "SubstanceDefinition.structure"
@@ -6322,7 +6311,6 @@ identifier: {
     "Substance.instance",
     "SubstanceDefinition",
     "SubstanceDefinition.moiety",
-    "SubstanceDefinition.structure.isotope",
     "SubstanceNucleicAcid.subunit.linkage",
     "SubstanceNucleicAcid.subunit.sugar",
     "SubstancePolymer",
@@ -7022,7 +7010,7 @@ type: {
     "SpecimenDefinition.typeTested.container",
     "StructureMap.group.input",
     "StructureMap.group.rule.source",
-    "SubstanceDefinition.structure.isotope.molecularWeight",
+    "SubstanceDefinition.molecularWeight",
     "SubstanceDefinition.structure.representation",
     "SubstanceDefinition.name",
     "SubstanceDefinition.relationship",
@@ -7138,7 +7126,6 @@ name: {
     "StructureMap.group.rule.dependent",
     "Subscription",
     "SubstanceDefinition.moiety",
-    "SubstanceDefinition.structure.isotope",
     "SubstanceDefinition",
     "SubstanceDefinition.name",
     "SubstanceNucleicAcid.subunit.linkage",
@@ -11345,7 +11332,7 @@ method: {
     "Observation",
     "ObservationDefinition",
     "Specimen.collection",
-    "SubstanceDefinition.structure.isotope.molecularWeight",
+    "SubstanceDefinition.molecularWeight",
     "TestScript.setup.action.operation"
   ]
 }
