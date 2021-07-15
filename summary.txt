@@ -1,16 +1,4 @@
 All mapped:
-servicePeriod: [
-  [
-    "FiveWs.done[x]",
-    "Account"
-  ]
-]
-actuality: [
-  [
-    "FiveWs.class",
-    "AdverseEvent"
-  ]
-]
 recordedDate: [
   [
     "FiveWs.recorded",
@@ -67,12 +55,6 @@ verificationStatus: [
     "Condition"
   ]
 ]
-criticality: [
-  [
-    "FiveWs.grade",
-    "AllergyIntolerance"
-  ]
-]
 recorded: [
   [
     "FiveWs.recorded",
@@ -97,42 +79,6 @@ recorded: [
   [
     "FiveWs.recorded",
     "Provenance"
-  ]
-]
-purposeOfEvent: [
-  [
-    "FiveWs.why[x]",
-    "AuditEvent"
-  ]
-]
-altId: [
-  [
-    "FiveWs.who",
-    "AuditEvent.agent"
-  ]
-]
-purposeOfUse: [
-  [
-    "FiveWs.why[x]",
-    "AuditEvent.agent"
-  ]
-]
-observer: [
-  [
-    "FiveWs.witness",
-    "AuditEvent.source"
-  ]
-]
-lifecycle: [
-  [
-    "FiveWs.context",
-    "AuditEvent.entity"
-  ]
-]
-query: [
-  [
-    "FiveWs.context",
-    "AuditEvent.entity"
   ]
 ]
 active: [
@@ -183,18 +129,6 @@ active: [
   [
     "FiveWs.status",
     "Schedule"
-  ]
-]
-morphology: [
-  [
-    "FiveWs.what[x]",
-    "BodyStructure"
-  ]
-]
-locationQualifier: [
-  [
-    "FiveWs.what[x]",
-    "BodyStructure"
   ]
 ]
 reported[x]: [
@@ -343,12 +277,6 @@ effective[x]: [
     "Observation"
   ]
 ]
-problem: [
-  [
-    "FiveWs.why[x]",
-    "ClinicalImpression"
-  ]
-]
 about: [
   [
     "FiveWs.context",
@@ -357,18 +285,6 @@ about: [
   [
     "FiveWs.context",
     "CommunicationRequest"
-  ]
-]
-sent: [
-  [
-    "FiveWs.done[x]",
-    "Communication"
-  ]
-]
-received: [
-  [
-    "FiveWs.done[x]",
-    "Communication"
   ]
 ]
 sender: [
@@ -411,18 +327,6 @@ authoredOn: [
     "Task"
   ]
 ]
-informationProvider: [
-  [
-    "FiveWs.actor",
-    "CommunicationRequest"
-  ]
-]
-abatement[x]: [
-  [
-    "FiveWs.done[x]",
-    "Condition"
-  ]
-]
 dateTime: [
   [
     "FiveWs.recorded",
@@ -433,131 +337,11 @@ dateTime: [
     "NutritionOrder"
   ]
 ]
-manager: [
-  [
-    "FiveWs.witness",
-    "Consent"
-  ]
-]
-contentDerivative: [
-  [
-    "FiveWs.what[x]",
-    "Contract"
-  ]
-]
-decision: [
-  [
-    "FiveWs.what[x]",
-    "Contract.term.offer"
-  ]
-]
-entity[x]: [
-  [
-    "FiveWs.what[x]",
-    "Contract.term.asset.valuedItem"
-  ]
-]
-effectiveTime: [
-  [
-    "FiveWs.done[x]",
-    "Contract.term.asset.valuedItem"
-  ]
-]
-points: [
-  [
-    "FiveWs.what[x]",
-    "Contract.term.asset.valuedItem"
-  ]
-]
-friendly: [
-  [
-    "FiveWs.what[x]",
-    "Contract"
-  ]
-]
-legal: [
-  [
-    "FiveWs.what[x]",
-    "Contract"
-  ]
-]
-policyHolder: [
-  [
-    "FiveWs.subject[x]",
-    "Coverage"
-  ]
-]
-subscriber: [
-  [
-    "FiveWs.subject[x]",
-    "Coverage"
-  ]
-]
-subscriberId: [
-  [
-    "FiveWs.subject[x]",
-    "Coverage"
-  ]
-]
-beneficiary: [
-  [
-    "FiveWs.subject[x]",
-    "Coverage"
-  ]
-]
-payor: [
-  [
-    "FiveWs.author",
-    "Coverage"
-  ]
-]
-identified[x]: [
-  [
-    "FiveWs.recorded",
-    "DetectedIssue"
-  ]
-]
-udiCarrier: [
-  [
-    "FiveWs.identifier",
-    "Device"
-  ]
-]
-distinctIdentifier: [
-  [
-    "FiveWs.what[x]",
-    "Device"
-  ]
-]
-manufactureDate: [
-  [
-    "FiveWs.what[x]",
-    "Device"
-  ]
-]
-serialNumber: [
-  [
-    "FiveWs.what[x]",
-    "Device"
-  ]
-]
 modelNumber: [
   [
     "FiveWs.what[x]",
     "Device"
   ],
-  [
-    "FiveWs.what[x]",
-    "DeviceDefinition"
-  ]
-]
-partNumber: [
-  [
-    "FiveWs.what[x]",
-    "Device"
-  ]
-]
-manufacturer[x]: [
   [
     "FiveWs.what[x]",
     "DeviceDefinition"
@@ -573,240 +357,9 @@ dateAsserted: [
     "MedicationUsage"
   ]
 ]
-resultsInterpreter: [
-  [
-    "FiveWs.actor",
-    "DiagnosticReport"
-  ]
-]
-masterIdentifier: [
-  [
-    "FiveWs.identifier",
-    "DocumentManifest"
-  ]
-]
-docStatus: [
-  [
-    "FiveWs.status",
-    "DocumentReference"
-  ]
-]
-episodeOfCare: [
-  [
-    "FiveWs.context",
-    "Encounter"
-  ]
-]
-connectionType: [
-  [
-    "FiveWs.class",
-    "Endpoint"
-  ]
-]
-candidate: [
-  [
-    "FiveWs.actor",
-    "EnrollmentRequest"
-  ]
-]
-lifecycleStatus: [
-  [
-    "FiveWs.status",
-    "Goal"
-  ]
-]
-start[x]: [
-  [
-    "FiveWs.planned",
-    "Goal"
-  ]
-]
-due[x]: [
-  [
-    "FiveWs.done[x]",
-    "Goal.target"
-  ]
-]
-occurrenceDateTime: [
-  [
-    "FiveWs.done[x]",
-    "GuidanceResponse"
-  ]
-]
-referrer: [
-  [
-    "FiveWs.cause",
-    "ImagingStudy"
-  ]
-]
-interpreter: [
-  [
-    "FiveWs.witness",
-    "ImagingStudy"
-  ]
-]
-informationSource[x]: [
-  [
-    "FiveWs.source",
-    "Immunization"
-  ]
-]
-occurence[x]: [
-  [
-    "FiveWs.done[x]",
-    "MedicationAdministration"
-  ]
-]
-dispenser: [
-  [
-    "FiveWs.who",
-    "MedicationRequest.dispenseRequest"
-  ]
-]
-nutritionProduct: [
-  [
-    "FiveWs.what[x]",
-    "NutritionIntake.consumedItem"
-  ]
-]
-orderer: [
-  [
-    "FiveWs.author",
-    "NutritionOrder"
-  ]
-]
-baseFormulaType: [
-  [
-    "FiveWs.what[x]",
-    "NutritionOrder.enteralFormula"
-  ]
-]
-additiveType: [
-  [
-    "FiveWs.what[x]",
-    "NutritionOrder.enteralFormula"
-  ]
-]
-paymentIssuer: [
-  [
-    "FiveWs.source",
-    "PaymentReconciliation"
-  ]
-]
-occurred[x]: [
-  [
-    "FiveWs.done[x]",
-    "Provenance"
-  ]
-]
-authored: [
-  [
-    "FiveWs.recorded",
-    "QuestionnaireResponse"
-  ]
-]
-principalInvestigator: [
-  [
-    "FiveWs.actor",
-    "ResearchStudy"
-  ]
-]
-whyStopped: [
-  [
-    "FiveWs.why[x]",
-    "ResearchStudy"
-  ]
-]
-recruitment: [
-  [
-    "FiveWs.subject[x]",
-    "ResearchStudy"
-  ]
-]
-actualGroup: [
-  [
-    "FiveWs.subject[x]",
-    "ResearchStudy.recruitment"
-  ]
-]
-subjectState: [
-  [
-    "FiveWs.status",
-    "ResearchSubject.progress"
-  ]
-]
-milestone: [
-  [
-    "FiveWs.status",
-    "ResearchSubject.progress"
-  ]
-]
-planningHorizon: [
-  [
-    "FiveWs.planned",
-    "Schedule"
-  ]
-]
-accessionIdentifier: [
-  [
-    "FiveWs.identifier",
-    "Specimen"
-  ]
-]
-receivedTime: [
-  [
-    "FiveWs.done[x]",
-    "Specimen"
-  ]
-]
-subscription: [
-  [
-    "FiveWs.why[x]",
-    "SubscriptionStatus"
-  ]
-]
-for: [
-  [
-    "FiveWs.subject[x]",
-    "Task"
-  ]
-]
-executionPeriod: [
-  [
-    "FiveWs.done[x]",
-    "Task"
-  ]
-]
-reasonCode: [
-  [
-    "FiveWs.why[x]",
-    "Task"
-  ]
-]
-reasonReference: [
-  [
-    "FiveWs.why[x]",
-    "Task"
-  ]
-]
-dateWritten: [
-  [
-    "FiveWs.recorded",
-    "VisionPrescription"
-  ]
-]
-prescriber: [
-  [
-    "FiveWs.author",
-    "VisionPrescription"
-  ]
-]
 
 
 none mapped:
-billingStatus: [
-  "Account"
-]
 coverage: [
   "Account",
   "Account.coverage",
@@ -817,12 +370,6 @@ coverage: [
   "EnrollmentRequest",
   "ExplanationOfBenefit.insurance",
   "InsurancePlan"
-]
-guarantor: [
-  "Account"
-]
-onHold: [
-  "Account.guarantor"
 ]
 partOf: [
   "Account",
@@ -1194,15 +741,6 @@ bodySite: [
   "ServiceRequest",
   "Specimen.collection"
 ]
-specimenRequirement: [
-  "ActivityDefinition"
-]
-observationRequirement: [
-  "ActivityDefinition"
-]
-observationResultRequirement: [
-  "ActivityDefinition"
-]
 transform: [
   "ActivityDefinition",
   "PlanDefinition.action",
@@ -1233,15 +771,9 @@ expression: [
   "TestScript.variable",
   "TestScript.setup.action.assert"
 ]
-administrableDoseForm: [
-  "AdministrableProductDefinition"
-]
 unitOfPresentation: [
   "AdministrableProductDefinition",
   "ManufacturedItemDefinition"
-]
-producedFrom: [
-  "AdministrableProductDefinition"
 ]
 ingredient: [
   "AdministrableProductDefinition",
@@ -1269,60 +801,6 @@ property: [
   "ValueSet.expansion",
   "ValueSet.expansion.contains"
 ]
-routeOfAdministration: [
-  "AdministrableProductDefinition"
-]
-firstDose: [
-  "AdministrableProductDefinition.routeOfAdministration"
-]
-maxSingleDose: [
-  "AdministrableProductDefinition.routeOfAdministration"
-]
-maxDosePerDay: [
-  "AdministrableProductDefinition.routeOfAdministration"
-]
-maxDosePerTreatmentPeriod: [
-  "AdministrableProductDefinition.routeOfAdministration"
-]
-maxTreatmentPeriod: [
-  "AdministrableProductDefinition.routeOfAdministration"
-]
-targetSpecies: [
-  "AdministrableProductDefinition.routeOfAdministration"
-]
-withdrawalPeriod: [
-  "AdministrableProductDefinition.routeOfAdministration.targetSpecies"
-]
-tissue: [
-  "AdministrableProductDefinition.routeOfAdministration.targetSpecies.withdrawalPeriod"
-]
-detected: [
-  "AdverseEvent"
-]
-resultingCondition: [
-  "AdverseEvent"
-]
-seriousness: [
-  "AdverseEvent"
-]
-suspectEntity: [
-  "AdverseEvent"
-]
-instance[x]: [
-  "AdverseEvent.suspectEntity"
-]
-causality: [
-  "AdverseEvent.suspectEntity"
-]
-assessmentMethod: [
-  "AdverseEvent.suspectEntity.causality"
-]
-entityRelatedness: [
-  "AdverseEvent.suspectEntity.causality"
-]
-contributingFactor: [
-  "AdverseEvent"
-]
 item[x]: [
   "AdverseEvent.contributingFactor",
   "AdverseEvent.preventiveAction",
@@ -1330,12 +808,6 @@ item[x]: [
   "AdverseEvent.supportingInfo",
   "ClinicalUseIssue.interaction.interactant",
   "SupplyDelivery.suppliedItem"
-]
-preventiveAction: [
-  "AdverseEvent"
-]
-mitigatingAction: [
-  "AdverseEvent"
 ]
 supportingInfo: [
   "AdverseEvent",
@@ -1352,9 +824,6 @@ supportingInfo: [
 study: [
   "AdverseEvent",
   "ResearchSubject"
-]
-lastOccurrence: [
-  "AllergyIntolerance"
 ]
 note: [
   "AllergyIntolerance",
@@ -1422,24 +891,6 @@ substance: [
   "Ingredient",
   "Ingredient.substance.strength.referenceStrength"
 ]
-manifestation: [
-  "AllergyIntolerance.reaction"
-]
-onset: [
-  "AllergyIntolerance.reaction"
-]
-exposureRoute: [
-  "AllergyIntolerance.reaction"
-]
-cancellationReason: [
-  "Appointment"
-]
-minutesDuration: [
-  "Appointment"
-]
-slot: [
-  "Appointment"
-]
 account: [
   "Appointment",
   "ChargeItem",
@@ -1456,18 +907,9 @@ required: [
   "Questionnaire.item",
   "TestScript.metadata.capability"
 ]
-requestedPeriod: [
-  "Appointment"
-]
 appointment: [
   "AppointmentResponse",
   "Encounter"
-]
-participantType: [
-  "AppointmentResponse"
-]
-participantStatus: [
-  "AppointmentResponse"
 ]
 comment: [
   "AppointmentResponse",
@@ -1490,15 +932,9 @@ contentType: [
   "TestScript.setup.action.operation",
   "TestScript.setup.action.assert"
 ]
-securityContext: [
-  "Binary"
-]
 data: [
   "Binary",
   "Consent.provision"
-]
-productCategory: [
-  "BiologicallyDerivedProduct"
 ]
 parent: [
   "BiologicallyDerivedProduct",
@@ -1534,18 +970,6 @@ time[x]: [
   "BiologicallyDerivedProduct.processing",
   "BiologicallyDerivedProduct.manipulation",
   "Specimen.processing"
-]
-manipulation: [
-  "BiologicallyDerivedProduct"
-]
-storage: [
-  "BiologicallyDerivedProduct"
-]
-temperature: [
-  "BiologicallyDerivedProduct.storage"
-]
-scale: [
-  "BiologicallyDerivedProduct.storage"
 ]
 instantiates: [
   "CapabilityStatement",
@@ -1628,12 +1052,6 @@ documentation: [
   "SubscriptionTopic.resourceTrigger.canFilterBy",
   "TerminologyCapabilities.expansion.parameter"
 ]
-security: [
-  "CapabilityStatement.rest"
-]
-cors: [
-  "CapabilityStatement.rest.security"
-]
 resource: [
   "CapabilityStatement.rest",
   "CapabilityStatement2.rest",
@@ -1658,36 +1076,6 @@ interaction: [
   "CapabilityStatement2.rest",
   "ClinicalUseIssue",
   "SubstanceReferenceInformation.target"
-]
-versioning: [
-  "CapabilityStatement.rest.resource"
-]
-readHistory: [
-  "CapabilityStatement.rest.resource"
-]
-updateCreate: [
-  "CapabilityStatement.rest.resource"
-]
-conditionalCreate: [
-  "CapabilityStatement.rest.resource"
-]
-conditionalRead: [
-  "CapabilityStatement.rest.resource"
-]
-conditionalUpdate: [
-  "CapabilityStatement.rest.resource"
-]
-conditionalDelete: [
-  "CapabilityStatement.rest.resource"
-]
-referencePolicy: [
-  "CapabilityStatement.rest.resource"
-]
-searchInclude: [
-  "CapabilityStatement.rest.resource"
-]
-searchRevInclude: [
-  "CapabilityStatement.rest.resource"
 ]
 searchParam: [
   "CapabilityStatement.rest.resource",
@@ -1730,9 +1118,6 @@ compartment: [
   "CapabilityStatement2.rest",
   "GraphDefinition.link.target"
 ]
-messaging: [
-  "CapabilityStatement"
-]
 endpoint: [
   "CapabilityStatement.messaging",
   "HealthcareService",
@@ -1751,12 +1136,6 @@ protocol: [
   "CapabilityStatement.messaging.endpoint",
   "ClinicalImpression",
   "ResearchStudy"
-]
-reliableCache: [
-  "CapabilityStatement.messaging"
-]
-supportedMessage: [
-  "CapabilityStatement.messaging"
 ]
 document: [
   "CapabilityStatement",
@@ -1806,41 +1185,20 @@ instantiatesUri: [
   "ServiceRequest",
   "Task"
 ]
-contributor: [
-  "CarePlan"
-]
 goal: [
   "CarePlan",
   "CarePlan.activity.plannedActivityDetail",
   "PlanDefinition"
 ]
-performedActivity: [
-  "CarePlan.activity"
-]
 progress: [
   "CarePlan.activity",
   "ResearchSubject"
-]
-plannedActivityReference: [
-  "CarePlan.activity"
-]
-plannedActivityDetail: [
-  "CarePlan.activity"
-]
-scheduled[x]: [
-  "CarePlan.activity.plannedActivityDetail"
-]
-dailyAmount: [
-  "CarePlan.activity.plannedActivityDetail"
 ]
 onBehalfOf: [
   "CareTeam.participant",
   "Procedure.performer",
   "Provenance.agent",
   "VerificationResult.attestation"
-]
-coverage[x]: [
-  "CareTeam.participant"
 ]
 managingOrganization: [
   "CareTeam",
@@ -1865,66 +1223,6 @@ telecom: [
   "Practitioner",
   "PractitionerRole",
   "RelatedPerson"
-]
-orderable: [
-  "CatalogEntry"
-]
-referencedItem: [
-  "CatalogEntry"
-]
-relatedEntry: [
-  "CatalogEntry"
-]
-updatedBy: [
-  "CatalogEntry"
-]
-estimatedDuration: [
-  "CatalogEntry"
-]
-billingCode: [
-  "CatalogEntry"
-]
-billingSummary: [
-  "CatalogEntry"
-]
-scheduleSummary: [
-  "CatalogEntry"
-]
-limitationSummary: [
-  "CatalogEntry"
-]
-regulatorySummary: [
-  "CatalogEntry"
-]
-definitionUri: [
-  "ChargeItem"
-]
-definitionCanonical: [
-  "ChargeItem"
-]
-performingOrganization: [
-  "ChargeItem"
-]
-requestingOrganization: [
-  "ChargeItem"
-]
-costCenter: [
-  "ChargeItem"
-]
-bodysite: [
-  "ChargeItem"
-]
-factorOverride: [
-  "ChargeItem"
-]
-priceOverride: [
-  "ChargeItem"
-]
-overrideReason: [
-  "ChargeItem"
-]
-enteredDate: [
-  "ChargeItem"
 ]
 product: [
   "ChargeItem",
@@ -1967,9 +1265,6 @@ language: [
   "SubstanceDefinition.name",
   "TerminologyCapabilities.codeSystem.version",
   "ValueSet.compose.include.concept.designation"
-]
-propertyGroup: [
-  "ChargeItemDefinition"
 ]
 priceComponent: [
   "ChargeItemDefinition.propertyGroup",
@@ -2073,15 +1368,9 @@ target[x]: [
   "ConceptMap2",
   "EvidenceReport.relatesTo"
 ]
-citedArtifact: [
-  "Citation"
-]
 relatedIdentifier: [
   "Citation.citedArtifact",
   "EvidenceReport"
-]
-dateAccessed: [
-  "Citation.citedArtifact"
 ]
 baseCitation: [
   "Citation.citedArtifact.version",
@@ -2099,120 +1388,24 @@ part: [
   "SubstanceDefinition.sourceMaterial",
   "SubstanceSourceMaterial.partDescription"
 ]
-publicationForm: [
-  "Citation.citedArtifact"
-]
-publishedIn: [
-  "Citation.citedArtifact.publicationForm"
-]
-publisherLocation: [
-  "Citation.citedArtifact.publicationForm.publishedIn"
-]
-periodicRelease: [
-  "Citation.citedArtifact.publicationForm"
-]
-citedMedium: [
-  "Citation.citedArtifact.publicationForm.periodicRelease"
-]
-volume: [
-  "Citation.citedArtifact.publicationForm.periodicRelease"
-]
 issue: [
   "Citation.citedArtifact.publicationForm.periodicRelease",
   "OperationOutcome"
 ]
-dateOfPublication: [
-  "Citation.citedArtifact.publicationForm.periodicRelease"
-]
-year: [
-  "Citation.citedArtifact.publicationForm.periodicRelease.dateOfPublication"
-]
-month: [
-  "Citation.citedArtifact.publicationForm.periodicRelease.dateOfPublication"
-]
-day: [
-  "Citation.citedArtifact.publicationForm.periodicRelease.dateOfPublication"
-]
-season: [
-  "Citation.citedArtifact.publicationForm.periodicRelease.dateOfPublication"
-]
-articleDate: [
-  "Citation.citedArtifact.publicationForm"
-]
-lastRevisionDate: [
-  "Citation.citedArtifact.publicationForm"
-]
-accessionNumber: [
-  "Citation.citedArtifact.publicationForm"
-]
-pageString: [
-  "Citation.citedArtifact.publicationForm"
-]
-firstPage: [
-  "Citation.citedArtifact.publicationForm"
-]
-lastPage: [
-  "Citation.citedArtifact.publicationForm"
-]
-pageCount: [
-  "Citation.citedArtifact.publicationForm"
-]
 webLocation: [
   "Citation.citedArtifact",
   "ResearchStudy"
-]
-whoClassified: [
-  "Citation.citedArtifact.classification"
-]
-person: [
-  "Citation.citedArtifact.classification.whoClassified"
-]
-classifierCopyright: [
-  "Citation.citedArtifact.classification.whoClassified"
-]
-freeToShare: [
-  "Citation.citedArtifact.classification.whoClassified"
-]
-contributorship: [
-  "Citation.citedArtifact"
-]
-complete: [
-  "Citation.citedArtifact.contributorship"
 ]
 entry: [
   "Citation.citedArtifact.contributorship",
   "Composition.section",
   "List"
 ]
-initials: [
-  "Citation.citedArtifact.contributorship.entry"
-]
-collectiveName: [
-  "Citation.citedArtifact.contributorship.entry"
-]
-affiliationInfo: [
-  "Citation.citedArtifact.contributorship.entry"
-]
-affiliation: [
-  "Citation.citedArtifact.contributorship.entry.affiliationInfo"
-]
-contributionType: [
-  "Citation.citedArtifact.contributorship.entry"
-]
-contributionInstance: [
-  "Citation.citedArtifact.contributorship.entry"
-]
 time: [
   "Citation.citedArtifact.contributorship.entry.contributionInstance",
   "Composition.attester",
   "DeviceMetric.calibration",
   "DocumentReference.attester"
-]
-correspondingContact: [
-  "Citation.citedArtifact.contributorship.entry"
-]
-listOrder: [
-  "Citation.citedArtifact.contributorship.entry"
 ]
 fundsReserve: [
   "Claim",
@@ -2454,12 +1647,6 @@ disposition: [
   "ExplanationOfBenefit",
   "PaymentReconciliation"
 ]
-preAuthPeriod: [
-  "ClaimResponse"
-]
-payeeType: [
-  "ClaimResponse"
-]
 itemSequence: [
   "ClaimResponse.item",
   "ClaimResponse.addItem",
@@ -2511,9 +1698,6 @@ addItem: [
   "ClaimResponse",
   "ExplanationOfBenefit"
 ]
-subdetailSequence: [
-  "ClaimResponse.addItem"
-]
 payment: [
   "ClaimResponse",
   "Contract.term.asset.valuedItem",
@@ -2551,9 +1735,6 @@ number: [
   "ImagingStudy.series",
   "ImagingStudy.series.instance"
 ]
-communicationRequest: [
-  "ClaimResponse"
-]
 error: [
   "ClaimResponse",
   "CoverageEligibilityResponse",
@@ -2563,9 +1744,6 @@ previous: [
   "ClinicalImpression",
   "SubscriptionTopic.resourceTrigger.queryCriteria"
 ]
-finding: [
-  "ClinicalImpression"
-]
 basis: [
   "ClinicalImpression.finding",
   "Ingredient.substance.strength",
@@ -2573,12 +1751,6 @@ basis: [
   "Measure.group",
   "RegulatedAuthorization",
   "RiskAssessment"
-]
-prognosisCodeableConcept: [
-  "ClinicalImpression"
-]
-prognosisReference: [
-  "ClinicalImpression"
 ]
 contraindication: [
   "ClinicalUseIssue",
@@ -2608,27 +1780,9 @@ otherTherapy: [
   "ClinicalUseIssue.contraindication",
   "ClinicalUseIssue.indication"
 ]
-therapy: [
-  "ClinicalUseIssue.contraindication.otherTherapy"
-]
-intendedEffect: [
-  "ClinicalUseIssue.indication"
-]
 undesirableEffect: [
   "ClinicalUseIssue.indication",
   "ClinicalUseIssue"
-]
-interactant: [
-  "ClinicalUseIssue.interaction"
-]
-effect: [
-  "ClinicalUseIssue.interaction"
-]
-incidence: [
-  "ClinicalUseIssue.interaction"
-]
-management: [
-  "ClinicalUseIssue.interaction"
 ]
 population: [
   "ClinicalUseIssue",
@@ -2636,29 +1790,14 @@ population: [
   "MeasureReport.group",
   "MeasureReport.group.stratifier.stratum"
 ]
-symptomConditionEffect: [
-  "ClinicalUseIssue.undesirableEffect"
-]
-frequencyOfOccurrence: [
-  "ClinicalUseIssue.undesirableEffect"
-]
-caseSensitive: [
-  "CodeSystem"
-]
 valueSet: [
   "CodeSystem",
   "OperationDefinition.parameter.binding",
   "ValueSet.compose.include"
 ]
-hierarchyMeaning: [
-  "CodeSystem"
-]
 compositional: [
   "CodeSystem",
   "TerminologyCapabilities.codeSystem.version"
-]
-versionNeeded: [
-  "CodeSystem"
 ]
 content: [
   "CodeSystem",
@@ -2666,9 +1805,6 @@ content: [
   "DocumentReference",
   "Library",
   "Subscription"
-]
-supplements: [
-  "CodeSystem"
 ]
 count: [
   "CodeSystem",
@@ -2719,9 +1855,6 @@ designation: [
   "CodeSystem.concept",
   "ValueSet.compose.include.concept",
   "ValueSet.expansion.contains"
-]
-inResponseTo: [
-  "Communication"
 ]
 medium: [
   "Communication",
@@ -2801,24 +1934,6 @@ stage: [
   "Condition",
   "ConditionDefinition"
 ]
-assessment: [
-  "Condition.stage"
-]
-hasSeverity: [
-  "ConditionDefinition"
-]
-hasBodySite: [
-  "ConditionDefinition"
-]
-hasStage: [
-  "ConditionDefinition"
-]
-observation: [
-  "ConditionDefinition"
-]
-precondition: [
-  "ConditionDefinition"
-]
 team: [
   "ConditionDefinition",
   "EpisodeOfCare"
@@ -2831,21 +1946,6 @@ plan: [
   "ConditionDefinition",
   "InsurancePlan"
 ]
-grantor: [
-  "Consent"
-]
-grantee: [
-  "Consent"
-]
-controller: [
-  "Consent"
-]
-sourceAttachment: [
-  "Consent"
-]
-sourceReference: [
-  "Consent"
-]
 authority: [
   "Consent.policy",
   "Contract",
@@ -2854,42 +1954,9 @@ authority: [
   "ImmunizationRecommendation",
   "SubstanceDefinition.name.official"
 ]
-policyRule: [
-  "Consent"
-]
-verification: [
-  "Consent"
-]
-verified: [
-  "Consent.verification"
-]
-verificationType: [
-  "Consent.verification"
-]
-verifiedBy: [
-  "Consent.verification"
-]
-verifiedWith: [
-  "Consent.verification"
-]
-verificationDate: [
-  "Consent.verification"
-]
 provision: [
   "Consent",
   "Consent.provision"
-]
-dataPeriod: [
-  "Consent.provision"
-]
-meaning: [
-  "Consent.provision.data"
-]
-legalState: [
-  "Contract"
-]
-expirationType: [
-  "Contract"
 ]
 domain: [
   "Contract",
@@ -2915,24 +1982,9 @@ topic[x]: [
   "Contract",
   "Contract.term"
 ]
-contentDefinition: [
-  "Contract"
-]
 publicationDate: [
   "Contract.contentDefinition",
   "Immunization.education"
-]
-publicationStatus: [
-  "Contract.contentDefinition"
-]
-control: [
-  "Contract.term.securityLabel"
-]
-offer: [
-  "Contract.term"
-]
-decisionMode: [
-  "Contract.term.offer"
 ]
 answer: [
   "Contract.term.offer",
@@ -2953,49 +2005,16 @@ securityLabelNumber: [
   "Contract.term.asset.valuedItem",
   "Contract.term.action"
 ]
-asset: [
-  "Contract.term"
-]
-periodType: [
-  "Contract.term.asset"
-]
-usePeriod: [
-  "Contract.term.asset"
-]
-valuedItem: [
-  "Contract.term.asset"
-]
 paymentDate: [
   "Contract.term.asset.valuedItem",
   "PaymentNotice",
   "PaymentReconciliation"
-]
-contextLinkId: [
-  "Contract.term.action"
-]
-requesterLinkId: [
-  "Contract.term.action"
-]
-performerRole: [
-  "Contract.term.action"
-]
-performerLinkId: [
-  "Contract.term.action"
-]
-reasonLinkId: [
-  "Contract.term.action"
 ]
 relevantHistory: [
   "Contract",
   "DeviceRequest",
   "ServiceRequest",
   "Task"
-]
-signer: [
-  "Contract"
-]
-legallyBinding[x]: [
-  "Contract"
 ]
 dependent: [
   "Coverage",
@@ -3004,30 +2023,6 @@ dependent: [
 order: [
   "Coverage",
   "SubstanceSourceMaterial.organism.organismGeneral"
-]
-costToBeneficiary: [
-  "Coverage"
-]
-exception: [
-  "Coverage.costToBeneficiary"
-]
-subrogation: [
-  "Coverage"
-]
-contract: [
-  "Coverage"
-]
-information: [
-  "CoverageEligibilityRequest.supportingInfo"
-]
-appliesToAll: [
-  "CoverageEligibilityRequest.supportingInfo"
-]
-supportingInfoSequence: [
-  "CoverageEligibilityRequest.item"
-]
-inforce: [
-  "CoverageEligibilityResponse.insurance"
 ]
 benefitPeriod: [
   "CoverageEligibilityResponse.insurance",
@@ -3058,24 +2053,9 @@ used[x]: [
   "CoverageEligibilityResponse.insurance.item.benefit",
   "ExplanationOfBenefit.benefitBalance.financial"
 ]
-authorizationRequired: [
-  "CoverageEligibilityResponse.insurance.item"
-]
-authorizationSupporting: [
-  "CoverageEligibilityResponse.insurance.item"
-]
-authorizationUrl: [
-  "CoverageEligibilityResponse.insurance.item"
-]
-implicated: [
-  "DetectedIssue"
-]
 mitigation: [
   "DetectedIssue",
   "RiskAssessment"
-]
-displayName: [
-  "Device"
 ]
 issuer: [
   "Device.udiCarrier",
@@ -3083,15 +2063,6 @@ issuer: [
   "DeviceDefinition.packaging.udiDeviceIdentifier",
   "Invoice",
   "Practitioner.qualification"
-]
-carrierAIDC: [
-  "Device.udiCarrier"
-]
-carrierHRF: [
-  "Device.udiCarrier"
-]
-entryType: [
-  "Device.udiCarrier"
 ]
 deviceName: [
   "Device",
@@ -3104,9 +2075,6 @@ specialization: [
 systemType: [
   "Device.specialization",
   "DeviceDefinition.specialization"
-]
-associationStatus: [
-  "Device"
 ]
 link: [
   "Device",
@@ -3139,43 +2107,19 @@ justification: [
   "DeviceDefinition.classification",
   "Permission"
 ]
-hasPart: [
-  "DeviceDefinition"
-]
 packaging: [
   "DeviceDefinition",
   "DeviceDefinition.packaging",
   "MedicationKnowledge",
   "MedicationKnowledge.packaging"
 ]
-distributor: [
-  "DeviceDefinition.packaging"
-]
-organizationReference: [
-  "DeviceDefinition.packaging.distributor"
-]
 shelfLifeStorage: [
   "DeviceDefinition",
   "PackagedProductDefinition.package"
 ]
-physicalCharacteristics: [
-  "DeviceDefinition"
-]
-languageCode: [
-  "DeviceDefinition"
-]
 capability: [
   "DeviceDefinition",
   "TestScript.metadata"
-]
-valueQuantity: [
-  "DeviceDefinition.property"
-]
-valueCode: [
-  "DeviceDefinition.property"
-]
-parentDevice: [
-  "DeviceDefinition"
 ]
 material: [
   "DeviceDefinition",
@@ -3183,35 +2127,17 @@ material: [
   "PackagedProductDefinition.package",
   "SpecimenDefinition.typeTested.container"
 ]
-alternate: [
-  "DeviceDefinition.material"
-]
 allergenicIndicator: [
   "DeviceDefinition.material",
   "Ingredient"
-]
-guideline: [
-  "DeviceDefinition"
 ]
 usageInstruction: [
   "DeviceDefinition.guideline",
   "DeviceDispense"
 ]
-warning: [
-  "DeviceDefinition.guideline"
-]
 intendedUse: [
   "DeviceDefinition.guideline",
   "RegulatedAuthorization"
-]
-chargeItem: [
-  "DeviceDefinition"
-]
-chargeItemCode: [
-  "DeviceDefinition.chargeItem"
-]
-preparedDate: [
-  "DeviceDispense"
 ]
 whenHandedOver: [
   "DeviceDispense",
@@ -3227,18 +2153,6 @@ color: [
   "DeviceMetric",
   "VisionPrescription.lensSpecification"
 ]
-measurementPeriod: [
-  "DeviceMetric"
-]
-calibration: [
-  "DeviceMetric"
-]
-state: [
-  "DeviceMetric.calibration"
-]
-priorRequest: [
-  "DeviceRequest"
-]
 derivedFrom: [
   "DeviceUsage",
   "MedicationUsage",
@@ -3247,12 +2161,6 @@ derivedFrom: [
   "Questionnaire",
   "SearchParameter",
   "SubscriptionTopic"
-]
-usageStatus: [
-  "DeviceUsage"
-]
-usageReason: [
-  "DeviceUsage"
 ]
 specimen: [
   "DiagnosticReport",
@@ -3270,46 +2178,13 @@ result: [
   "TestReport.setup.action.operation",
   "TestReport.setup.action.assert"
 ]
-imagingStudy: [
-  "DiagnosticReport"
-]
-composition: [
-  "DiagnosticReport"
-]
-conclusion: [
-  "DiagnosticReport"
-]
-conclusionCode: [
-  "DiagnosticReport"
-]
-presentedForm: [
-  "DiagnosticReport"
-]
-ref: [
-  "DocumentManifest.related"
-]
-facilityType: [
-  "DocumentReference"
-]
-practiceSetting: [
-  "DocumentReference"
-]
 attachment: [
   "DocumentReference.content",
   "SubstancePolymer.repeat.repeatUnit.structuralRepresentation"
 ]
-sourcePatientInfo: [
-  "DocumentReference"
-]
 statusHistory: [
   "Encounter",
   "EpisodeOfCare"
-]
-classHistory: [
-  "Encounter"
-]
-subjectStatus: [
-  "Encounter"
 ]
 length: [
   "Encounter",
@@ -3321,57 +2196,15 @@ rank: [
   "Encounter.diagnosis",
   "EpisodeOfCare.diagnosis"
 ]
-hospitalization: [
-  "Encounter"
-]
-preAdmissionIdentifier: [
-  "Encounter.hospitalization"
-]
 origin: [
   "Encounter.hospitalization",
   "TestScript",
   "TestScript.metadata.capability",
   "TestScript.setup.action.operation"
 ]
-admitSource: [
-  "Encounter.hospitalization"
-]
-reAdmission: [
-  "Encounter.hospitalization"
-]
-dietPreference: [
-  "Encounter.hospitalization"
-]
-specialCourtesy: [
-  "Encounter.hospitalization"
-]
-specialArrangement: [
-  "Encounter.hospitalization"
-]
-dischargeDisposition: [
-  "Encounter.hospitalization"
-]
-serviceProvider: [
-  "Encounter"
-]
-payloadType: [
-  "Endpoint"
-]
-payloadMimeType: [
-  "Endpoint"
-]
 header: [
   "Endpoint",
   "Subscription"
-]
-requestProvider: [
-  "EnrollmentResponse"
-]
-referralRequest: [
-  "EpisodeOfCare"
-]
-careManager: [
-  "EpisodeOfCare"
 ]
 trigger: [
   "EventDefinition",
@@ -3380,48 +2213,6 @@ trigger: [
 citeAs[x]: [
   "Evidence",
   "EvidenceReport"
-]
-assertion: [
-  "Evidence"
-]
-variableDefinition: [
-  "Evidence"
-]
-variableRole: [
-  "Evidence.variableDefinition"
-]
-observed: [
-  "Evidence.variableDefinition"
-]
-intended: [
-  "Evidence.variableDefinition"
-]
-directnessMatch: [
-  "Evidence.variableDefinition"
-]
-synthesisType: [
-  "Evidence"
-]
-studyType: [
-  "Evidence"
-]
-statistic: [
-  "Evidence"
-]
-distribution: [
-  "Evidence"
-]
-certainty: [
-  "Evidence"
-]
-rating: [
-  "Evidence.certainty"
-]
-rater: [
-  "Evidence.certainty"
-]
-subcomponent: [
-  "Evidence.certainty"
 ]
 characteristic: [
   "EvidenceReport.subject",
@@ -3437,37 +2228,13 @@ exclude: [
   "Group.characteristic",
   "ValueSet.compose"
 ]
-focusReference: [
-  "EvidenceReport.section"
-]
-entryClassifier: [
-  "EvidenceReport.section"
-]
-entryReference: [
-  "EvidenceReport.section"
-]
-entryQuantity: [
-  "EvidenceReport.section"
-]
-shortTitle: [
-  "EvidenceVariable"
-]
-characteristicCombination: [
-  "EvidenceVariable"
-]
 definition[x]: [
   "EvidenceVariable.characteristic",
   "PlanDefinition.action"
 ]
-timeFromStart: [
-  "EvidenceVariable.characteristic"
-]
 range: [
   "EvidenceVariable.characteristic.timeFromStart",
   "ObservationDefinition.qualifiedValue"
-]
-groupMeasure: [
-  "EvidenceVariable.characteristic"
 ]
 handling: [
   "EvidenceVariable",
@@ -3490,72 +2257,18 @@ versionId: [
   "ExampleScenario.instance.version",
   "ExampleScenario.instance.containedInstance"
 ]
-containedInstance: [
-  "ExampleScenario.instance"
-]
 process: [
   "ExampleScenario",
   "ExampleScenario.process.step"
-]
-preConditions: [
-  "ExampleScenario.process"
-]
-postConditions: [
-  "ExampleScenario.process"
 ]
 step: [
   "ExampleScenario.process",
   "ExampleScenario.process.step.alternative"
 ]
-pause: [
-  "ExampleScenario.process.step"
-]
-initiator: [
-  "ExampleScenario.process.step.operation"
-]
-initiatorActive: [
-  "ExampleScenario.process.step.operation"
-]
-receiverActive: [
-  "ExampleScenario.process.step.operation"
-]
-alternative: [
-  "ExampleScenario.process.step"
-]
-workflow: [
-  "ExampleScenario"
-]
-fundsReserveRequested: [
-  "ExplanationOfBenefit"
-]
-preAuthRefPeriod: [
-  "ExplanationOfBenefit"
-]
-precedence: [
-  "ExplanationOfBenefit"
-]
-benefitBalance: [
-  "ExplanationOfBenefit"
-]
-financial: [
-  "ExplanationOfBenefit.benefitBalance"
-]
 dataAbsentReason: [
   "FamilyMemberHistory",
   "Observation",
   "Observation.component"
-]
-sex: [
-  "FamilyMemberHistory"
-]
-born[x]: [
-  "FamilyMemberHistory"
-]
-age[x]: [
-  "FamilyMemberHistory"
-]
-estimatedAge: [
-  "FamilyMemberHistory"
 ]
 deceased[x]: [
   "FamilyMemberHistory",
@@ -3567,21 +2280,9 @@ contributedToDeath: [
   "FamilyMemberHistory.condition",
   "FamilyMemberHistory.procedure"
 ]
-performed[x]: [
-  "FamilyMemberHistory.procedure"
-]
-achievementStatus: [
-  "Goal"
-]
-continuous: [
-  "Goal"
-]
 detail[x]: [
   "Goal.target",
   "PlanDefinition.goal.target"
-]
-sliceName: [
-  "GraphDefinition.link"
 ]
 min: [
   "GraphDefinition.link",
@@ -3599,35 +2300,14 @@ params: [
   "GraphDefinition.link.target",
   "TestScript.setup.action.operation"
 ]
-managingEntity: [
-  "Group"
-]
 inactive: [
   "Group.member",
   "ValueSet.compose",
   "ValueSet.expansion.contains"
 ]
-requestIdentifier: [
-  "GuidanceResponse"
-]
-module[x]: [
-  "GuidanceResponse"
-]
-evaluationMessage: [
-  "GuidanceResponse"
-]
-outputParameters: [
-  "GuidanceResponse"
-]
 dataRequirement: [
   "GuidanceResponse",
   "Library"
-]
-providedBy: [
-  "HealthcareService"
-]
-extraDetails: [
-  "HealthcareService"
 ]
 photo: [
   "HealthcareService",
@@ -3641,15 +2321,9 @@ coverageArea: [
   "InsurancePlan",
   "InsurancePlan.plan"
 ]
-serviceProvisionCode: [
-  "HealthcareService"
-]
 eligibility: [
   "HealthcareService",
   "ResearchStudy.recruitment"
-]
-program: [
-  "HealthcareService"
 ]
 communication: [
   "HealthcareService",
@@ -3657,12 +2331,6 @@ communication: [
   "Person",
   "Practitioner",
   "RelatedPerson"
-]
-referralMethod: [
-  "HealthcareService"
-]
-appointmentRequired: [
-  "HealthcareService"
 ]
 availableTime: [
   "HealthcareService",
@@ -3699,9 +2367,6 @@ availabilityExceptions: [
   "Location",
   "PractitionerRole"
 ]
-numberOfSeries: [
-  "ImagingStudy"
-]
 numberOfInstances: [
   "ImagingStudy",
   "ImagingStudy.series"
@@ -3716,47 +2381,14 @@ uid: [
   "ImagingStudy.series",
   "ImagingStudy.series.instance"
 ]
-laterality: [
-  "ImagingStudy.series"
-]
-sopClass: [
-  "ImagingStudy.series.instance"
-]
 route: [
   "Immunization",
   "MedicationAdministration.dosage",
   "MedicinalProductDefinition.administrableProduct"
 ]
-doseQuantity: [
-  "Immunization"
-]
-isSubpotent: [
-  "Immunization"
-]
-subpotentReason: [
-  "Immunization"
-]
-education: [
-  "Immunization"
-]
-documentType: [
-  "Immunization.education"
-]
-presentationDate: [
-  "Immunization.education"
-]
-programEligibility: [
-  "Immunization"
-]
-fundingSource: [
-  "Immunization"
-]
 reported: [
   "Immunization.reaction",
   "MedicationRequest"
-]
-protocolApplied: [
-  "Immunization"
 ]
 targetDisease: [
   "Immunization.protocolApplied",
@@ -3773,81 +2405,18 @@ seriesDoses: [
   "ImmunizationEvaluation",
   "ImmunizationRecommendation.recommendation"
 ]
-immunizationEvent: [
-  "ImmunizationEvaluation"
-]
-doseStatus: [
-  "ImmunizationEvaluation"
-]
-doseStatusReason: [
-  "ImmunizationEvaluation"
-]
-recommendation: [
-  "ImmunizationRecommendation"
-]
-contraindicatedVaccineCode: [
-  "ImmunizationRecommendation.recommendation"
-]
-forecastStatus: [
-  "ImmunizationRecommendation.recommendation"
-]
-forecastReason: [
-  "ImmunizationRecommendation.recommendation"
-]
-dateCriterion: [
-  "ImmunizationRecommendation.recommendation"
-]
-supportingImmunization: [
-  "ImmunizationRecommendation.recommendation"
-]
-supportingPatientInformation: [
-  "ImmunizationRecommendation.recommendation"
-]
 packageId: [
   "ImplementationGuide",
   "ImplementationGuide.dependsOn"
-]
-license: [
-  "ImplementationGuide"
-]
-global: [
-  "ImplementationGuide"
-]
-grouping: [
-  "ImplementationGuide.definition"
 ]
 example[x]: [
   "ImplementationGuide.definition.resource",
   "ImplementationGuide.manifest.resource"
 ]
-groupingId: [
-  "ImplementationGuide.definition.resource"
-]
 page: [
   "ImplementationGuide.definition",
   "ImplementationGuide.definition.page",
   "ImplementationGuide.manifest"
-]
-name[x]: [
-  "ImplementationGuide.definition.page"
-]
-generation: [
-  "ImplementationGuide.definition.page"
-]
-template: [
-  "ImplementationGuide.definition"
-]
-manifest: [
-  "ImplementationGuide"
-]
-rendering: [
-  "ImplementationGuide.manifest"
-]
-relativePath: [
-  "ImplementationGuide.manifest.resource"
-]
-anchor: [
-  "ImplementationGuide.manifest.page"
 ]
 other: [
   "ImplementationGuide.manifest",
@@ -3858,24 +2427,6 @@ strength: [
   "Ingredient.specifiedSubstance",
   "OperationDefinition.parameter.binding"
 ]
-presentation[x]: [
-  "Ingredient.substance.strength"
-]
-presentationHighLimit[x]: [
-  "Ingredient.substance.strength"
-]
-presentationText: [
-  "Ingredient.substance.strength"
-]
-concentration[x]: [
-  "Ingredient.substance.strength"
-]
-concentrationHighLimit[x]: [
-  "Ingredient.substance.strength"
-]
-concentrationText: [
-  "Ingredient.substance.strength"
-]
 measurementPoint: [
   "Ingredient.substance.strength",
   "Ingredient.substance.strength.referenceStrength"
@@ -3885,25 +2436,10 @@ country: [
   "Ingredient.substance.strength.referenceStrength",
   "MedicinalProductDefinition.name.countryLanguage"
 ]
-referenceStrength: [
-  "Ingredient.substance.strength"
-]
 strength[x]: [
   "Ingredient.substance.strength.referenceStrength",
   "Medication.ingredient",
   "MedicationKnowledge.ingredient"
-]
-strengthHighLimit[x]: [
-  "Ingredient.substance.strength.referenceStrength"
-]
-specifiedSubstance: [
-  "Ingredient"
-]
-ownedBy: [
-  "InsurancePlan"
-]
-administeredBy: [
-  "InsurancePlan"
 ]
 requirement: [
   "InsurancePlan.coverage.benefit",
@@ -3911,121 +2447,16 @@ requirement: [
   "PlanDefinition.action.output",
   "SpecimenDefinition.typeTested"
 ]
-limit: [
-  "InsurancePlan.coverage.benefit"
-]
-generalCost: [
-  "InsurancePlan.plan"
-]
-groupSize: [
-  "InsurancePlan.plan.generalCost"
-]
 cost: [
   "InsurancePlan.plan.generalCost",
   "InsurancePlan.plan.specificCost.benefit",
   "MedicationKnowledge",
   "MedicationKnowledge.packaging"
 ]
-specificCost: [
-  "InsurancePlan.plan"
-]
-qualifiers: [
-  "InsurancePlan.plan.specificCost.benefit.cost"
-]
-countType: [
-  "InventoryReport"
-]
-operationType: [
-  "InventoryReport"
-]
-operationTypeReason: [
-  "InventoryReport"
-]
-reportedDateTime: [
-  "InventoryReport"
-]
-reportingPeriod: [
-  "InventoryReport"
-]
-inventoryListing: [
-  "InventoryReport"
-]
-itemStatus: [
-  "InventoryReport.inventoryListing"
-]
-countingDateTime: [
-  "InventoryReport.inventoryListing"
-]
-items: [
-  "InventoryReport.inventoryListing"
-]
-lot: [
-  "InventoryReport.inventoryListing.items"
-]
-serial: [
-  "InventoryReport.inventoryListing.items"
-]
 expiry: [
   "InventoryReport.inventoryListing.items",
   "NutritionProduct.instance",
   "Substance.instance"
-]
-manufacturingDate: [
-  "InventoryReport.inventoryListing.items"
-]
-cancelledReason: [
-  "Invoice"
-]
-lineItem: [
-  "Invoice"
-]
-chargeItem[x]: [
-  "Invoice.lineItem"
-]
-totalPriceComponent: [
-  "Invoice"
-]
-totalNet: [
-  "Invoice"
-]
-totalGross: [
-  "Invoice"
-]
-paymentTerms: [
-  "Invoice"
-]
-flag: [
-  "List.entry"
-]
-deleted: [
-  "List.entry"
-]
-position: [
-  "Location"
-]
-longitude: [
-  "Location.position"
-]
-latitude: [
-  "Location.position"
-]
-altitude: [
-  "Location.position"
-]
-hoursOfOperation: [
-  "Location"
-]
-openingTime: [
-  "Location.hoursOfOperation"
-]
-closingTime: [
-  "Location.hoursOfOperation"
-]
-manufacturedDoseForm: [
-  "ManufacturedItemDefinition"
-]
-disclaimer: [
-  "Measure"
 ]
 scoring: [
   "Measure",
@@ -4036,29 +2467,14 @@ scoringUnit: [
   "Measure",
   "Measure.group"
 ]
-compositeScoring: [
-  "Measure"
-]
-riskAdjustment: [
-  "Measure"
-]
-rateAggregation: [
-  "Measure"
-]
 rationale: [
   "Measure",
   "RiskAssessment.prediction"
-]
-clinicalRecommendationStatement: [
-  "Measure"
 ]
 improvementNotation: [
   "Measure",
   "Measure.group",
   "MeasureReport"
-]
-guidance: [
-  "Measure"
 ]
 criteria: [
   "Measure.group.population",
@@ -4066,24 +2482,9 @@ criteria: [
   "Measure.group.stratifier.component",
   "Measure.supplementalData"
 ]
-inputPopulationId: [
-  "Measure.group.population"
-]
-aggregateMethod: [
-  "Measure.group.population"
-]
 stratifier: [
   "Measure.group",
   "MeasureReport.group"
-]
-supplementalData: [
-  "Measure"
-]
-dataUpdateType: [
-  "MeasureReport"
-]
-reportingVendor: [
-  "MeasureReport"
 ]
 subjectResults: [
   "MeasureReport.group.population",
@@ -4093,12 +2494,6 @@ measureScore[x]: [
   "MeasureReport.group",
   "MeasureReport.group.stratifier.stratum"
 ]
-stratum: [
-  "MeasureReport.group.stratifier"
-]
-evaluatedResource: [
-  "MeasureReport"
-]
 doseForm: [
   "Medication",
   "MedicationKnowledge"
@@ -4107,24 +2502,9 @@ isActive: [
   "Medication.ingredient",
   "MedicationKnowledge.ingredient"
 ]
-batch: [
-  "Medication"
-]
-dose: [
-  "MedicationAdministration.dosage"
-]
 rate[x]: [
   "MedicationAdministration.dosage",
   "NutritionOrder.enteralFormula.administration"
-]
-authorizingPrescription: [
-  "MedicationDispense"
-]
-daysSupply: [
-  "MedicationDispense"
-]
-whenPrepared: [
-  "MedicationDispense"
 ]
 renderedDosageInstruction: [
   "MedicationDispense",
@@ -4140,12 +2520,6 @@ substitution: [
   "MedicationKnowledge.regulatory",
   "MedicationRequest"
 ]
-wasSubstituted: [
-  "MedicationDispense.substitution"
-]
-responsibleParty: [
-  "MedicationDispense.substitution"
-]
 detectedIssue: [
   "MedicationDispense",
   "MedicationRequest"
@@ -4154,69 +2528,9 @@ synonym: [
   "MedicationKnowledge",
   "SubstanceDefinition.name"
 ]
-relatedMedicationKnowledge: [
-  "MedicationKnowledge"
-]
-associatedMedication: [
-  "MedicationKnowledge"
-]
-associatedDefinition: [
-  "MedicationKnowledge"
-]
-productType: [
-  "MedicationKnowledge"
-]
-monograph: [
-  "MedicationKnowledge"
-]
-preparationInstruction: [
-  "MedicationKnowledge"
-]
-intendedRoute: [
-  "MedicationKnowledge"
-]
 effectiveDate: [
   "MedicationKnowledge.cost",
   "MedicinalProductDefinition.operation"
-]
-cost[x]: [
-  "MedicationKnowledge.cost"
-]
-monitoringProgram: [
-  "MedicationKnowledge"
-]
-indicationGuideline: [
-  "MedicationKnowledge"
-]
-dosingGuideline: [
-  "MedicationKnowledge.indicationGuideline"
-]
-treatmentIntent: [
-  "MedicationKnowledge.indicationGuideline.dosingGuideline"
-]
-administrationTreatment: [
-  "MedicationKnowledge.indicationGuideline.dosingGuideline"
-]
-patientCharacteristic: [
-  "MedicationKnowledge.indicationGuideline.dosingGuideline"
-]
-medicineClassification: [
-  "MedicationKnowledge"
-]
-drugCharacteristic: [
-  "MedicationKnowledge"
-]
-clinicalUseIssue: [
-  "MedicationKnowledge"
-]
-regulatory: [
-  "MedicationKnowledge"
-]
-regulatoryAuthority: [
-  "MedicationKnowledge.regulatory"
-]
-allowed: [
-  "MedicationKnowledge.regulatory.substitution"
 ]
 schedule: [
   "MedicationKnowledge.regulatory",
@@ -4226,98 +2540,26 @@ schedule: [
   "NutritionOrder.enteralFormula.administration",
   "Slot"
 ]
-maxDispense: [
-  "MedicationKnowledge.regulatory"
-]
-kineticCharacteristic: [
-  "MedicationKnowledge"
-]
-courseOfTherapyType: [
-  "MedicationRequest"
-]
-dispenseRequest: [
-  "MedicationRequest"
-]
-initialFill: [
-  "MedicationRequest.dispenseRequest"
-]
-dispenseInterval: [
-  "MedicationRequest.dispenseRequest"
-]
 validityPeriod: [
   "MedicationRequest.dispenseRequest",
   "RegulatedAuthorization"
-]
-numberOfRepeatsAllowed: [
-  "MedicationRequest.dispenseRequest"
-]
-expectedSupplyDuration: [
-  "MedicationRequest.dispenseRequest"
-]
-dispenserInstruction: [
-  "MedicationRequest.dispenseRequest"
-]
-doseAdministrationAid: [
-  "MedicationRequest.dispenseRequest"
-]
-priorPrescription: [
-  "MedicationRequest"
-]
-adherence: [
-  "MedicationUsage"
-]
-combinedPharmaceuticalDoseForm: [
-  "MedicinalProductDefinition"
 ]
 legalStatusOfSupply: [
   "MedicinalProductDefinition",
   "PackagedProductDefinition"
 ]
-additionalMonitoringIndicator: [
-  "MedicinalProductDefinition"
-]
-specialMeasures: [
-  "MedicinalProductDefinition"
-]
-paediatricUseIndicator: [
-  "MedicinalProductDefinition"
-]
 marketingStatus: [
   "MedicinalProductDefinition",
   "PackagedProductDefinition"
-]
-impurity: [
-  "MedicinalProductDefinition"
 ]
 attachedDocument: [
   "MedicinalProductDefinition",
   "PackagedProductDefinition",
   "RegulatedAuthorization"
 ]
-masterFile: [
-  "MedicinalProductDefinition"
-]
-clinicalTrial: [
-  "MedicinalProductDefinition"
-]
 productName: [
   "MedicinalProductDefinition.name",
   "NutritionOrder.supplement"
-]
-namePart: [
-  "MedicinalProductDefinition.name"
-]
-countryLanguage: [
-  "MedicinalProductDefinition.name"
-]
-crossReference: [
-  "MedicinalProductDefinition"
-]
-authorization: [
-  "MedicinalProductDefinition.operation"
-]
-confidentialityIndicator: [
-  "MedicinalProductDefinition.operation"
 ]
 package: [
   "MedicinalProductDefinition",
@@ -4325,180 +2567,33 @@ package: [
   "PackagedProductDefinition",
   "PackagedProductDefinition.package"
 ]
-size[x]: [
-  "MedicinalProductDefinition.package"
-]
-administrableProduct: [
-  "MedicinalProductDefinition"
-]
 base: [
   "MessageDefinition",
   "OperationDefinition",
   "SearchParameter",
   "VisionPrescription.lensSpecification.prism"
 ]
-responseRequired: [
-  "MessageDefinition"
-]
-allowedResponse: [
-  "MessageDefinition"
-]
 message: [
   "MessageDefinition.allowedResponse",
   "TestReport.setup.action.operation",
   "TestReport.setup.action.assert"
 ]
-situation: [
-  "MessageDefinition.allowedResponse"
-]
-graph: [
-  "MessageDefinition"
-]
 details: [
   "MessageHeader.response",
   "OperationOutcome.issue"
 ]
-coordinateSystem: [
-  "MolecularSequence"
-]
-referenceSeq: [
-  "MolecularSequence"
-]
-chromosome: [
-  "MolecularSequence.referenceSeq"
-]
-genomeBuild: [
-  "MolecularSequence.referenceSeq"
-]
 orientation: [
   "MolecularSequence.referenceSeq",
   "SubstancePolymer.repeat.repeatUnit"
-]
-referenceSeqId: [
-  "MolecularSequence.referenceSeq"
-]
-referenceSeqPointer: [
-  "MolecularSequence.referenceSeq"
-]
-referenceSeqString: [
-  "MolecularSequence.referenceSeq"
-]
-strand: [
-  "MolecularSequence.referenceSeq"
-]
-windowStart: [
-  "MolecularSequence.referenceSeq"
-]
-windowEnd: [
-  "MolecularSequence.referenceSeq"
-]
-variant: [
-  "MolecularSequence"
-]
-observedAllele: [
-  "MolecularSequence.variant"
-]
-referenceAllele: [
-  "MolecularSequence.variant"
-]
-cigar: [
-  "MolecularSequence.variant"
-]
-variantPointer: [
-  "MolecularSequence.variant"
-]
-observedSeq: [
-  "MolecularSequence"
-]
-quality: [
-  "MolecularSequence"
-]
-standardSequence: [
-  "MolecularSequence.quality"
 ]
 score: [
   "MolecularSequence.quality",
   "MolecularSequence.quality.roc",
   "TestReport"
 ]
-truthTP: [
-  "MolecularSequence.quality"
-]
-queryTP: [
-  "MolecularSequence.quality"
-]
-truthFN: [
-  "MolecularSequence.quality"
-]
-queryFP: [
-  "MolecularSequence.quality"
-]
-gtFP: [
-  "MolecularSequence.quality"
-]
 precision: [
   "MolecularSequence.quality",
   "MolecularSequence.quality.roc"
-]
-recall: [
-  "MolecularSequence.quality"
-]
-fScore: [
-  "MolecularSequence.quality"
-]
-roc: [
-  "MolecularSequence.quality"
-]
-numTP: [
-  "MolecularSequence.quality.roc"
-]
-numFP: [
-  "MolecularSequence.quality.roc"
-]
-numFN: [
-  "MolecularSequence.quality.roc"
-]
-sensitivity: [
-  "MolecularSequence.quality.roc"
-]
-fMeasure: [
-  "MolecularSequence.quality.roc"
-]
-readCoverage: [
-  "MolecularSequence"
-]
-repository: [
-  "MolecularSequence"
-]
-datasetId: [
-  "MolecularSequence.repository"
-]
-variantsetId: [
-  "MolecularSequence.repository"
-]
-readsetId: [
-  "MolecularSequence.repository"
-]
-pointer: [
-  "MolecularSequence"
-]
-structureVariant: [
-  "MolecularSequence"
-]
-variantType: [
-  "MolecularSequence.structureVariant"
-]
-exact: [
-  "MolecularSequence.structureVariant"
-]
-outer: [
-  "MolecularSequence.structureVariant"
-]
-inner: [
-  "MolecularSequence.structureVariant"
-]
-uniqueId: [
-  "NamingSystem"
 ]
 preferred: [
   "NamingSystem.uniqueId",
@@ -4507,93 +2602,15 @@ preferred: [
   "RelatedPerson.communication",
   "SubstanceDefinition.name"
 ]
-authoritative: [
-  "NamingSystem.uniqueId"
-]
-consumedItem: [
-  "NutritionIntake"
-]
-rate: [
-  "NutritionIntake.consumedItem"
-]
-notConsumed: [
-  "NutritionIntake.consumedItem"
-]
-notConsumedReason: [
-  "NutritionIntake.consumedItem"
-]
-ingredientLabel: [
-  "NutritionIntake"
-]
 nutrient: [
   "NutritionIntake.ingredientLabel",
   "NutritionOrder.oralDiet",
   "NutritionProduct"
 ]
-allergyIntolerance: [
-  "NutritionOrder"
-]
-foodPreferenceModifier: [
-  "NutritionOrder"
-]
-excludeFoodModifier: [
-  "NutritionOrder"
-]
-oralDiet: [
-  "NutritionOrder"
-]
-texture: [
-  "NutritionOrder.oralDiet"
-]
-foodType: [
-  "NutritionOrder.oralDiet.texture"
-]
-fluidConsistencyType: [
-  "NutritionOrder.oralDiet"
-]
 instruction: [
   "NutritionOrder.oralDiet",
   "NutritionOrder.supplement",
   "SpecimenDefinition.typeTested.handling"
-]
-supplement: [
-  "NutritionOrder"
-]
-enteralFormula: [
-  "NutritionOrder"
-]
-baseFormulaProductName: [
-  "NutritionOrder.enteralFormula"
-]
-additiveProductName: [
-  "NutritionOrder.enteralFormula"
-]
-caloricDensity: [
-  "NutritionOrder.enteralFormula"
-]
-routeofAdministration: [
-  "NutritionOrder.enteralFormula"
-]
-administration: [
-  "NutritionOrder.enteralFormula"
-]
-maxVolumeToDeliver: [
-  "NutritionOrder.enteralFormula"
-]
-administrationInstruction: [
-  "NutritionOrder.enteralFormula"
-]
-knownAllergen: [
-  "NutritionProduct"
-]
-productCharacteristic: [
-  "NutritionProduct"
-]
-useBy: [
-  "NutritionProduct.instance"
-]
-instantiates[x]: [
-  "Observation"
 ]
 interpretation: [
   "Observation",
@@ -4632,24 +2649,9 @@ permittedDataType: [
   "ObservationDefinition",
   "ObservationDefinition.component"
 ]
-multipleResultsAllowed: [
-  "ObservationDefinition"
-]
-preferredReportName: [
-  "ObservationDefinition"
-]
 quantitativeDetails: [
   "ObservationDefinition",
   "ObservationDefinition.component"
-]
-customaryUnit: [
-  "ObservationDefinition.quantitativeDetails"
-]
-conversionFactor: [
-  "ObservationDefinition.quantitativeDetails"
-]
-decimalPrecision: [
-  "ObservationDefinition.quantitativeDetails"
 ]
 qualifiedValue: [
   "ObservationDefinition",
@@ -4663,78 +2665,15 @@ gender: [
   "Practitioner",
   "RelatedPerson"
 ]
-gestationalAge: [
-  "ObservationDefinition.qualifiedValue"
-]
-rangeCategory: [
-  "ObservationDefinition.qualifiedValue"
-]
-validCodedValueSet: [
-  "ObservationDefinition.qualifiedValue"
-]
-normalCodedValueSet: [
-  "ObservationDefinition.qualifiedValue"
-]
-abnormalCodedValueSet: [
-  "ObservationDefinition.qualifiedValue"
-]
-criticalCodedValueSet: [
-  "ObservationDefinition.qualifiedValue"
-]
-affectsState: [
-  "OperationDefinition"
-]
-inputProfile: [
-  "OperationDefinition"
-]
-outputProfile: [
-  "OperationDefinition"
-]
-targetProfile: [
-  "OperationDefinition.parameter"
-]
-searchType: [
-  "OperationDefinition.parameter"
-]
-binding: [
-  "OperationDefinition.parameter"
-]
-referencedFrom: [
-  "OperationDefinition.parameter"
-]
 sourceId: [
   "OperationDefinition.parameter.referencedFrom",
   "TestScript.variable",
   "TestScript.setup.action.operation",
   "TestScript.setup.action.assert"
 ]
-overload: [
-  "OperationDefinition"
-]
-parameterName: [
-  "OperationDefinition.overload"
-]
-diagnostics: [
-  "OperationOutcome.issue"
-]
-participatingOrganization: [
-  "OrganizationAffiliation"
-]
 healthcareService: [
   "OrganizationAffiliation",
   "PractitionerRole"
-]
-containedItemQuantity: [
-  "PackagedProductDefinition"
-]
-copackagedIndicator: [
-  "PackagedProductDefinition"
-]
-alternateMaterial: [
-  "PackagedProductDefinition.package"
-]
-containedItem: [
-  "PackagedProductDefinition.package"
 ]
 amount[x]: [
   "PackagedProductDefinition.package.containedItem",
@@ -4753,60 +2692,6 @@ maritalStatus: [
   "Patient",
   "Person"
 ]
-multipleBirth[x]: [
-  "Patient"
-]
-generalPractitioner: [
-  "Patient"
-]
-paymentStatus: [
-  "PaymentNotice"
-]
-paymentAmount: [
-  "PaymentReconciliation"
-]
-paymentIdentifier: [
-  "PaymentReconciliation"
-]
-predecessor: [
-  "PaymentReconciliation.detail"
-]
-submitter: [
-  "PaymentReconciliation.detail"
-]
-assertionDate: [
-  "Permission"
-]
-validity: [
-  "Permission"
-]
-dataScope: [
-  "Permission"
-]
-processingActivity: [
-  "Permission"
-]
-partyReference: [
-  "Permission.processingActivity"
-]
-partyCodeableConcept: [
-  "Permission.processingActivity"
-]
-grounds: [
-  "Permission.justification"
-]
-usageLimitations: [
-  "Permission"
-]
-assurance: [
-  "Person.link"
-]
-due: [
-  "PlanDefinition.goal.target"
-]
-option: [
-  "PlanDefinition.actor"
-]
 prefix: [
   "PlanDefinition.action",
   "Questionnaire.item",
@@ -4815,9 +2700,6 @@ prefix: [
 textEquivalent: [
   "PlanDefinition.action",
   "RequestGroup.action"
-]
-goalId: [
-  "PlanDefinition.action"
 ]
 input: [
   "PlanDefinition.action",
@@ -4865,95 +2747,8 @@ cardinalityBehavior: [
   "PlanDefinition.action",
   "RequestGroup.action"
 ]
-practitioner: [
-  "PractitionerRole"
-]
-report: [
-  "Procedure"
-]
-complication: [
-  "Procedure"
-]
-complicationDetail: [
-  "Procedure"
-]
-followUp: [
-  "Procedure"
-]
-focalDevice: [
-  "Procedure"
-]
-manipulated: [
-  "Procedure.focalDevice"
-]
-used: [
-  "Procedure"
-]
-subjectType: [
-  "Questionnaire"
-]
-enableWhen: [
-  "Questionnaire.item"
-]
-question: [
-  "Questionnaire.item.enableWhen"
-]
-answer[x]: [
-  "Questionnaire.item.enableWhen"
-]
-enableBehavior: [
-  "Questionnaire.item"
-]
-disabledDisplay: [
-  "Questionnaire.item"
-]
-repeats: [
-  "Questionnaire.item"
-]
-readOnly: [
-  "Questionnaire.item"
-]
-maxLength: [
-  "Questionnaire.item"
-]
-answerConstraint: [
-  "Questionnaire.item"
-]
-answerValueSet: [
-  "Questionnaire.item"
-]
-answerOption: [
-  "Questionnaire.item"
-]
-initialSelected: [
-  "Questionnaire.item.answerOption"
-]
-initial: [
-  "Questionnaire.item"
-]
-region: [
-  "RegulatedAuthorization"
-]
-relatedDate: [
-  "RegulatedAuthorization"
-]
 date[x]: [
   "RegulatedAuthorization.relatedDate",
-  "RegulatedAuthorization.case"
-]
-jurisdictionalAuthorization: [
-  "RegulatedAuthorization"
-]
-holder: [
-  "RegulatedAuthorization"
-]
-regulator: [
-  "RegulatedAuthorization"
-]
-case: [
-  "RegulatedAuthorization"
-]
-application: [
   "RegulatedAuthorization.case"
 ]
 label: [
@@ -4961,114 +2756,9 @@ label: [
   "TestScript.setup.action.operation",
   "TestScript.setup.action.assert"
 ]
-primaryPurposeType: [
-  "ResearchStudy"
-]
 phase: [
   "ResearchStudy",
   "TestScript.scope"
-]
-focusType: [
-  "ResearchStudy.focus"
-]
-keyword: [
-  "ResearchStudy"
-]
-descriptionSummary: [
-  "ResearchStudy"
-]
-associatedParty: [
-  "ResearchStudy"
-]
-targetNumber: [
-  "ResearchStudy.recruitment"
-]
-actualNumber: [
-  "ResearchStudy.recruitment"
-]
-comparisonGroup: [
-  "ResearchStudy"
-]
-identifier[x]: [
-  "ResearchStudy.comparisonGroup"
-]
-intendedExposure: [
-  "ResearchStudy.comparisonGroup"
-]
-observedGroup: [
-  "ResearchStudy.comparisonGroup"
-]
-objective: [
-  "ResearchStudy"
-]
-outcomeMeasure: [
-  "ResearchStudy"
-]
-startDate: [
-  "ResearchSubject.progress"
-]
-endDate: [
-  "ResearchSubject.progress"
-]
-assignedArm: [
-  "ResearchSubject"
-]
-actualArm: [
-  "ResearchSubject"
-]
-consent: [
-  "ResearchSubject"
-]
-prediction: [
-  "RiskAssessment"
-]
-probability[x]: [
-  "RiskAssessment.prediction"
-]
-qualitativeRisk: [
-  "RiskAssessment.prediction"
-]
-relativeRisk: [
-  "RiskAssessment.prediction"
-]
-when[x]: [
-  "RiskAssessment.prediction"
-]
-xpath: [
-  "SearchParameter"
-]
-xpathUsage: [
-  "SearchParameter"
-]
-multipleOr: [
-  "SearchParameter"
-]
-multipleAnd: [
-  "SearchParameter"
-]
-comparator: [
-  "SearchParameter"
-]
-chain: [
-  "SearchParameter"
-]
-requisition: [
-  "ServiceRequest"
-]
-orderDetail: [
-  "ServiceRequest"
-]
-quantity[x]: [
-  "ServiceRequest"
-]
-asNeeded[x]: [
-  "ServiceRequest"
-]
-overbooked: [
-  "Slot"
-]
-fastingStatus[x]: [
-  "Specimen.collection"
 ]
 container: [
   "Specimen",
@@ -5078,76 +2768,13 @@ capacity: [
   "Specimen.container",
   "SpecimenDefinition.typeTested.container"
 ]
-specimenQuantity: [
-  "Specimen.container"
-]
 additive[x]: [
   "Specimen.container",
   "SpecimenDefinition.typeTested.container.additive"
 ]
-typeCollected: [
-  "SpecimenDefinition"
-]
-patientPreparation: [
-  "SpecimenDefinition"
-]
-timeAspect: [
-  "SpecimenDefinition"
-]
-typeTested: [
-  "SpecimenDefinition"
-]
-isDerived: [
-  "SpecimenDefinition.typeTested"
-]
-preference: [
-  "SpecimenDefinition.typeTested"
-]
-cap: [
-  "SpecimenDefinition.typeTested.container"
-]
-minimumVolume[x]: [
-  "SpecimenDefinition.typeTested.container"
-]
-preparation: [
-  "SpecimenDefinition.typeTested.container"
-]
-retentionTime: [
-  "SpecimenDefinition.typeTested"
-]
-singleUse: [
-  "SpecimenDefinition.typeTested"
-]
-rejectionCriterion: [
-  "SpecimenDefinition.typeTested"
-]
-temperatureQualifier: [
-  "SpecimenDefinition.typeTested.handling"
-]
-temperatureRange: [
-  "SpecimenDefinition.typeTested.handling"
-]
-maxDuration: [
-  "SpecimenDefinition.typeTested.handling"
-]
-testingDestination: [
-  "SpecimenDefinition.typeTested"
-]
 structure: [
   "StructureMap",
   "SubstanceDefinition"
-]
-import: [
-  "StructureMap"
-]
-extends: [
-  "StructureMap.group"
-]
-typeMode: [
-  "StructureMap.group"
-]
-defaultValue[x]: [
-  "StructureMap.group.rule.source"
 ]
 listMode: [
   "StructureMap.group.rule.source",
@@ -5159,18 +2786,6 @@ variable: [
   "StructureMap.group.rule.dependent",
   "TestScript"
 ]
-check: [
-  "StructureMap.group.rule.source"
-]
-logMessage: [
-  "StructureMap.group.rule.source"
-]
-listRuleId: [
-  "StructureMap.group.rule.target"
-]
-filterBy: [
-  "Subscription"
-]
 searchParamName: [
   "Subscription.filterBy",
   "SubscriptionTopic.resourceTrigger.canFilterBy"
@@ -5178,63 +2793,6 @@ searchParamName: [
 searchModifier: [
   "Subscription.filterBy",
   "SubscriptionTopic.resourceTrigger.canFilterBy"
-]
-channelType: [
-  "Subscription"
-]
-heartbeatPeriod: [
-  "Subscription"
-]
-timeout: [
-  "Subscription"
-]
-notificationUrlLocation: [
-  "Subscription"
-]
-maxCount: [
-  "Subscription"
-]
-eventsSinceSubscriptionStart: [
-  "SubscriptionStatus"
-]
-eventsInNotification: [
-  "SubscriptionStatus"
-]
-resourceTrigger: [
-  "SubscriptionTopic"
-]
-methodCriteria: [
-  "SubscriptionTopic.resourceTrigger"
-]
-queryCriteria: [
-  "SubscriptionTopic.resourceTrigger"
-]
-resultForCreate: [
-  "SubscriptionTopic.resourceTrigger.queryCriteria"
-]
-current: [
-  "SubscriptionTopic.resourceTrigger.queryCriteria"
-]
-resultForDelete: [
-  "SubscriptionTopic.resourceTrigger.queryCriteria"
-]
-requireBoth: [
-  "SubscriptionTopic.resourceTrigger.queryCriteria"
-]
-fhirPathCriteria: [
-  "SubscriptionTopic.resourceTrigger"
-]
-canFilterBy: [
-  "SubscriptionTopic.resourceTrigger"
-]
-substance[x]: [
-  "Substance.ingredient"
-]
-grade: [
-  "SubstanceDefinition"
-]
-moiety: [
-  "SubstanceDefinition"
 ]
 stereochemistry: [
   "SubstanceDefinition.moiety",
@@ -5253,26 +2811,8 @@ amountType: [
   "SubstanceDefinition.relationship",
   "SubstanceReferenceInformation.target"
 ]
-parameters: [
-  "SubstanceDefinition.property"
-]
-definingSubstance: [
-  "SubstanceDefinition.property"
-]
-referenceInformation: [
-  "SubstanceDefinition"
-]
 molecularWeight: [
   "SubstanceDefinition",
-  "SubstanceDefinition.structure"
-]
-molecularFormulaByMoiety: [
-  "SubstanceDefinition.structure"
-]
-technique: [
-  "SubstanceDefinition.structure"
-]
-sourceDocument: [
   "SubstanceDefinition.structure"
 ]
 representation: [
@@ -5285,30 +2825,9 @@ translation: [
   "TerminologyCapabilities",
   "TerminologyCapabilities.closure"
 ]
-official: [
-  "SubstanceDefinition.name"
-]
-substanceDefinition[x]: [
-  "SubstanceDefinition.relationship"
-]
 isDefining: [
   "SubstanceDefinition.relationship",
   "SubstancePolymer.monomerSet.startingMaterial"
-]
-amountRatioHighLimit: [
-  "SubstanceDefinition.relationship"
-]
-nucleicAcid: [
-  "SubstanceDefinition"
-]
-polymer: [
-  "SubstanceDefinition"
-]
-protein: [
-  "SubstanceDefinition"
-]
-sourceMaterial: [
-  "SubstanceDefinition"
 ]
 genus: [
   "SubstanceDefinition.sourceMaterial",
@@ -5330,12 +2849,6 @@ numberOfSubunits: [
   "SubstanceNucleicAcid",
   "SubstanceProtein"
 ]
-areaOfHybridisation: [
-  "SubstanceNucleicAcid"
-]
-oligoNucleotideType: [
-  "SubstanceNucleicAcid"
-]
 subunit: [
   "SubstanceNucleicAcid",
   "SubstanceNucleicAcid.subunit",
@@ -5346,250 +2859,25 @@ sequenceAttachment: [
   "SubstanceNucleicAcid.subunit",
   "SubstanceProtein.subunit"
 ]
-fivePrime: [
-  "SubstanceNucleicAcid.subunit"
-]
-threePrime: [
-  "SubstanceNucleicAcid.subunit"
-]
-linkage: [
-  "SubstanceNucleicAcid.subunit"
-]
-connectivity: [
-  "SubstanceNucleicAcid.subunit.linkage"
-]
 residueSite: [
   "SubstanceNucleicAcid.subunit.linkage",
   "SubstanceNucleicAcid.subunit.sugar"
-]
-sugar: [
-  "SubstanceNucleicAcid.subunit"
-]
-geometry: [
-  "SubstancePolymer"
-]
-copolymerConnectivity: [
-  "SubstancePolymer"
-]
-modification: [
-  "SubstancePolymer"
-]
-monomerSet: [
-  "SubstancePolymer"
-]
-ratioType: [
-  "SubstancePolymer.monomerSet"
-]
-startingMaterial: [
-  "SubstancePolymer.monomerSet"
-]
-repeat: [
-  "SubstancePolymer"
-]
-averageMolecularFormula: [
-  "SubstancePolymer.repeat"
-]
-repeatUnitAmountType: [
-  "SubstancePolymer.repeat"
-]
-repeatUnit: [
-  "SubstancePolymer.repeat"
-]
-degreeOfPolymerisation: [
-  "SubstancePolymer.repeat.repeatUnit"
-]
-average: [
-  "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation"
-]
-structuralRepresentation: [
-  "SubstancePolymer.repeat.repeatUnit"
-]
-disulfideLinkage: [
-  "SubstanceProtein"
-]
-nTerminalModificationId: [
-  "SubstanceProtein.subunit"
-]
-nTerminalModification: [
-  "SubstanceProtein.subunit"
-]
-cTerminalModificationId: [
-  "SubstanceProtein.subunit"
-]
-cTerminalModification: [
-  "SubstanceProtein.subunit"
 ]
 gene: [
   "SubstanceReferenceInformation",
   "SubstanceReferenceInformation.gene"
 ]
-geneSequenceOrigin: [
-  "SubstanceReferenceInformation.gene"
-]
-geneElement: [
-  "SubstanceReferenceInformation"
-]
 organism: [
   "SubstanceReferenceInformation.target",
   "SubstanceSourceMaterial"
-]
-organismType: [
-  "SubstanceReferenceInformation.target"
-]
-sourceMaterialClass: [
-  "SubstanceSourceMaterial"
-]
-sourceMaterialType: [
-  "SubstanceSourceMaterial"
-]
-sourceMaterialState: [
-  "SubstanceSourceMaterial"
-]
-organismId: [
-  "SubstanceSourceMaterial"
-]
-organismName: [
-  "SubstanceSourceMaterial"
-]
-parentSubstanceId: [
-  "SubstanceSourceMaterial"
-]
-parentSubstanceName: [
-  "SubstanceSourceMaterial"
-]
-geographicalLocation: [
-  "SubstanceSourceMaterial"
-]
-developmentStage: [
-  "SubstanceSourceMaterial"
-]
-fractionDescription: [
-  "SubstanceSourceMaterial"
-]
-fraction: [
-  "SubstanceSourceMaterial.fractionDescription"
-]
-materialType: [
-  "SubstanceSourceMaterial.fractionDescription"
-]
-family: [
-  "SubstanceSourceMaterial.organism"
-]
-intraspecificType: [
-  "SubstanceSourceMaterial.organism"
-]
-intraspecificDescription: [
-  "SubstanceSourceMaterial.organism"
-]
-authorType: [
-  "SubstanceSourceMaterial.organism.author"
-]
-authorDescription: [
-  "SubstanceSourceMaterial.organism.author"
-]
-hybrid: [
-  "SubstanceSourceMaterial.organism"
-]
-maternalOrganismId: [
-  "SubstanceSourceMaterial.organism.hybrid"
-]
-maternalOrganismName: [
-  "SubstanceSourceMaterial.organism.hybrid"
-]
-paternalOrganismId: [
-  "SubstanceSourceMaterial.organism.hybrid"
-]
-paternalOrganismName: [
-  "SubstanceSourceMaterial.organism.hybrid"
-]
-hybridType: [
-  "SubstanceSourceMaterial.organism.hybrid"
-]
-organismGeneral: [
-  "SubstanceSourceMaterial.organism"
-]
-kingdom: [
-  "SubstanceSourceMaterial.organism.organismGeneral"
-]
-phylum: [
-  "SubstanceSourceMaterial.organism.organismGeneral"
-]
-partDescription: [
-  "SubstanceSourceMaterial"
-]
-partLocation: [
-  "SubstanceSourceMaterial.partDescription"
-]
-suppliedItem: [
-  "SupplyDelivery"
-]
-deliverFrom: [
-  "SupplyRequest"
-]
-deliverTo: [
-  "SupplyRequest"
-]
-businessStatus: [
-  "Task"
-]
-lastModified: [
-  "Task"
-]
-restriction: [
-  "Task"
-]
-repetitions: [
-  "Task.restriction"
-]
-codeSystem: [
-  "TerminologyCapabilities"
-]
-isDefault: [
-  "TerminologyCapabilities.codeSystem.version"
 ]
 op: [
   "TerminologyCapabilities.codeSystem.version.filter",
   "ValueSet.compose.include.filter"
 ]
-subsumption: [
-  "TerminologyCapabilities.codeSystem"
-]
 expansion: [
   "TerminologyCapabilities",
   "ValueSet"
-]
-hierarchical: [
-  "TerminologyCapabilities.expansion"
-]
-paging: [
-  "TerminologyCapabilities.expansion"
-]
-incomplete: [
-  "TerminologyCapabilities.expansion"
-]
-textFilter: [
-  "TerminologyCapabilities.expansion"
-]
-codeSearch: [
-  "TerminologyCapabilities"
-]
-validateCode: [
-  "TerminologyCapabilities"
-]
-translations: [
-  "TerminologyCapabilities.validateCode"
-]
-needsMap: [
-  "TerminologyCapabilities.translation"
-]
-closure: [
-  "TerminologyCapabilities"
-]
-testScript: [
-  "TestReport"
-]
-tester: [
-  "TestReport"
 ]
 setup: [
   "TestReport",
@@ -5613,219 +2901,5674 @@ index: [
   "TestScript.origin",
   "TestScript.destination"
 ]
-metadata: [
-  "TestScript"
-]
-validated: [
-  "TestScript.metadata.capability"
-]
-capabilities: [
-  "TestScript.metadata.capability"
-]
-artifact: [
-  "TestScript.scope"
-]
-conformance: [
-  "TestScript.scope"
-]
-fixture: [
-  "TestScript"
-]
-autocreate: [
-  "TestScript.fixture"
-]
-autodelete: [
-  "TestScript.fixture"
-]
-defaultValue: [
-  "TestScript.variable"
-]
 headerField: [
   "TestScript.variable",
   "TestScript.setup.action.assert"
-]
-hint: [
-  "TestScript.variable"
-]
-accept: [
-  "TestScript.setup.action.operation"
-]
-encodeRequestUrl: [
-  "TestScript.setup.action.operation"
-]
-requestHeader: [
-  "TestScript.setup.action.operation"
-]
-field: [
-  "TestScript.setup.action.operation.requestHeader"
-]
-requestId: [
-  "TestScript.setup.action.operation"
-]
-responseId: [
-  "TestScript.setup.action.operation"
-]
-direction: [
-  "TestScript.setup.action.assert"
-]
-compareToSourceId: [
-  "TestScript.setup.action.assert"
-]
-compareToSourceExpression: [
-  "TestScript.setup.action.assert"
-]
-compareToSourcePath: [
-  "TestScript.setup.action.assert"
-]
-minimumId: [
-  "TestScript.setup.action.assert"
-]
-navigationLinks: [
-  "TestScript.setup.action.assert"
-]
-requestMethod: [
-  "TestScript.setup.action.assert"
-]
-requestURL: [
-  "TestScript.setup.action.assert"
-]
-responseCode: [
-  "TestScript.setup.action.assert"
-]
-stopTestOnFail: [
-  "TestScript.setup.action.assert"
-]
-validateProfileId: [
-  "TestScript.setup.action.assert"
-]
-warningOnly: [
-  "TestScript.setup.action.assert"
-]
-immutable: [
-  "ValueSet"
-]
-compose: [
-  "ValueSet"
-]
-include: [
-  "ValueSet.compose"
-]
-timestamp: [
-  "ValueSet.expansion"
-]
-offset: [
-  "ValueSet.expansion"
 ]
 contains: [
   "ValueSet.expansion",
   "ValueSet.expansion.contains"
 ]
-inclusionCriteria: [
-  "ValueSet.scope"
-]
-exclusionCriteria: [
-  "ValueSet.scope"
-]
-targetLocation: [
-  "VerificationResult"
-]
-need: [
-  "VerificationResult"
-]
-validationType: [
-  "VerificationResult"
-]
-validationProcess: [
-  "VerificationResult"
-]
-frequency: [
-  "VerificationResult"
-]
-lastPerformed: [
-  "VerificationResult"
-]
-nextScheduled: [
-  "VerificationResult"
-]
-failureAction: [
-  "VerificationResult"
-]
 communicationMethod: [
   "VerificationResult.primarySource",
   "VerificationResult.attestation"
 ]
-validationStatus: [
-  "VerificationResult.primarySource"
-]
-validationDate: [
-  "VerificationResult.primarySource"
-]
-canPushUpdates: [
-  "VerificationResult.primarySource"
-]
-pushTypeAvailable: [
-  "VerificationResult.primarySource"
-]
-attestation: [
-  "VerificationResult"
-]
-sourceIdentityCertificate: [
-  "VerificationResult.attestation"
-]
-proxyIdentityCertificate: [
-  "VerificationResult.attestation"
-]
-proxySignature: [
-  "VerificationResult.attestation"
-]
-sourceSignature: [
-  "VerificationResult.attestation"
-]
-validator: [
-  "VerificationResult"
-]
-identityCertificate: [
-  "VerificationResult.validator"
-]
-attestationSignature: [
-  "VerificationResult.validator"
-]
-lensSpecification: [
-  "VisionPrescription"
-]
-eye: [
-  "VisionPrescription.lensSpecification"
-]
-sphere: [
-  "VisionPrescription.lensSpecification"
-]
-cylinder: [
-  "VisionPrescription.lensSpecification"
-]
-axis: [
-  "VisionPrescription.lensSpecification"
-]
-prism: [
-  "VisionPrescription.lensSpecification"
-]
-add: [
-  "VisionPrescription.lensSpecification"
-]
-power: [
-  "VisionPrescription.lensSpecification"
-]
-backCurve: [
-  "VisionPrescription.lensSpecification"
-]
-diameter: [
-  "VisionPrescription.lensSpecification"
-]
-brand: [
-  "VisionPrescription.lensSpecification"
-]
 
 
 some mapped:
+identifier: {
+  "w5": [
+    [
+      "FiveWs.identifier",
+      "Account"
+    ],
+    [
+      "FiveWs.identifier",
+      "ActivityDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "AllergyIntolerance"
+    ],
+    [
+      "FiveWs.identifier",
+      "Appointment"
+    ],
+    [
+      "FiveWs.identifier",
+      "AppointmentResponse"
+    ],
+    [
+      "FiveWs.identifier",
+      "Basic"
+    ],
+    [
+      "FiveWs.identifier",
+      "BiologicallyDerivedProduct"
+    ],
+    [
+      "FiveWs.identifier",
+      "BodyStructure"
+    ],
+    [
+      "FiveWs.identifier",
+      "CanonicalResource"
+    ],
+    [
+      "FiveWs.identifier",
+      "CarePlan"
+    ],
+    [
+      "FiveWs.identifier",
+      "CareTeam"
+    ],
+    [
+      "FiveWs.identifier",
+      "ChargeItem"
+    ],
+    [
+      "FiveWs.identifier",
+      "ChargeItemDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "Citation"
+    ],
+    [
+      "FiveWs.identifier",
+      "Claim"
+    ],
+    [
+      "FiveWs.identifier",
+      "Claim.insurance"
+    ],
+    [
+      "FiveWs.identifier",
+      "ClaimResponse"
+    ],
+    [
+      "FiveWs.identifier",
+      "ClinicalImpression"
+    ],
+    [
+      "FiveWs.identifier",
+      "CodeSystem"
+    ],
+    [
+      "FiveWs.identifier",
+      "Communication"
+    ],
+    [
+      "FiveWs.identifier",
+      "CommunicationRequest"
+    ],
+    [
+      "FiveWs.identifier",
+      "Composition"
+    ],
+    [
+      "FiveWs.identifier",
+      "ConceptMap"
+    ],
+    [
+      "FiveWs.identifier",
+      "ConceptMap2"
+    ],
+    [
+      "FiveWs.identifier",
+      "Condition"
+    ],
+    [
+      "FiveWs.identifier",
+      "ConditionDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "Consent"
+    ],
+    [
+      "FiveWs.identifier",
+      "Coverage"
+    ],
+    [
+      "FiveWs.identifier",
+      "CoverageEligibilityRequest"
+    ],
+    [
+      "FiveWs.identifier",
+      "CoverageEligibilityResponse"
+    ],
+    [
+      "FiveWs.identifier",
+      "DetectedIssue"
+    ],
+    [
+      "FiveWs.identifier",
+      "Device"
+    ],
+    [
+      "FiveWs.identifier",
+      "DeviceDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "DeviceDispense"
+    ],
+    [
+      "FiveWs.identifier",
+      "DeviceMetric"
+    ],
+    [
+      "FiveWs.identifier",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.identifier",
+      "DeviceUsage"
+    ],
+    [
+      "FiveWs.identifier",
+      "DiagnosticReport"
+    ],
+    [
+      "FiveWs.identifier",
+      "DocumentManifest"
+    ],
+    [
+      "FiveWs.identifier",
+      "DocumentReference"
+    ],
+    [
+      "FiveWs.identifier",
+      "DocumentReference.content"
+    ],
+    [
+      "FiveWs.identifier",
+      "Encounter"
+    ],
+    [
+      "FiveWs.identifier",
+      "Endpoint"
+    ],
+    [
+      "FiveWs.identifier",
+      "EpisodeOfCare"
+    ],
+    [
+      "FiveWs.identifier",
+      "EventDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "Evidence"
+    ],
+    [
+      "FiveWs.identifier",
+      "EvidenceReport"
+    ],
+    [
+      "FiveWs.identifier",
+      "EvidenceVariable"
+    ],
+    [
+      "FiveWs.identifier",
+      "ExampleScenario"
+    ],
+    [
+      "FiveWs.identifier",
+      "ExplanationOfBenefit"
+    ],
+    [
+      "FiveWs.identifier",
+      "FamilyMemberHistory"
+    ],
+    [
+      "FiveWs.identifier",
+      "Flag"
+    ],
+    [
+      "FiveWs.identifier",
+      "Goal"
+    ],
+    [
+      "FiveWs.identifier",
+      "Group"
+    ],
+    [
+      "FiveWs.identifier",
+      "GuidanceResponse"
+    ],
+    [
+      "FiveWs.identifier",
+      "HealthcareService"
+    ],
+    [
+      "FiveWs.identifier",
+      "ImagingStudy"
+    ],
+    [
+      "FiveWs.identifier",
+      "Immunization"
+    ],
+    [
+      "FiveWs.identifier",
+      "ImmunizationEvaluation"
+    ],
+    [
+      "FiveWs.identifier",
+      "ImmunizationRecommendation"
+    ],
+    [
+      "FiveWs.identifier",
+      "InsurancePlan"
+    ],
+    [
+      "FiveWs.identifier",
+      "InsurancePlan.plan"
+    ],
+    [
+      "FiveWs.identifier",
+      "InventoryReport"
+    ],
+    [
+      "FiveWs.identifier",
+      "Invoice"
+    ],
+    [
+      "FiveWs.identifier",
+      "Library"
+    ],
+    [
+      "FiveWs.identifier",
+      "List"
+    ],
+    [
+      "FiveWs.identifier",
+      "Location"
+    ],
+    [
+      "FiveWs.identifier",
+      "Measure"
+    ],
+    [
+      "FiveWs.identifier",
+      "MeasureReport"
+    ],
+    [
+      "FiveWs.identifier",
+      "Medication"
+    ],
+    [
+      "FiveWs.identifier",
+      "MedicationAdministration"
+    ],
+    [
+      "FiveWs.identifier",
+      "MedicationDispense"
+    ],
+    [
+      "FiveWs.identifier",
+      "MedicationRequest"
+    ],
+    [
+      "FiveWs.identifier",
+      "MedicationUsage"
+    ],
+    [
+      "FiveWs.identifier",
+      "MessageDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "MolecularSequence"
+    ],
+    [
+      "FiveWs.identifier",
+      "NutritionIntake"
+    ],
+    [
+      "FiveWs.identifier",
+      "NutritionOrder"
+    ],
+    [
+      "FiveWs.identifier",
+      "Observation"
+    ],
+    [
+      "FiveWs.identifier",
+      "Organization"
+    ],
+    [
+      "FiveWs.identifier",
+      "OrganizationAffiliation"
+    ],
+    [
+      "FiveWs.identifier",
+      "Patient"
+    ],
+    [
+      "FiveWs.identifier",
+      "PaymentNotice"
+    ],
+    [
+      "FiveWs.identifier",
+      "PaymentReconciliation"
+    ],
+    [
+      "FiveWs.identifier",
+      "Person"
+    ],
+    [
+      "FiveWs.identifier",
+      "PlanDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "Practitioner"
+    ],
+    [
+      "FiveWs.identifier",
+      "PractitionerRole"
+    ],
+    [
+      "FiveWs.identifier",
+      "Procedure"
+    ],
+    [
+      "FiveWs.identifier",
+      "Questionnaire"
+    ],
+    [
+      "FiveWs.identifier",
+      "QuestionnaireResponse"
+    ],
+    [
+      "FiveWs.identifier",
+      "RelatedPerson"
+    ],
+    [
+      "FiveWs.identifier",
+      "RequestGroup"
+    ],
+    [
+      "FiveWs.identifier",
+      "ResearchStudy"
+    ],
+    [
+      "FiveWs.identifier",
+      "ResearchSubject"
+    ],
+    [
+      "FiveWs.identifier",
+      "RiskAssessment"
+    ],
+    [
+      "FiveWs.identifier",
+      "Schedule"
+    ],
+    [
+      "FiveWs.identifier",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.identifier",
+      "Slot"
+    ],
+    [
+      "FiveWs.identifier",
+      "Specimen"
+    ],
+    [
+      "FiveWs.identifier",
+      "StructureMap"
+    ],
+    [
+      "FiveWs.identifier",
+      "Subscription"
+    ],
+    [
+      "FiveWs.identifier",
+      "SubscriptionTopic"
+    ],
+    [
+      "FiveWs.identifier",
+      "Substance"
+    ],
+    [
+      "FiveWs.identifier",
+      "SupplyRequest"
+    ],
+    [
+      "FiveWs.identifier",
+      "Task"
+    ],
+    [
+      "FiveWs.identifier",
+      "TerminologyCapabilities"
+    ],
+    [
+      "FiveWs.identifier",
+      "TestReport"
+    ],
+    [
+      "FiveWs.identifier",
+      "TestScript"
+    ],
+    [
+      "FiveWs.identifier",
+      "ValueSet"
+    ],
+    [
+      "FiveWs.identifier",
+      "VisionPrescription"
+    ]
+  ],
+  "bare": [
+    "AdministrableProductDefinition",
+    "AdverseEvent",
+    "CatalogEntry",
+    "Citation.citedArtifact",
+    "Citation.citedArtifact.publicationForm.publishedIn",
+    "Citation.citedArtifact.contributorship.entry",
+    "Citation.citedArtifact.contributorship.entry.affiliationInfo",
+    "ClaimResponse.payment",
+    "ClinicalUseIssue",
+    "Contract",
+    "Contract.term",
+    "Contract.term.offer",
+    "Contract.term.asset.valuedItem",
+    "DeviceDefinition.packaging",
+    "DocumentManifest.related",
+    "EnrollmentRequest",
+    "EnrollmentResponse",
+    "ExplanationOfBenefit.payment",
+    "Ingredient",
+    "ManufacturedItemDefinition",
+    "MedicationKnowledge",
+    "MedicationKnowledge.packaging",
+    "MedicinalProductDefinition",
+    "MessageHeader.response",
+    "NutritionProduct.instance",
+    "ObservationDefinition",
+    "PackagedProductDefinition",
+    "PackagedProductDefinition.package",
+    "PaymentReconciliation.detail",
+    "Practitioner.qualification",
+    "RegulatedAuthorization",
+    "RegulatedAuthorization.case",
+    "Specimen.container",
+    "SpecimenDefinition",
+    "Substance.instance",
+    "SubstanceDefinition",
+    "SubstanceDefinition.moiety",
+    "SubstanceNucleicAcid.subunit.linkage",
+    "SubstanceNucleicAcid.subunit.sugar",
+    "SubstancePolymer",
+    "SupplyDelivery",
+    "ValueSet.expansion"
+  ]
+}
+status: {
+  "w5": [
+    [
+      "FiveWs.status",
+      "Account"
+    ],
+    [
+      "FiveWs.status",
+      "ActivityDefinition"
+    ],
+    [
+      "FiveWs.status",
+      "AdverseEvent"
+    ],
+    [
+      "FiveWs.status",
+      "Appointment"
+    ],
+    [
+      "FiveWs.status",
+      "CanonicalResource"
+    ],
+    [
+      "FiveWs.status",
+      "CapabilityStatement"
+    ],
+    [
+      "FiveWs.status",
+      "CapabilityStatement2"
+    ],
+    [
+      "FiveWs.status",
+      "CarePlan"
+    ],
+    [
+      "FiveWs.status",
+      "CareTeam"
+    ],
+    [
+      "FiveWs.status",
+      "ChargeItem"
+    ],
+    [
+      "FiveWs.status",
+      "ChargeItemDefinition"
+    ],
+    [
+      "FiveWs.status",
+      "Claim"
+    ],
+    [
+      "FiveWs.status",
+      "ClaimResponse"
+    ],
+    [
+      "FiveWs.status",
+      "ClinicalImpression"
+    ],
+    [
+      "FiveWs.status",
+      "CodeSystem"
+    ],
+    [
+      "FiveWs.status",
+      "Communication"
+    ],
+    [
+      "FiveWs.status",
+      "CommunicationRequest"
+    ],
+    [
+      "FiveWs.status",
+      "Composition"
+    ],
+    [
+      "FiveWs.status",
+      "ConceptMap"
+    ],
+    [
+      "FiveWs.status",
+      "ConceptMap2"
+    ],
+    [
+      "FiveWs.status",
+      "ConditionDefinition"
+    ],
+    [
+      "FiveWs.status",
+      "Consent"
+    ],
+    [
+      "FiveWs.status",
+      "Contract"
+    ],
+    [
+      "FiveWs.status",
+      "Coverage"
+    ],
+    [
+      "FiveWs.status",
+      "CoverageEligibilityRequest"
+    ],
+    [
+      "FiveWs.status",
+      "CoverageEligibilityResponse"
+    ],
+    [
+      "FiveWs.status",
+      "DetectedIssue"
+    ],
+    [
+      "FiveWs.status",
+      "Device"
+    ],
+    [
+      "FiveWs.status",
+      "DeviceDispense"
+    ],
+    [
+      "FiveWs.status",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.status",
+      "DeviceUsage"
+    ],
+    [
+      "FiveWs.status",
+      "DiagnosticReport"
+    ],
+    [
+      "FiveWs.status",
+      "DocumentManifest"
+    ],
+    [
+      "FiveWs.status",
+      "DocumentReference"
+    ],
+    [
+      "FiveWs.status",
+      "Encounter"
+    ],
+    [
+      "FiveWs.status",
+      "Endpoint"
+    ],
+    [
+      "FiveWs.status",
+      "EpisodeOfCare"
+    ],
+    [
+      "FiveWs.status",
+      "EventDefinition"
+    ],
+    [
+      "FiveWs.status",
+      "Evidence"
+    ],
+    [
+      "FiveWs.status",
+      "EvidenceReport"
+    ],
+    [
+      "FiveWs.status",
+      "EvidenceVariable"
+    ],
+    [
+      "FiveWs.status",
+      "ExampleScenario"
+    ],
+    [
+      "FiveWs.status",
+      "ExplanationOfBenefit"
+    ],
+    [
+      "FiveWs.status",
+      "FamilyMemberHistory"
+    ],
+    [
+      "FiveWs.status",
+      "Flag"
+    ],
+    [
+      "FiveWs.status",
+      "GraphDefinition"
+    ],
+    [
+      "FiveWs.status",
+      "GuidanceResponse"
+    ],
+    [
+      "FiveWs.status",
+      "ImagingStudy"
+    ],
+    [
+      "FiveWs.status",
+      "Immunization"
+    ],
+    [
+      "FiveWs.status",
+      "ImmunizationEvaluation"
+    ],
+    [
+      "FiveWs.status",
+      "ImplementationGuide"
+    ],
+    [
+      "FiveWs.status",
+      "InsurancePlan"
+    ],
+    [
+      "FiveWs.status",
+      "InventoryReport"
+    ],
+    [
+      "FiveWs.status",
+      "Invoice"
+    ],
+    [
+      "FiveWs.status",
+      "Library"
+    ],
+    [
+      "FiveWs.status",
+      "List"
+    ],
+    [
+      "FiveWs.status",
+      "Location"
+    ],
+    [
+      "FiveWs.status",
+      "Measure"
+    ],
+    [
+      "FiveWs.status",
+      "MeasureReport"
+    ],
+    [
+      "FiveWs.status",
+      "MedicationAdministration"
+    ],
+    [
+      "FiveWs.status",
+      "MedicationDispense"
+    ],
+    [
+      "FiveWs.status",
+      "MedicationRequest"
+    ],
+    [
+      "FiveWs.status",
+      "MedicationUsage"
+    ],
+    [
+      "FiveWs.status",
+      "MessageDefinition"
+    ],
+    [
+      "FiveWs.status",
+      "NamingSystem"
+    ],
+    [
+      "FiveWs.status",
+      "NutritionIntake"
+    ],
+    [
+      "FiveWs.status",
+      "NutritionOrder"
+    ],
+    [
+      "FiveWs.status",
+      "NutritionProduct"
+    ],
+    [
+      "FiveWs.status",
+      "Observation"
+    ],
+    [
+      "FiveWs.status",
+      "OperationDefinition"
+    ],
+    [
+      "FiveWs.status",
+      "PaymentNotice"
+    ],
+    [
+      "FiveWs.status",
+      "PaymentReconciliation"
+    ],
+    [
+      "FiveWs.status",
+      "PlanDefinition"
+    ],
+    [
+      "FiveWs.status",
+      "Procedure"
+    ],
+    [
+      "FiveWs.status",
+      "Questionnaire"
+    ],
+    [
+      "FiveWs.status",
+      "QuestionnaireResponse"
+    ],
+    [
+      "FiveWs.status",
+      "RequestGroup"
+    ],
+    [
+      "FiveWs.status",
+      "ResearchStudy"
+    ],
+    [
+      "FiveWs.status",
+      "ResearchSubject"
+    ],
+    [
+      "FiveWs.status",
+      "RiskAssessment"
+    ],
+    [
+      "FiveWs.status",
+      "SearchParameter"
+    ],
+    [
+      "FiveWs.status",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.status",
+      "Specimen"
+    ],
+    [
+      "FiveWs.status",
+      "StructureMap"
+    ],
+    [
+      "FiveWs.status",
+      "Subscription"
+    ],
+    [
+      "FiveWs.status",
+      "SubscriptionStatus"
+    ],
+    [
+      "FiveWs.status",
+      "SubscriptionTopic"
+    ],
+    [
+      "FiveWs.status",
+      "Substance"
+    ],
+    [
+      "FiveWs.status",
+      "SupplyRequest"
+    ],
+    [
+      "FiveWs.status",
+      "Task"
+    ],
+    [
+      "FiveWs.status",
+      "TerminologyCapabilities"
+    ],
+    [
+      "FiveWs.status",
+      "TestReport"
+    ],
+    [
+      "FiveWs.status",
+      "TestScript"
+    ],
+    [
+      "FiveWs.status",
+      "ValueSet"
+    ],
+    [
+      "FiveWs.status",
+      "VisionPrescription"
+    ]
+  ],
+  "bare": [
+    "AdministrableProductDefinition.property",
+    "Appointment.participant",
+    "BiologicallyDerivedProduct",
+    "CarePlan.activity.plannedActivityDetail",
+    "CatalogEntry",
+    "Citation",
+    "ClinicalUseIssue",
+    "Contract.term.action",
+    "Encounter.statusHistory",
+    "Encounter.location",
+    "EnrollmentRequest",
+    "EnrollmentResponse",
+    "EpisodeOfCare.statusHistory",
+    "Medication",
+    "MedicationKnowledge",
+    "MedicinalProductDefinition",
+    "ObservationDefinition",
+    "PackagedProductDefinition",
+    "Permission",
+    "RegulatedAuthorization",
+    "RegulatedAuthorization.case",
+    "Slot",
+    "SpecimenDefinition",
+    "SubstanceDefinition",
+    "SubstanceDefinition.code",
+    "SubstanceDefinition.name",
+    "SubstanceDefinition.name.official",
+    "SupplyDelivery",
+    "VerificationResult"
+  ]
+}
+type: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Account"
+    ],
+    [
+      "FiveWs.class",
+      "AllergyIntolerance"
+    ],
+    [
+      "FiveWs.what[x]",
+      "AuditEvent"
+    ],
+    [
+      "FiveWs.who",
+      "AuditEvent.agent"
+    ],
+    [
+      "FiveWs.where[x]",
+      "AuditEvent.agent.network"
+    ],
+    [
+      "FiveWs.witness",
+      "AuditEvent.source"
+    ],
+    [
+      "FiveWs.what[x]",
+      "AuditEvent.entity"
+    ],
+    [
+      "FiveWs.context",
+      "AuditEvent.entity.detail"
+    ],
+    [
+      "FiveWs.class",
+      "Claim"
+    ],
+    [
+      "FiveWs.class",
+      "ClaimResponse"
+    ],
+    [
+      "FiveWs.class",
+      "Composition"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Contract"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Contract.term"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Contract.term.offer"
+    ],
+    [
+      "FiveWs.actor",
+      "Contract.signer"
+    ],
+    [
+      "FiveWs.class",
+      "Coverage"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Device.deviceName"
+    ],
+    [
+      "FiveWs.what[x]",
+      "DeviceDefinition.deviceName"
+    ],
+    [
+      "FiveWs.class",
+      "DeviceMetric"
+    ],
+    [
+      "FiveWs.class",
+      "DocumentManifest"
+    ],
+    [
+      "FiveWs.what[x]",
+      "DocumentReference"
+    ],
+    [
+      "FiveWs.class",
+      "Encounter"
+    ],
+    [
+      "FiveWs.class",
+      "EpisodeOfCare"
+    ],
+    [
+      "FiveWs.class",
+      "ExplanationOfBenefit"
+    ],
+    [
+      "FiveWs.class",
+      "Group"
+    ],
+    [
+      "FiveWs.class",
+      "InsurancePlan"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Invoice"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Library"
+    ],
+    [
+      "FiveWs.class",
+      "Location"
+    ],
+    [
+      "FiveWs.class",
+      "MeasureReport"
+    ],
+    [
+      "FiveWs.what[x]",
+      "NutritionOrder.oralDiet"
+    ],
+    [
+      "FiveWs.what[x]",
+      "NutritionOrder.supplement"
+    ],
+    [
+      "FiveWs.class",
+      "Organization"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Specimen"
+    ],
+    [
+      "FiveWs.what[x]",
+      "SubscriptionStatus"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition.participant",
+    "AdministrableProductDefinition.property",
+    "Appointment.participant",
+    "CapabilityStatement.rest.resource",
+    "CapabilityStatement.rest.resource.searchParam",
+    "CapabilityStatement2.rest.resource",
+    "CapabilityStatement2.rest.resource.searchParam",
+    "CatalogEntry",
+    "ChargeItemDefinition.propertyGroup.priceComponent",
+    "Citation.classification",
+    "Citation.citedArtifact.title",
+    "Citation.citedArtifact.abstract",
+    "Citation.citedArtifact.part",
+    "Citation.citedArtifact.publicationForm.publishedIn",
+    "Citation.citedArtifact.webLocation",
+    "Citation.citedArtifact.classification",
+    "Citation.citedArtifact.contributorship.entry.contributionInstance",
+    "Citation.citedArtifact.contributorship.summary",
+    "Claim.payee",
+    "Claim.diagnosis",
+    "Claim.procedure",
+    "Claim.accident",
+    "ClaimResponse.payment",
+    "ClaimResponse.processNote",
+    "ClinicalUseIssue",
+    "ClinicalUseIssue.interaction",
+    "CodeSystem.property",
+    "Condition.stage",
+    "ConditionDefinition.precondition",
+    "Consent.provision",
+    "Contract.contentDefinition",
+    "Contract.term.asset",
+    "Contract.term.action",
+    "Coverage.class",
+    "Coverage.costToBeneficiary",
+    "Coverage.costToBeneficiary.exception",
+    "CoverageEligibilityResponse.insurance.item.benefit",
+    "Device",
+    "Device.version",
+    "Device.property",
+    "DeviceDefinition.classification",
+    "DeviceDefinition.packaging",
+    "DeviceDefinition.version",
+    "DeviceDefinition.capability",
+    "DeviceDefinition.property",
+    "DeviceDispense",
+    "DeviceMetric.calibration",
+    "Encounter.participant",
+    "Evidence.certainty",
+    "EvidenceReport",
+    "ExampleScenario.actor",
+    "ExampleScenario.process.step.operation",
+    "ExplanationOfBenefit.payee",
+    "ExplanationOfBenefit.diagnosis",
+    "ExplanationOfBenefit.procedure",
+    "ExplanationOfBenefit.accident",
+    "ExplanationOfBenefit.payment",
+    "ExplanationOfBenefit.processNote",
+    "ExplanationOfBenefit.benefitBalance.financial",
+    "GraphDefinition.link.target",
+    "HealthcareService",
+    "ImplementationGuide.global",
+    "InsurancePlan.coverage",
+    "InsurancePlan.coverage.benefit",
+    "InsurancePlan.plan",
+    "InsurancePlan.plan.generalCost",
+    "InsurancePlan.plan.specificCost.benefit",
+    "InsurancePlan.plan.specificCost.benefit.cost",
+    "Invoice.lineItem.priceComponent",
+    "Linkage.item",
+    "ManufacturedItemDefinition.property",
+    "Measure",
+    "Measure.group",
+    "MedicationDispense",
+    "MedicationDispense.substitution",
+    "MedicationKnowledge.relatedMedicationKnowledge",
+    "MedicationKnowledge.monograph",
+    "MedicationKnowledge.cost",
+    "MedicationKnowledge.monitoringProgram",
+    "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage",
+    "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic",
+    "MedicationKnowledge.medicineClassification",
+    "MedicationKnowledge.packaging",
+    "MedicationKnowledge.drugCharacteristic",
+    "MedicationKnowledge.regulatory.substitution",
+    "MedicationKnowledge.kineticCharacteristic",
+    "MedicinalProductDefinition",
+    "MedicinalProductDefinition.contact",
+    "MedicinalProductDefinition.name",
+    "MedicinalProductDefinition.name.namePart",
+    "MedicinalProductDefinition.crossReference",
+    "MedicinalProductDefinition.operation",
+    "MedicinalProductDefinition.package",
+    "MolecularSequence",
+    "MolecularSequence.quality",
+    "MolecularSequence.repository",
+    "NamingSystem",
+    "NamingSystem.uniqueId",
+    "NutritionIntake.consumedItem",
+    "NutritionProduct.productCharacteristic",
+    "Observation.referenceRange",
+    "OperationDefinition",
+    "OperationDefinition.parameter",
+    "PackagedProductDefinition",
+    "PackagedProductDefinition.package",
+    "PackagedProductDefinition.package.property",
+    "Patient.link",
+    "PaymentReconciliation.detail",
+    "PaymentReconciliation.processNote",
+    "PlanDefinition",
+    "PlanDefinition.actor.option",
+    "PlanDefinition.action.participant",
+    "PlanDefinition.action",
+    "Provenance.agent",
+    "Questionnaire.item",
+    "RegulatedAuthorization",
+    "RegulatedAuthorization.relatedDate",
+    "RegulatedAuthorization.case",
+    "RequestGroup.action.participant",
+    "RequestGroup.action",
+    "ResearchStudy.label",
+    "ResearchStudy.classification",
+    "ResearchStudy.comparisonGroup",
+    "ResearchStudy.objective",
+    "ResearchStudy.outcomeMeasure",
+    "ResearchStudy.webLocation",
+    "ResearchSubject.progress",
+    "SearchParameter",
+    "Specimen.container",
+    "SpecimenDefinition.typeTested",
+    "SpecimenDefinition.typeTested.container",
+    "StructureMap.group.input",
+    "StructureMap.group.rule.source",
+    "SubstanceDefinition.molecularWeight",
+    "SubstanceDefinition.structure.representation",
+    "SubstanceDefinition.name",
+    "SubstanceDefinition.relationship",
+    "SubstanceDefinition.sourceMaterial",
+    "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation",
+    "SubstancePolymer.repeat.repeatUnit.structuralRepresentation",
+    "SubstanceReferenceInformation.geneElement",
+    "SubstanceReferenceInformation.target",
+    "SupplyDelivery",
+    "Task.input",
+    "Task.output",
+    "TestReport.participant",
+    "TestScript.setup.action.operation",
+    "VerificationResult.primarySource"
+  ]
+}
+name: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Account"
+    ],
+    [
+      "FiveWs.who",
+      "AuditEvent.agent"
+    ],
+    [
+      "FiveWs.context",
+      "AuditEvent.entity"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Endpoint"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition",
+    "CanonicalResource",
+    "CapabilityStatement",
+    "CapabilityStatement.software",
+    "CapabilityStatement.rest.resource.searchParam",
+    "CapabilityStatement.rest.resource.operation",
+    "CapabilityStatement2",
+    "CapabilityStatement2.software",
+    "CapabilityStatement2.rest.resource.searchParam",
+    "CapabilityStatement2.rest.resource.operation",
+    "CareTeam",
+    "CatalogEntry",
+    "Citation",
+    "Citation.citedArtifact.contributorship.entry",
+    "CodeSystem",
+    "ConceptMap",
+    "ConceptMap2",
+    "ConditionDefinition",
+    "Contract",
+    "Coverage.class",
+    "CoverageEligibilityResponse.insurance.item",
+    "Device.deviceName",
+    "DeviceDefinition.deviceName",
+    "DeviceDefinition.packaging.distributor",
+    "EventDefinition",
+    "EvidenceVariable",
+    "EvidenceVariable.category",
+    "ExampleScenario",
+    "ExampleScenario.actor",
+    "ExampleScenario.instance",
+    "ExampleScenario.process.step.operation",
+    "ExplanationOfBenefit.benefitBalance",
+    "FamilyMemberHistory",
+    "GraphDefinition",
+    "Group",
+    "HealthcareService",
+    "ImplementationGuide",
+    "ImplementationGuide.definition.grouping",
+    "ImplementationGuide.definition.resource",
+    "ImplementationGuide.manifest.page",
+    "InsurancePlan",
+    "InsurancePlan.contact",
+    "Library",
+    "Location",
+    "Measure",
+    "MedicationKnowledge.monitoringProgram",
+    "MedicinalProductDefinition",
+    "MessageDefinition",
+    "MessageHeader.destination",
+    "MessageHeader.source",
+    "MolecularSequence.repository",
+    "NamingSystem",
+    "ObservationDefinition",
+    "OperationDefinition",
+    "OperationDefinition.parameter",
+    "Organization",
+    "Organization.contact",
+    "PackagedProductDefinition",
+    "Parameters.parameter",
+    "Patient",
+    "Patient.contact",
+    "Person",
+    "PlanDefinition",
+    "Practitioner",
+    "Questionnaire",
+    "RelatedPerson",
+    "ResearchStudy",
+    "ResearchStudy.associatedParty",
+    "ResearchStudy.comparisonGroup",
+    "ResearchStudy.objective",
+    "ResearchStudy.outcomeMeasure",
+    "SearchParameter",
+    "StructureMap",
+    "StructureMap.group",
+    "StructureMap.group.input",
+    "StructureMap.group.rule",
+    "StructureMap.group.rule.dependent",
+    "Subscription",
+    "SubstanceDefinition.moiety",
+    "SubstanceDefinition",
+    "SubstanceDefinition.name",
+    "SubstanceNucleicAcid.subunit.linkage",
+    "SubstanceNucleicAcid.subunit.sugar",
+    "TerminologyCapabilities",
+    "TerminologyCapabilities.software",
+    "TerminologyCapabilities.expansion.parameter",
+    "TestReport",
+    "TestReport.test",
+    "TestScript",
+    "TestScript.variable",
+    "TestScript.test",
+    "ValueSet",
+    "ValueSet.expansion.parameter"
+  ]
+}
+subject: {
+  "w5": [
+    [
+      "FiveWs.subject[x]",
+      "Account"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "AdverseEvent"
+    ],
+    [
+      "FiveWs.who",
+      "Appointment"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Basic"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "CarePlan"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "CareTeam"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "ChargeItem"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "ClinicalImpression"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Communication"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "CommunicationRequest"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Composition"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Condition"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Consent"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "DeviceDispense"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "DeviceUsage"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "DiagnosticReport"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "DocumentManifest"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "DocumentReference"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Encounter"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Flag"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Goal"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "GuidanceResponse"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "ImagingStudy"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Invoice"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "List"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "MeasureReport"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "MedicationAdministration"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "MedicationDispense"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "MedicationRequest"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "MedicationUsage"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "NutritionIntake"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Observation"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Procedure"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "QuestionnaireResponse"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "RequestGroup"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "RiskAssessment"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Specimen"
+    ]
+  ],
+  "bare": [
+    "AdministrableProductDefinition",
+    "ClinicalUseIssue",
+    "Contract",
+    "Contract.term.action",
+    "EvidenceReport",
+    "ObservationDefinition",
+    "PackagedProductDefinition",
+    "RegulatedAuthorization",
+    "ResearchSubject"
+  ]
+}
+priority: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Appointment"
+    ],
+    [
+      "FiveWs.grade",
+      "Communication"
+    ],
+    [
+      "FiveWs.grade",
+      "CommunicationRequest"
+    ],
+    [
+      "FiveWs.class",
+      "CoverageEligibilityRequest"
+    ],
+    [
+      "FiveWs.grade",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.grade",
+      "Encounter"
+    ],
+    [
+      "FiveWs.grade",
+      "Goal"
+    ],
+    [
+      "FiveWs.grade",
+      "MedicationRequest"
+    ],
+    [
+      "FiveWs.grade",
+      "RequestGroup"
+    ],
+    [
+      "FiveWs.grade",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.grade",
+      "SupplyRequest"
+    ],
+    [
+      "FiveWs.grade",
+      "Task"
+    ]
+  ],
+  "bare": [
+    "Account.coverage",
+    "ActivityDefinition",
+    "Claim",
+    "ExplanationOfBenefit",
+    "PlanDefinition.goal",
+    "PlanDefinition.action",
+    "RequestGroup.action"
+  ]
+}
+owner: {
+  "w5": [
+    [
+      "FiveWs.source",
+      "Device"
+    ],
+    [
+      "FiveWs.source",
+      "DeviceDefinition"
+    ],
+    [
+      "FiveWs.actor",
+      "Task"
+    ]
+  ],
+  "bare": [
+    "Account"
+  ]
+}
+description: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "BodyStructure"
+    ],
+    [
+      "FiveWs.what[x]",
+      "CarePlan"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Goal"
+    ]
+  ],
+  "bare": [
+    "Account",
+    "ActivityDefinition",
+    "AllergyIntolerance.reaction",
+    "Appointment",
+    "BiologicallyDerivedProduct.processing",
+    "BiologicallyDerivedProduct.manipulation",
+    "BiologicallyDerivedProduct.storage",
+    "CanonicalResource",
+    "CapabilityStatement",
+    "CapabilityStatement.implementation",
+    "CapabilityStatement.rest.security",
+    "CapabilityStatement2",
+    "CapabilityStatement2.implementation",
+    "CarePlan.activity.plannedActivityDetail",
+    "ChargeItemDefinition",
+    "ChargeItemDefinition.applicability",
+    "Citation",
+    "ClinicalImpression",
+    "ClinicalUseIssue",
+    "CodeSystem",
+    "CodeSystem.filter",
+    "CodeSystem.property",
+    "ConceptMap",
+    "ConceptMap2",
+    "ConditionDefinition",
+    "CoverageEligibilityResponse.insurance.item",
+    "DeviceDefinition.capability",
+    "DocumentManifest",
+    "DocumentReference",
+    "EventDefinition",
+    "Evidence",
+    "Evidence.variableDefinition",
+    "Evidence.certainty",
+    "EvidenceVariable",
+    "EvidenceVariable.characteristic",
+    "EvidenceVariable.characteristic.timeFromStart",
+    "ExampleScenario.actor",
+    "ExampleScenario.instance",
+    "ExampleScenario.instance.version",
+    "ExampleScenario.process",
+    "ExampleScenario.process.step.operation",
+    "ExampleScenario.process.step.alternative",
+    "ExplanationOfBenefit.benefitBalance",
+    "GraphDefinition",
+    "GraphDefinition.link",
+    "GraphDefinition.link.target.compartment",
+    "HealthcareService.notAvailable",
+    "ImagingStudy",
+    "ImagingStudy.series",
+    "ImmunizationEvaluation",
+    "ImmunizationRecommendation.recommendation",
+    "ImplementationGuide",
+    "ImplementationGuide.definition.grouping",
+    "ImplementationGuide.definition.resource",
+    "Ingredient",
+    "Library",
+    "Location",
+    "Measure",
+    "Measure.group",
+    "Measure.group.population",
+    "Measure.group.stratifier",
+    "Measure.group.stratifier.component",
+    "Measure.supplementalData",
+    "MedicinalProductDefinition",
+    "MessageDefinition",
+    "NamingSystem",
+    "ObservationDefinition",
+    "OperationDefinition",
+    "PackagedProductDefinition",
+    "PlanDefinition",
+    "PlanDefinition.goal",
+    "PlanDefinition.actor",
+    "PlanDefinition.action",
+    "PractitionerRole.notAvailable",
+    "Questionnaire",
+    "RegulatedAuthorization",
+    "RequestGroup.action",
+    "ResearchStudy",
+    "ResearchStudy.comparisonGroup",
+    "ResearchStudy.objective",
+    "ResearchStudy.outcomeMeasure",
+    "SearchParameter",
+    "Specimen.processing",
+    "Specimen.container",
+    "SpecimenDefinition",
+    "SpecimenDefinition.typeTested.container",
+    "StructureMap",
+    "SubscriptionTopic",
+    "SubscriptionTopic.resourceTrigger",
+    "Substance",
+    "SubstanceDefinition",
+    "Task",
+    "TerminologyCapabilities",
+    "TerminologyCapabilities.implementation",
+    "TestReport.test",
+    "TestScript",
+    "TestScript.metadata.link",
+    "TestScript.metadata.capability",
+    "TestScript.variable",
+    "TestScript.setup.action.operation",
+    "TestScript.setup.action.assert",
+    "TestScript.test",
+    "ValueSet"
+  ]
+}
+party: {
+  "w5": [
+    [
+      "FiveWs.witness",
+      "Composition.attester"
+    ],
+    [
+      "FiveWs.author",
+      "Contract.signer"
+    ],
+    [
+      "FiveWs.witness",
+      "DocumentReference.attester"
+    ]
+  ],
+  "bare": [
+    "Account.guarantor",
+    "Claim.payee",
+    "Contract.term.offer",
+    "ExplanationOfBenefit.payee",
+    "ResearchStudy.associatedParty"
+  ]
+}
+period: {
+  "w5": [
+    [
+      "FiveWs.done[x]",
+      "AuditEvent"
+    ],
+    [
+      "FiveWs.planned",
+      "CarePlan"
+    ],
+    [
+      "FiveWs.init",
+      "CareTeam"
+    ],
+    [
+      "FiveWs.done[x]",
+      "Coverage"
+    ],
+    [
+      "FiveWs.done[x]",
+      "Encounter"
+    ],
+    [
+      "FiveWs.done[x]",
+      "Endpoint"
+    ],
+    [
+      "FiveWs.init",
+      "EpisodeOfCare"
+    ],
+    [
+      "FiveWs.context",
+      "Flag"
+    ],
+    [
+      "FiveWs.done[x]",
+      "OrganizationAffiliation"
+    ],
+    [
+      "FiveWs.done[x]",
+      "PaymentReconciliation"
+    ],
+    [
+      "FiveWs.done[x]",
+      "PractitionerRole"
+    ],
+    [
+      "FiveWs.done[x]",
+      "RelatedPerson"
+    ],
+    [
+      "FiveWs.done[x]",
+      "ResearchStudy"
+    ]
+  ],
+  "bare": [
+    "Account.guarantor",
+    "Appointment.participant",
+    "Citation.statusDate",
+    "Citation.citedArtifact.statusDate",
+    "Composition.event",
+    "Consent.provision",
+    "Contract.term.asset",
+    "Coverage.costToBeneficiary.exception",
+    "DocumentReference",
+    "Encounter.statusHistory",
+    "Encounter.classHistory",
+    "Encounter.participant",
+    "Encounter.location",
+    "EpisodeOfCare.statusHistory",
+    "EvidenceReport.subject.characteristic",
+    "Group.characteristic",
+    "Group.member",
+    "InsurancePlan",
+    "MeasureReport",
+    "MedicationKnowledge.regulatory.maxDispense",
+    "NamingSystem.uniqueId",
+    "Patient.contact",
+    "Practitioner.qualification",
+    "ResearchStudy.statusDate",
+    "ResearchSubject",
+    "Task.restriction"
+  ]
+}
+url: {
+  "w5": [
+    [
+      "FiveWs.identifier",
+      "ActivityDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "CanonicalResource"
+    ],
+    [
+      "FiveWs.identifier",
+      "CapabilityStatement"
+    ],
+    [
+      "FiveWs.identifier",
+      "CapabilityStatement2"
+    ],
+    [
+      "FiveWs.identifier",
+      "ChargeItemDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "Citation"
+    ],
+    [
+      "FiveWs.identifier",
+      "CodeSystem"
+    ],
+    [
+      "FiveWs.identifier",
+      "ConceptMap"
+    ],
+    [
+      "FiveWs.identifier",
+      "ConceptMap2"
+    ],
+    [
+      "FiveWs.identifier",
+      "ConditionDefinition"
+    ],
+    [
+      "FiveWs.where[x]",
+      "Device"
+    ],
+    [
+      "FiveWs.identifier",
+      "EventDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "Evidence"
+    ],
+    [
+      "FiveWs.identifier",
+      "EvidenceReport"
+    ],
+    [
+      "FiveWs.identifier",
+      "EvidenceVariable"
+    ],
+    [
+      "FiveWs.identifier",
+      "ExampleScenario"
+    ],
+    [
+      "FiveWs.identifier",
+      "GraphDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "ImplementationGuide"
+    ],
+    [
+      "FiveWs.identifier",
+      "Library"
+    ],
+    [
+      "FiveWs.identifier",
+      "Measure"
+    ],
+    [
+      "FiveWs.identifier",
+      "MessageDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "NamingSystem"
+    ],
+    [
+      "FiveWs.identifier",
+      "OperationDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "PlanDefinition"
+    ],
+    [
+      "FiveWs.identifier",
+      "Questionnaire"
+    ],
+    [
+      "FiveWs.identifier",
+      "SearchParameter"
+    ],
+    [
+      "FiveWs.identifier",
+      "StructureMap"
+    ],
+    [
+      "FiveWs.identifier",
+      "SubscriptionTopic"
+    ],
+    [
+      "FiveWs.identifier",
+      "TerminologyCapabilities"
+    ],
+    [
+      "FiveWs.identifier",
+      "TestScript"
+    ],
+    [
+      "FiveWs.identifier",
+      "ValueSet"
+    ]
+  ],
+  "bare": [
+    "CapabilityStatement.implementation",
+    "CapabilityStatement2.implementation",
+    "Citation.citedArtifact.webLocation",
+    "ConceptMap.group.unmapped",
+    "ConceptMap2.group.unmapped",
+    "Contract",
+    "MolecularSequence.repository",
+    "ObservationDefinition",
+    "ResearchStudy",
+    "ResearchStudy.webLocation",
+    "SpecimenDefinition",
+    "StructureMap.structure",
+    "TerminologyCapabilities.implementation",
+    "TestScript.metadata.link",
+    "TestScript.setup.action.operation"
+  ]
+}
+version: {
+  "w5": [
+    [
+      "FiveWs.version",
+      "ActivityDefinition"
+    ],
+    [
+      "FiveWs.version",
+      "CanonicalResource"
+    ],
+    [
+      "FiveWs.version",
+      "CapabilityStatement"
+    ],
+    [
+      "FiveWs.version",
+      "CapabilityStatement2"
+    ],
+    [
+      "FiveWs.version",
+      "ChargeItemDefinition"
+    ],
+    [
+      "FiveWs.version",
+      "Citation"
+    ],
+    [
+      "FiveWs.version",
+      "CodeSystem"
+    ],
+    [
+      "FiveWs.version",
+      "ConceptMap"
+    ],
+    [
+      "FiveWs.version",
+      "ConceptMap2"
+    ],
+    [
+      "FiveWs.version",
+      "ConditionDefinition"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Device.specialization"
+    ],
+    [
+      "FiveWs.what[x]",
+      "DeviceDefinition.specialization"
+    ],
+    [
+      "FiveWs.version",
+      "EventDefinition"
+    ],
+    [
+      "FiveWs.version",
+      "Evidence"
+    ],
+    [
+      "FiveWs.version",
+      "EvidenceVariable"
+    ],
+    [
+      "FiveWs.version",
+      "ExampleScenario"
+    ],
+    [
+      "FiveWs.version",
+      "GraphDefinition"
+    ],
+    [
+      "FiveWs.version",
+      "ImplementationGuide"
+    ],
+    [
+      "FiveWs.version",
+      "Library"
+    ],
+    [
+      "FiveWs.version",
+      "Measure"
+    ],
+    [
+      "FiveWs.version",
+      "MessageDefinition"
+    ],
+    [
+      "FiveWs.version",
+      "NamingSystem"
+    ],
+    [
+      "FiveWs.version",
+      "OperationDefinition"
+    ],
+    [
+      "FiveWs.version",
+      "PlanDefinition"
+    ],
+    [
+      "FiveWs.version",
+      "Questionnaire"
+    ],
+    [
+      "FiveWs.version",
+      "SearchParameter"
+    ],
+    [
+      "FiveWs.version",
+      "StructureMap"
+    ],
+    [
+      "FiveWs.version",
+      "SubscriptionTopic"
+    ],
+    [
+      "FiveWs.version",
+      "TerminologyCapabilities"
+    ],
+    [
+      "FiveWs.version",
+      "TestScript"
+    ],
+    [
+      "FiveWs.version",
+      "ValueSet"
+    ]
+  ],
+  "bare": [
+    "CapabilityStatement.software",
+    "CapabilityStatement2.software",
+    "Citation.citedArtifact",
+    "Contract",
+    "Device",
+    "DeviceDefinition",
+    "ExampleScenario.instance",
+    "ImplementationGuide.dependsOn",
+    "MedicinalProductDefinition",
+    "MessageHeader.source",
+    "ObservationDefinition",
+    "ResearchStudy",
+    "SpecimenDefinition",
+    "SubstanceDefinition",
+    "TerminologyCapabilities.software",
+    "TerminologyCapabilities.codeSystem",
+    "ValueSet.compose.include",
+    "ValueSet.expansion.contains"
+  ]
+}
+experimental: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "ActivityDefinition"
+    ],
+    [
+      "FiveWs.class",
+      "CanonicalResource"
+    ],
+    [
+      "FiveWs.class",
+      "CapabilityStatement"
+    ],
+    [
+      "FiveWs.class",
+      "CapabilityStatement2"
+    ],
+    [
+      "FiveWs.class",
+      "ChargeItemDefinition"
+    ],
+    [
+      "FiveWs.class",
+      "Citation"
+    ],
+    [
+      "FiveWs.class",
+      "CodeSystem"
+    ],
+    [
+      "FiveWs.class",
+      "ConceptMap"
+    ],
+    [
+      "FiveWs.class",
+      "ConceptMap2"
+    ],
+    [
+      "FiveWs.class",
+      "ConditionDefinition"
+    ],
+    [
+      "FiveWs.class",
+      "EventDefinition"
+    ],
+    [
+      "FiveWs.class",
+      "ExampleScenario"
+    ],
+    [
+      "FiveWs.class",
+      "GraphDefinition"
+    ],
+    [
+      "FiveWs.class",
+      "ImplementationGuide"
+    ],
+    [
+      "FiveWs.class",
+      "Library"
+    ],
+    [
+      "FiveWs.class",
+      "Measure"
+    ],
+    [
+      "FiveWs.class",
+      "MessageDefinition"
+    ],
+    [
+      "FiveWs.class",
+      "OperationDefinition"
+    ],
+    [
+      "FiveWs.class",
+      "PlanDefinition"
+    ],
+    [
+      "FiveWs.class",
+      "Questionnaire"
+    ],
+    [
+      "FiveWs.class",
+      "SearchParameter"
+    ],
+    [
+      "FiveWs.class",
+      "StructureMap"
+    ],
+    [
+      "FiveWs.class",
+      "SubscriptionTopic"
+    ],
+    [
+      "FiveWs.class",
+      "TerminologyCapabilities"
+    ],
+    [
+      "FiveWs.class",
+      "TestScript"
+    ],
+    [
+      "FiveWs.class",
+      "ValueSet"
+    ]
+  ],
+  "bare": [
+    "ObservationDefinition",
+    "SpecimenDefinition"
+  ]
+}
+date: {
+  "w5": [
+    [
+      "FiveWs.recorded",
+      "ActivityDefinition"
+    ],
+    [
+      "FiveWs.recorded",
+      "CanonicalResource"
+    ],
+    [
+      "FiveWs.recorded",
+      "CapabilityStatement"
+    ],
+    [
+      "FiveWs.recorded",
+      "CapabilityStatement2"
+    ],
+    [
+      "FiveWs.recorded",
+      "ChargeItemDefinition"
+    ],
+    [
+      "FiveWs.recorded",
+      "Citation"
+    ],
+    [
+      "FiveWs.recorded",
+      "ClinicalImpression"
+    ],
+    [
+      "FiveWs.recorded",
+      "CodeSystem"
+    ],
+    [
+      "FiveWs.done[x]",
+      "Composition"
+    ],
+    [
+      "FiveWs.recorded",
+      "ConceptMap"
+    ],
+    [
+      "FiveWs.recorded",
+      "ConceptMap2"
+    ],
+    [
+      "FiveWs.recorded",
+      "ConditionDefinition"
+    ],
+    [
+      "FiveWs.recorded",
+      "DocumentReference"
+    ],
+    [
+      "FiveWs.recorded",
+      "EventDefinition"
+    ],
+    [
+      "FiveWs.recorded",
+      "Evidence"
+    ],
+    [
+      "FiveWs.recorded",
+      "EvidenceVariable"
+    ],
+    [
+      "FiveWs.recorded",
+      "ExampleScenario"
+    ],
+    [
+      "FiveWs.recorded",
+      "FamilyMemberHistory"
+    ],
+    [
+      "FiveWs.recorded",
+      "GraphDefinition"
+    ],
+    [
+      "FiveWs.init",
+      "ImmunizationEvaluation"
+    ],
+    [
+      "FiveWs.recorded",
+      "ImplementationGuide"
+    ],
+    [
+      "FiveWs.done[x]",
+      "Invoice"
+    ],
+    [
+      "FiveWs.recorded",
+      "Library"
+    ],
+    [
+      "FiveWs.recorded",
+      "List"
+    ],
+    [
+      "FiveWs.recorded",
+      "Measure"
+    ],
+    [
+      "FiveWs.recorded",
+      "MeasureReport"
+    ],
+    [
+      "FiveWs.recorded",
+      "MessageDefinition"
+    ],
+    [
+      "FiveWs.recorded",
+      "NamingSystem"
+    ],
+    [
+      "FiveWs.recorded",
+      "OperationDefinition"
+    ],
+    [
+      "FiveWs.recorded",
+      "PlanDefinition"
+    ],
+    [
+      "FiveWs.recorded",
+      "Questionnaire"
+    ],
+    [
+      "FiveWs.recorded",
+      "SearchParameter"
+    ],
+    [
+      "FiveWs.recorded",
+      "StructureMap"
+    ],
+    [
+      "FiveWs.recorded",
+      "SubscriptionTopic"
+    ],
+    [
+      "FiveWs.recorded",
+      "TerminologyCapabilities"
+    ],
+    [
+      "FiveWs.recorded",
+      "TestScript"
+    ],
+    [
+      "FiveWs.recorded",
+      "ValueSet"
+    ]
+  ],
+  "bare": [
+    "Citation.citedArtifact.publicationForm.periodicRelease.dateOfPublication",
+    "Claim.procedure",
+    "Claim.accident",
+    "ClaimResponse.payment",
+    "DetectedIssue.mitigation",
+    "ExplanationOfBenefit.procedure",
+    "ExplanationOfBenefit.accident",
+    "ExplanationOfBenefit.payment",
+    "Immunization.reaction",
+    "ImmunizationRecommendation",
+    "List.entry",
+    "ObservationDefinition",
+    "PaymentReconciliation.detail",
+    "ResearchStudy",
+    "SpecimenDefinition",
+    "SubstanceDefinition.name.official",
+    "VerificationResult.attestation"
+  ]
+}
+publisher: {
+  "w5": [
+    [
+      "FiveWs.witness",
+      "ActivityDefinition"
+    ],
+    [
+      "FiveWs.witness",
+      "CanonicalResource"
+    ],
+    [
+      "FiveWs.witness",
+      "CapabilityStatement"
+    ],
+    [
+      "FiveWs.witness",
+      "CapabilityStatement2"
+    ],
+    [
+      "FiveWs.witness",
+      "ChargeItemDefinition"
+    ],
+    [
+      "FiveWs.witness",
+      "Citation"
+    ],
+    [
+      "FiveWs.witness",
+      "CodeSystem"
+    ],
+    [
+      "FiveWs.witness",
+      "ConceptMap"
+    ],
+    [
+      "FiveWs.witness",
+      "ConceptMap2"
+    ],
+    [
+      "FiveWs.witness",
+      "ConditionDefinition"
+    ],
+    [
+      "FiveWs.witness",
+      "EventDefinition"
+    ],
+    [
+      "FiveWs.witness",
+      "Evidence"
+    ],
+    [
+      "FiveWs.witness",
+      "EvidenceReport"
+    ],
+    [
+      "FiveWs.witness",
+      "EvidenceVariable"
+    ],
+    [
+      "FiveWs.witness",
+      "ExampleScenario"
+    ],
+    [
+      "FiveWs.witness",
+      "GraphDefinition"
+    ],
+    [
+      "FiveWs.witness",
+      "ImplementationGuide"
+    ],
+    [
+      "FiveWs.witness",
+      "Library"
+    ],
+    [
+      "FiveWs.witness",
+      "Measure"
+    ],
+    [
+      "FiveWs.witness",
+      "MessageDefinition"
+    ],
+    [
+      "FiveWs.witness",
+      "NamingSystem"
+    ],
+    [
+      "FiveWs.witness",
+      "OperationDefinition"
+    ],
+    [
+      "FiveWs.witness",
+      "PlanDefinition"
+    ],
+    [
+      "FiveWs.witness",
+      "Questionnaire"
+    ],
+    [
+      "FiveWs.witness",
+      "SearchParameter"
+    ],
+    [
+      "FiveWs.witness",
+      "StructureMap"
+    ],
+    [
+      "FiveWs.author",
+      "SubscriptionTopic"
+    ],
+    [
+      "FiveWs.witness",
+      "TerminologyCapabilities"
+    ],
+    [
+      "FiveWs.witness",
+      "TestScript"
+    ],
+    [
+      "FiveWs.witness",
+      "ValueSet"
+    ]
+  ],
+  "bare": [
+    "Citation.citedArtifact.publicationForm.publishedIn",
+    "Citation.citedArtifact.classification.whoClassified",
+    "Contract.contentDefinition",
+    "ObservationDefinition",
+    "SpecimenDefinition"
+  ]
+}
+contact: {
+  "w5": [
+    [
+      "FiveWs.source",
+      "Device"
+    ],
+    [
+      "FiveWs.source",
+      "DeviceDefinition"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Subscription"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition",
+    "CanonicalResource",
+    "CapabilityStatement",
+    "CapabilityStatement2",
+    "ChargeItemDefinition",
+    "Citation",
+    "CodeSystem",
+    "ConceptMap",
+    "ConceptMap2",
+    "ConditionDefinition",
+    "Endpoint",
+    "EventDefinition",
+    "Evidence",
+    "EvidenceReport",
+    "EvidenceVariable",
+    "ExampleScenario",
+    "GraphDefinition",
+    "ImplementationGuide",
+    "InsurancePlan",
+    "Library",
+    "Measure",
+    "MedicinalProductDefinition",
+    "MedicinalProductDefinition.contact",
+    "MessageDefinition",
+    "MessageHeader.source",
+    "NamingSystem",
+    "ObservationDefinition",
+    "OperationDefinition",
+    "Organization",
+    "Patient",
+    "PlanDefinition",
+    "Questionnaire",
+    "ResearchStudy",
+    "SearchParameter",
+    "SpecimenDefinition",
+    "StructureMap",
+    "SubscriptionTopic",
+    "TerminologyCapabilities",
+    "TestScript",
+    "ValueSet"
+  ]
+}
+purpose: {
+  "w5": [
+    [
+      "FiveWs.why[x]",
+      "ActivityDefinition"
+    ],
+    [
+      "FiveWs.why[x]",
+      "CanonicalResource"
+    ],
+    [
+      "FiveWs.why[x]",
+      "CapabilityStatement"
+    ],
+    [
+      "FiveWs.why[x]",
+      "CapabilityStatement2"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Citation"
+    ],
+    [
+      "FiveWs.why[x]",
+      "CodeSystem"
+    ],
+    [
+      "FiveWs.why[x]",
+      "ConceptMap"
+    ],
+    [
+      "FiveWs.why[x]",
+      "ConceptMap2"
+    ],
+    [
+      "FiveWs.class",
+      "CoverageEligibilityRequest"
+    ],
+    [
+      "FiveWs.class",
+      "CoverageEligibilityResponse"
+    ],
+    [
+      "FiveWs.why[x]",
+      "EventDefinition"
+    ],
+    [
+      "FiveWs.why[x]",
+      "ExampleScenario"
+    ],
+    [
+      "FiveWs.why[x]",
+      "GraphDefinition"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Library"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Measure"
+    ],
+    [
+      "FiveWs.why[x]",
+      "MessageDefinition"
+    ],
+    [
+      "FiveWs.why[x]",
+      "OperationDefinition"
+    ],
+    [
+      "FiveWs.why[x]",
+      "PlanDefinition"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Questionnaire"
+    ],
+    [
+      "FiveWs.why[x]",
+      "SearchParameter"
+    ],
+    [
+      "FiveWs.why[x]",
+      "StructureMap"
+    ],
+    [
+      "FiveWs.why[x]",
+      "SubscriptionTopic"
+    ],
+    [
+      "FiveWs.why[x]",
+      "TerminologyCapabilities"
+    ],
+    [
+      "FiveWs.why[x]",
+      "TestScript"
+    ],
+    [
+      "FiveWs.why[x]",
+      "ValueSet"
+    ]
+  ],
+  "bare": [
+    "ConditionDefinition.questionnaire",
+    "Consent.provision",
+    "InsurancePlan.contact",
+    "ObservationDefinition",
+    "Organization.contact",
+    "Permission",
+    "Permission.processingActivity",
+    "SpecimenDefinition"
+  ]
+}
+topic: {
+  "w5": [
+    [
+      "FiveWs.context",
+      "Communication"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Subscription"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition",
+    "Contract.term.offer",
+    "EventDefinition",
+    "Library",
+    "Measure",
+    "MetadataResource",
+    "PlanDefinition",
+    "SubscriptionStatus"
+  ]
+}
+author: {
+  "w5": [
+    [
+      "FiveWs.author",
+      "Basic"
+    ],
+    [
+      "FiveWs.author",
+      "CarePlan"
+    ],
+    [
+      "FiveWs.author",
+      "Composition"
+    ],
+    [
+      "FiveWs.author",
+      "Composition.section"
+    ],
+    [
+      "FiveWs.author",
+      "DetectedIssue"
+    ],
+    [
+      "FiveWs.author",
+      "DocumentManifest"
+    ],
+    [
+      "FiveWs.author",
+      "Flag"
+    ],
+    [
+      "FiveWs.author",
+      "Linkage"
+    ],
+    [
+      "FiveWs.actor",
+      "MedicationKnowledge"
+    ],
+    [
+      "FiveWs.author",
+      "MessageHeader"
+    ],
+    [
+      "FiveWs.author",
+      "QuestionnaireResponse"
+    ],
+    [
+      "FiveWs.author",
+      "RequestGroup"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition",
+    "AdverseEvent.suspectEntity.causality",
+    "Citation",
+    "Contract",
+    "DetectedIssue.mitigation",
+    "DocumentReference",
+    "EventDefinition",
+    "Evidence",
+    "EvidenceReport",
+    "EvidenceReport.section",
+    "EvidenceVariable",
+    "Library",
+    "Measure",
+    "MetadataResource",
+    "PlanDefinition",
+    "SubstanceSourceMaterial.organism"
+  ]
+}
+kind: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "NamingSystem"
+    ],
+    [
+      "FiveWs.class",
+      "OperationDefinition"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition",
+    "CapabilityStatement",
+    "CapabilityStatement2",
+    "CarePlan.activity.plannedActivityDetail",
+    "PlanDefinition.action.condition",
+    "RequestGroup.action.condition",
+    "TerminologyCapabilities"
+  ]
+}
+code: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "AdverseEvent"
+    ],
+    [
+      "FiveWs.what[x]",
+      "AllergyIntolerance"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Basic"
+    ],
+    [
+      "FiveWs.what[x]",
+      "ChargeItem"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Condition"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Condition.evidence"
+    ],
+    [
+      "FiveWs.class",
+      "DetectedIssue"
+    ],
+    [
+      "FiveWs.why[x]",
+      "DetectedIssue.evidence"
+    ],
+    [
+      "FiveWs.what[x]",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.what[x]",
+      "DeviceRequest.parameter"
+    ],
+    [
+      "FiveWs.what[x]",
+      "DiagnosticReport"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Flag"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Group"
+    ],
+    [
+      "FiveWs.what[x]",
+      "List"
+    ],
+    [
+      "FiveWs.class",
+      "Medication"
+    ],
+    [
+      "FiveWs.class",
+      "MedicationKnowledge"
+    ],
+    [
+      "FiveWs.class",
+      "NutritionIntake"
+    ],
+    [
+      "FiveWs.identifier",
+      "NutritionProduct"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Observation"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Observation.component"
+    ],
+    [
+      "FiveWs.what[x]",
+      "ObservationDefinition"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Procedure"
+    ],
+    [
+      "FiveWs.what[x]",
+      "RequestGroup"
+    ],
+    [
+      "FiveWs.what[x]",
+      "RiskAssessment"
+    ],
+    [
+      "FiveWs.what[x]",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Substance"
+    ],
+    [
+      "FiveWs.what[x]",
+      "SupplyRequest.parameter"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Task"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition",
+    "AdministrableProductDefinition.routeOfAdministration",
+    "AdministrableProductDefinition.routeOfAdministration.targetSpecies",
+    "CapabilityStatement.rest.resource.interaction",
+    "CapabilityStatement.rest.interaction",
+    "CapabilityStatement2.rest.feature",
+    "CapabilityStatement2.rest.resource.interaction",
+    "CapabilityStatement2.rest.interaction",
+    "CarePlan.activity.plannedActivityDetail",
+    "ChargeItemDefinition",
+    "ChargeItemDefinition.propertyGroup.priceComponent",
+    "Claim.supportingInfo",
+    "ClaimResponse.error",
+    "CodeSystem.filter",
+    "CodeSystem.property",
+    "CodeSystem.concept",
+    "CodeSystem.concept.property",
+    "Composition.relatesTo",
+    "Composition.event",
+    "Composition.section",
+    "ConceptMap.group.element",
+    "ConceptMap.group.element.target",
+    "ConceptMap.group.unmapped",
+    "ConceptMap2.group.element",
+    "ConceptMap2.group.element.target",
+    "ConceptMap2.group.unmapped",
+    "ConditionDefinition",
+    "ConditionDefinition.observation",
+    "ConditionDefinition.medication",
+    "ConditionDefinition.precondition",
+    "Consent.provision",
+    "Contract.term.asset.context",
+    "CoverageEligibilityResponse.error",
+    "DocumentReference.relatesTo",
+    "EvidenceReport.subject.characteristic",
+    "EvidenceReport.relatesTo",
+    "ExplanationOfBenefit.supportingInfo",
+    "FamilyMemberHistory.condition",
+    "FamilyMemberHistory.procedure",
+    "GraphDefinition.link.target.compartment",
+    "Group.characteristic",
+    "HealthcareService.eligibility",
+    "ImmunizationRecommendation.recommendation.dateCriterion",
+    "ImplementationGuide.definition.parameter",
+    "ImplementationGuide.definition.template",
+    "Ingredient.substance",
+    "Ingredient.specifiedSubstance",
+    "InsurancePlan.coverage.benefit.limit",
+    "Invoice.lineItem.priceComponent",
+    "Measure.group",
+    "Measure.group.population",
+    "Measure.group.stratifier",
+    "Measure.group.stratifier.component",
+    "Measure.supplementalData",
+    "MeasureReport.group",
+    "MeasureReport.group.population",
+    "MeasureReport.group.stratifier",
+    "MeasureReport.group.stratifier.stratum.component",
+    "MeasureReport.group.stratifier.stratum.population",
+    "MedicationUsage.adherence",
+    "MessageDefinition.focus",
+    "MessageHeader.response",
+    "ObservationDefinition.component",
+    "OperationDefinition",
+    "OperationOutcome.issue",
+    "OrganizationAffiliation",
+    "PlanDefinition.action",
+    "Practitioner.qualification",
+    "PractitionerRole",
+    "Questionnaire",
+    "Questionnaire.item",
+    "RequestGroup.action",
+    "SearchParameter",
+    "SubstanceDefinition.property",
+    "SubstanceDefinition",
+    "SubstanceDefinition.code",
+    "SubstancePolymer.monomerSet.startingMaterial",
+    "TerminologyCapabilities.codeSystem.version",
+    "TerminologyCapabilities.codeSystem.version.filter",
+    "ValueSet.compose.include.concept",
+    "ValueSet.expansion.property",
+    "ValueSet.expansion.contains",
+    "ValueSet.expansion.contains.property"
+  ]
+}
+intent: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "CommunicationRequest"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Contract.term.action"
+    ],
+    [
+      "FiveWs.class",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.class",
+      "MedicationRequest"
+    ],
+    [
+      "FiveWs.class",
+      "NutritionOrder"
+    ],
+    [
+      "FiveWs.class",
+      "RequestGroup"
+    ],
+    [
+      "FiveWs.class",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.class",
+      "Task"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition",
+    "CarePlan",
+    "Permission"
+  ]
+}
+timing[x]: {
+  "w5": [
+    [
+      "FiveWs.done[x]",
+      "DeviceUsage"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition",
+    "Claim.supportingInfo",
+    "ExplanationOfBenefit.supportingInfo",
+    "PlanDefinition.action",
+    "RequestGroup.action"
+  ]
+}
+location: {
+  "w5": [
+    [
+      "FiveWs.where[x]",
+      "AuditEvent.agent"
+    ],
+    [
+      "FiveWs.what[x]",
+      "BodyStructure"
+    ],
+    [
+      "FiveWs.where[x]",
+      "Device"
+    ],
+    [
+      "FiveWs.where[x]",
+      "Encounter.location"
+    ],
+    [
+      "FiveWs.where[x]",
+      "HealthcareService"
+    ],
+    [
+      "FiveWs.where[x]",
+      "ImagingStudy"
+    ],
+    [
+      "FiveWs.where[x]",
+      "Immunization"
+    ],
+    [
+      "FiveWs.where[x]",
+      "OrganizationAffiliation"
+    ],
+    [
+      "FiveWs.where[x]",
+      "PractitionerRole"
+    ],
+    [
+      "FiveWs.where[x]",
+      "Procedure"
+    ],
+    [
+      "FiveWs.where[x]",
+      "Provenance"
+    ],
+    [
+      "FiveWs.actor",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.where[x]",
+      "Task"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition",
+    "AdverseEvent",
+    "CarePlan.activity.plannedActivityDetail",
+    "DeviceDispense",
+    "Encounter",
+    "InventoryReport.inventoryListing",
+    "MedicationDispense",
+    "NutritionIntake",
+    "OperationOutcome.issue",
+    "PlanDefinition.action",
+    "RequestGroup.action",
+    "ResearchStudy"
+  ]
+}
+participant: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "RequestGroup.action"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition",
+    "AdverseEvent",
+    "Appointment",
+    "CareTeam",
+    "Encounter",
+    "Invoice",
+    "PlanDefinition.action",
+    "TestReport"
+  ]
+}
+role: {
+  "w5": [
+    [
+      "FiveWs.who",
+      "AuditEvent.agent"
+    ],
+    [
+      "FiveWs.context",
+      "AuditEvent.entity"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition.participant",
+    "CareTeam.participant",
+    "Citation.citedArtifact.contributorship.entry.affiliationInfo",
+    "Citation.citedArtifact.contributorship.entry",
+    "Claim.careTeam",
+    "ConditionDefinition.plan",
+    "Consent.provision.actor",
+    "Contract.term.offer.party",
+    "Contract.term.action.subject",
+    "EpisodeOfCare.diagnosis",
+    "ExplanationOfBenefit.careTeam",
+    "Ingredient",
+    "Invoice.participant",
+    "PlanDefinition.actor.option",
+    "PlanDefinition.action.participant",
+    "Provenance.agent",
+    "Provenance.entity",
+    "RequestGroup.action.participant",
+    "ResearchStudy.associatedParty",
+    "SubstanceDefinition.moiety"
+  ]
+}
+quantity: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Contract.term.asset.valuedItem"
+    ]
+  ],
+  "bare": [
+    "ActivityDefinition",
+    "BiologicallyDerivedProduct",
+    "CarePlan.activity.plannedActivityDetail",
+    "ChargeItem",
+    "Claim.item",
+    "Claim.item.detail",
+    "Claim.item.detail.subDetail",
+    "ClaimResponse.addItem",
+    "ClaimResponse.addItem.detail",
+    "ClaimResponse.addItem.detail.subDetail",
+    "CoverageEligibilityRequest.item",
+    "DeviceDispense",
+    "DeviceRequest",
+    "EvidenceVariable.characteristic.timeFromStart",
+    "ExplanationOfBenefit.item",
+    "ExplanationOfBenefit.item.detail",
+    "ExplanationOfBenefit.item.detail.subDetail",
+    "ExplanationOfBenefit.addItem",
+    "ExplanationOfBenefit.addItem.detail",
+    "ExplanationOfBenefit.addItem.detail.subDetail",
+    "Group",
+    "InventoryReport.inventoryListing.items",
+    "MedicationDispense",
+    "MedicationKnowledge.packaging",
+    "MedicationKnowledge.regulatory.maxDispense",
+    "MedicationRequest.dispenseRequest.initialFill",
+    "MedicationRequest.dispenseRequest",
+    "MolecularSequence",
+    "NutritionOrder.supplement",
+    "NutritionOrder.enteralFormula.administration",
+    "NutritionProduct.instance",
+    "PackagedProductDefinition.package",
+    "Specimen.collection",
+    "Substance.instance",
+    "Substance.ingredient",
+    "SupplyDelivery.suppliedItem",
+    "SupplyRequest"
+  ]
+}
+device: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "DeviceDispense"
+    ],
+    [
+      "FiveWs.actor",
+      "DeviceUsage"
+    ]
+  ],
+  "bare": [
+    "AdministrableProductDefinition",
+    "EvidenceVariable.characteristic",
+    "MedicationAdministration",
+    "MedicationKnowledge",
+    "MedicationKnowledge.packaging",
+    "MolecularSequence",
+    "Observation",
+    "ObservationDefinition"
+  ]
+}
+value[x]: {
+  "w5": [
+    [
+      "FiveWs.context",
+      "AuditEvent.entity.detail"
+    ],
+    [
+      "FiveWs.what[x]",
+      "DeviceRequest.parameter"
+    ],
+    [
+      "FiveWs.what[x]",
+      "SupplyRequest.parameter"
+    ]
+  ],
+  "bare": [
+    "AdministrableProductDefinition.property",
+    "Claim.supportingInfo",
+    "CodeSystem.concept.property",
+    "ConditionDefinition.precondition",
+    "Contract.term.offer.answer",
+    "Coverage.costToBeneficiary",
+    "Device.property",
+    "EvidenceReport.subject.characteristic",
+    "EvidenceVariable.category",
+    "ExplanationOfBenefit.supportingInfo",
+    "Group.characteristic",
+    "ImagingStudy.procedure",
+    "ManufacturedItemDefinition.property",
+    "MeasureReport.group.stratifier.stratum",
+    "MeasureReport.group.stratifier.stratum.component",
+    "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic",
+    "MedicationKnowledge.drugCharacteristic",
+    "MedicationKnowledge.kineticCharacteristic",
+    "NutritionProduct.productCharacteristic",
+    "Observation",
+    "Observation.component",
+    "PackagedProductDefinition.package.property",
+    "Parameters.parameter",
+    "Questionnaire.item.answerOption",
+    "Questionnaire.item.initial",
+    "QuestionnaireResponse.item.answer",
+    "StructureMap.group.rule.target.parameter",
+    "Task.input",
+    "Task.output",
+    "ValueSet.expansion.parameter",
+    "ValueSet.expansion.contains.property"
+  ]
+}
+value: {
+  "w5": [
+    [
+      "FiveWs.identifier",
+      "NamingSystem.uniqueId"
+    ]
+  ],
+  "bare": [
+    "AdministrableProductDefinition.routeOfAdministration.targetSpecies.withdrawalPeriod",
+    "CapabilityStatement2.rest.feature",
+    "Citation.citedArtifact.version",
+    "Citation.citedArtifact.part",
+    "Citation.citedArtifact.contributorship.summary",
+    "ClaimResponse.item.adjudication",
+    "CodeSystem.filter",
+    "CodeSystem.concept.designation",
+    "ConceptMap.group.element.target.dependsOn",
+    "ConceptMap2.group.element.target.dependsOn",
+    "Coverage.class",
+    "Device.version",
+    "Device.operationalStatus",
+    "Device.associationStatus",
+    "DeviceDefinition.version",
+    "ExplanationOfBenefit.item.adjudication",
+    "ImmunizationRecommendation.recommendation.dateCriterion",
+    "ImplementationGuide.definition.parameter",
+    "InsurancePlan.coverage.benefit.limit",
+    "InsurancePlan.plan.specificCost.benefit.cost",
+    "ResearchStudy.label",
+    "Subscription.filterBy",
+    "TestScript.setup.action.operation.requestHeader",
+    "TestScript.setup.action.assert",
+    "ValueSet.compose.include.concept.designation",
+    "ValueSet.compose.include.filter"
+  ]
+}
+supportingInformation: {
+  "w5": [
+    [
+      "FiveWs.context",
+      "Appointment"
+    ],
+    [
+      "FiveWs.context",
+      "DeviceDispense"
+    ],
+    [
+      "FiveWs.context",
+      "MedicationAdministration"
+    ],
+    [
+      "FiveWs.context",
+      "MedicationDispense"
+    ],
+    [
+      "FiveWs.context",
+      "MedicationRequest"
+    ]
+  ],
+  "bare": [
+    "AdministrableProductDefinition.routeOfAdministration.targetSpecies.withdrawalPeriod",
+    "ChargeItem"
+  ]
+}
+category: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "AdverseEvent"
+    ],
+    [
+      "FiveWs.class",
+      "AllergyIntolerance"
+    ],
+    [
+      "FiveWs.class",
+      "CarePlan"
+    ],
+    [
+      "FiveWs.class",
+      "CareTeam"
+    ],
+    [
+      "FiveWs.class",
+      "Communication"
+    ],
+    [
+      "FiveWs.class",
+      "CommunicationRequest"
+    ],
+    [
+      "FiveWs.class",
+      "Composition"
+    ],
+    [
+      "FiveWs.class",
+      "Condition"
+    ],
+    [
+      "FiveWs.class",
+      "Consent"
+    ],
+    [
+      "FiveWs.class",
+      "DeviceMetric"
+    ],
+    [
+      "FiveWs.class",
+      "DiagnosticReport"
+    ],
+    [
+      "FiveWs.what[x]",
+      "DocumentReference"
+    ],
+    [
+      "FiveWs.class",
+      "Flag"
+    ],
+    [
+      "FiveWs.class",
+      "Goal"
+    ],
+    [
+      "FiveWs.class",
+      "HealthcareService"
+    ],
+    [
+      "FiveWs.class",
+      "MedicationRequest"
+    ],
+    [
+      "FiveWs.class",
+      "MedicationUsage"
+    ],
+    [
+      "FiveWs.class",
+      "NutritionProduct"
+    ],
+    [
+      "FiveWs.class",
+      "Observation"
+    ],
+    [
+      "FiveWs.class",
+      "ObservationDefinition"
+    ],
+    [
+      "FiveWs.class",
+      "Procedure"
+    ],
+    [
+      "FiveWs.class",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.class",
+      "Substance"
+    ],
+    [
+      "FiveWs.class",
+      "SupplyRequest"
+    ]
+  ],
+  "bare": [
+    "Claim.supportingInfo",
+    "Claim.item",
+    "Claim.item.detail",
+    "Claim.item.detail.subDetail",
+    "ClaimResponse.item.adjudication",
+    "ClaimResponse.total",
+    "ClinicalUseIssue",
+    "ConditionDefinition.observation",
+    "ConditionDefinition.medication",
+    "Contract.term.securityLabel",
+    "CoverageEligibilityRequest.item",
+    "CoverageEligibilityResponse.insurance.item",
+    "DeviceDispense",
+    "DeviceUsage",
+    "EvidenceVariable",
+    "ExplanationOfBenefit.supportingInfo",
+    "ExplanationOfBenefit.item",
+    "ExplanationOfBenefit.item.adjudication",
+    "ExplanationOfBenefit.item.detail",
+    "ExplanationOfBenefit.item.detail.subDetail",
+    "ExplanationOfBenefit.total",
+    "ExplanationOfBenefit.benefitBalance",
+    "InsurancePlan.plan.specificCost",
+    "InventoryReport.inventoryListing.items",
+    "MedicationAdministration",
+    "MedicationDispense",
+    "MessageDefinition",
+    "PlanDefinition.goal",
+    "ResearchStudy",
+    "SubstanceDefinition",
+    "SubstanceDefinition.property",
+    "SubstancePolymer.monomerSet.startingMaterial"
+  ]
+}
+encounter: {
+  "w5": [
+    [
+      "FiveWs.context",
+      "AdverseEvent"
+    ],
+    [
+      "FiveWs.context",
+      "AllergyIntolerance"
+    ],
+    [
+      "FiveWs.why[x]",
+      "AuditEvent"
+    ],
+    [
+      "FiveWs.context",
+      "CarePlan"
+    ],
+    [
+      "FiveWs.context",
+      "ClinicalImpression"
+    ],
+    [
+      "FiveWs.context",
+      "Communication"
+    ],
+    [
+      "FiveWs.context",
+      "CommunicationRequest"
+    ],
+    [
+      "FiveWs.context",
+      "Composition"
+    ],
+    [
+      "FiveWs.context",
+      "Condition"
+    ],
+    [
+      "FiveWs.context",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.context",
+      "DiagnosticReport"
+    ],
+    [
+      "FiveWs.context",
+      "DocumentReference"
+    ],
+    [
+      "FiveWs.context",
+      "Flag"
+    ],
+    [
+      "FiveWs.context",
+      "GuidanceResponse"
+    ],
+    [
+      "FiveWs.context",
+      "ImagingStudy"
+    ],
+    [
+      "FiveWs.context",
+      "Immunization"
+    ],
+    [
+      "FiveWs.context",
+      "List"
+    ],
+    [
+      "FiveWs.context",
+      "MedicationAdministration"
+    ],
+    [
+      "FiveWs.context",
+      "MedicationRequest"
+    ],
+    [
+      "FiveWs.context",
+      "NutritionOrder"
+    ],
+    [
+      "FiveWs.context",
+      "Observation"
+    ],
+    [
+      "FiveWs.context",
+      "Procedure"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Provenance"
+    ],
+    [
+      "FiveWs.context",
+      "QuestionnaireResponse"
+    ],
+    [
+      "FiveWs.context",
+      "RequestGroup"
+    ],
+    [
+      "FiveWs.context",
+      "RiskAssessment"
+    ],
+    [
+      "FiveWs.context",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.context",
+      "Task"
+    ],
+    [
+      "FiveWs.context",
+      "VisionPrescription"
+    ]
+  ],
+  "bare": [
+    "Claim.item",
+    "DeviceDispense",
+    "ExplanationOfBenefit.item",
+    "MedicationDispense",
+    "MedicationUsage",
+    "NutritionIntake"
+  ]
+}
+occurrence[x]: {
+  "w5": [
+    [
+      "FiveWs.done[x]",
+      "AdverseEvent"
+    ],
+    [
+      "FiveWs.done[x]",
+      "ChargeItem"
+    ],
+    [
+      "FiveWs.planned",
+      "CommunicationRequest"
+    ],
+    [
+      "FiveWs.planned",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.done[x]",
+      "Immunization"
+    ],
+    [
+      "FiveWs.done[x]",
+      "NutritionIntake"
+    ],
+    [
+      "FiveWs.done[x]",
+      "Procedure"
+    ],
+    [
+      "FiveWs.done[x]",
+      "RiskAssessment"
+    ],
+    [
+      "FiveWs.planned",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.done[x]",
+      "SupplyDelivery"
+    ],
+    [
+      "FiveWs.planned",
+      "SupplyRequest"
+    ]
+  ],
+  "bare": [
+    "Contract.term.action"
+  ]
+}
+outcome: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "AuditEvent"
+    ]
+  ],
+  "bare": [
+    "AdverseEvent",
+    "ClaimResponse",
+    "CoverageEligibilityResponse",
+    "EnrollmentResponse",
+    "ExplanationOfBenefit",
+    "FamilyMemberHistory.condition",
+    "FamilyMemberHistory.procedure",
+    "Goal",
+    "PaymentReconciliation",
+    "Procedure",
+    "RiskAssessment.prediction"
+  ]
+}
+actor: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "AdverseEvent.participant"
+    ],
+    [
+      "FiveWs.who",
+      "Appointment.participant"
+    ],
+    [
+      "FiveWs.who",
+      "AppointmentResponse"
+    ],
+    [
+      "FiveWs.actor",
+      "ChargeItem.performer"
+    ],
+    [
+      "FiveWs.who",
+      "Encounter.participant"
+    ],
+    [
+      "FiveWs.actor",
+      "ImagingStudy.series.performer"
+    ],
+    [
+      "FiveWs.actor",
+      "Immunization.performer"
+    ],
+    [
+      "FiveWs.actor",
+      "Invoice.participant"
+    ],
+    [
+      "FiveWs.actor",
+      "Procedure.performer"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Schedule"
+    ]
+  ],
+  "bare": [
+    "Consent.provision",
+    "DeviceDispense.performer",
+    "ExampleScenario",
+    "MedicationAdministration.performer",
+    "MedicationDispense.performer",
+    "NutritionIntake.performer",
+    "PlanDefinition",
+    "RequestGroup.action.participant"
+  ]
+}
+patient: {
+  "w5": [
+    [
+      "FiveWs.subject[x]",
+      "AllergyIntolerance"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "BodyStructure"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Claim"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "ClaimResponse"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "CoverageEligibilityRequest"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "CoverageEligibilityResponse"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "DetectedIssue"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Device"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "EpisodeOfCare"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "ExplanationOfBenefit"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "FamilyMemberHistory"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "Immunization"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "ImmunizationEvaluation"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "ImmunizationRecommendation"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "NutritionOrder"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "VisionPrescription"
+    ]
+  ],
+  "bare": [
+    "MolecularSequence",
+    "RelatedPerson",
+    "SupplyDelivery"
+  ]
+}
+onset[x]: {
+  "w5": [
+    [
+      "FiveWs.init",
+      "AllergyIntolerance"
+    ],
+    [
+      "FiveWs.init",
+      "Condition"
+    ]
+  ],
+  "bare": [
+    "FamilyMemberHistory.condition"
+  ]
+}
+asserter: {
+  "w5": [
+    [
+      "FiveWs.source",
+      "AllergyIntolerance"
+    ],
+    [
+      "FiveWs.source",
+      "Condition"
+    ]
+  ],
+  "bare": [
+    "Permission"
+  ]
+}
+severity: {
+  "w5": [
+    [
+      "FiveWs.grade",
+      "Condition"
+    ],
+    [
+      "FiveWs.grade",
+      "DetectedIssue"
+    ]
+  ],
+  "bare": [
+    "AllergyIntolerance.reaction",
+    "AuditEvent",
+    "ConditionDefinition",
+    "OperationOutcome.issue"
+  ]
+}
+serviceCategory: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Schedule"
+    ],
+    [
+      "FiveWs.class",
+      "Slot"
+    ]
+  ],
+  "bare": [
+    "Appointment"
+  ]
+}
+serviceType: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Schedule"
+    ],
+    [
+      "FiveWs.class",
+      "Slot"
+    ]
+  ],
+  "bare": [
+    "Appointment",
+    "Encounter"
+  ]
+}
+specialty: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Appointment"
+    ],
+    [
+      "FiveWs.class",
+      "Schedule"
+    ],
+    [
+      "FiveWs.class",
+      "Slot"
+    ]
+  ],
+  "bare": [
+    "HealthcareService",
+    "OrganizationAffiliation",
+    "PractitionerRole"
+  ]
+}
+appointmentType: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Slot"
+    ]
+  ],
+  "bare": [
+    "Appointment"
+  ]
+}
+reason: {
+  "w5": [
+    [
+      "FiveWs.why[x]",
+      "CareTeam"
+    ],
+    [
+      "FiveWs.why[x]",
+      "ChargeItem"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Communication"
+    ],
+    [
+      "FiveWs.why[x]",
+      "CommunicationRequest"
+    ],
+    [
+      "FiveWs.why[x]",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.why[x]",
+      "DeviceUsage"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Encounter"
+    ],
+    [
+      "FiveWs.why[x]",
+      "FamilyMemberHistory"
+    ],
+    [
+      "FiveWs.why[x]",
+      "GuidanceResponse"
+    ],
+    [
+      "FiveWs.why[x]",
+      "ImagingStudy"
+    ],
+    [
+      "FiveWs.why[x]",
+      "MedicationRequest"
+    ],
+    [
+      "FiveWs.why[x]",
+      "MedicationUsage"
+    ],
+    [
+      "FiveWs.why[x]",
+      "MessageHeader"
+    ],
+    [
+      "FiveWs.why[x]",
+      "NutritionIntake"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Procedure"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Provenance"
+    ],
+    [
+      "FiveWs.why[x]",
+      "RequestGroup"
+    ],
+    [
+      "FiveWs.why[x]",
+      "RiskAssessment"
+    ],
+    [
+      "FiveWs.why[x]",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Subscription"
+    ],
+    [
+      "FiveWs.why[x]",
+      "SupplyRequest"
+    ]
+  ],
+  "bare": [
+    "Appointment",
+    "CarePlan.activity.plannedActivityDetail",
+    "Claim.supportingInfo",
+    "ClaimResponse.item.adjudication",
+    "Contract.term.action",
+    "Device.operationalStatus",
+    "Device.associationStatus",
+    "ExplanationOfBenefit.supportingInfo",
+    "ExplanationOfBenefit.item.adjudication",
+    "Immunization",
+    "MedicationAdministration",
+    "MedicationDispense.substitution",
+    "MedicationRequest.substitution",
+    "MedicationUsage.adherence",
+    "PlanDefinition.action",
+    "ResearchSubject.progress"
+  ]
+}
+replaces: {
+  "w5": [
+    [
+      "FiveWs.context",
+      "Appointment"
+    ]
+  ],
+  "bare": [
+    "CarePlan",
+    "ChargeItemDefinition",
+    "CommunicationRequest",
+    "MessageDefinition",
+    "RequestGroup",
+    "ServiceRequest"
+  ]
+}
+start: {
+  "w5": [
+    [
+      "FiveWs.init",
+      "Appointment"
+    ],
+    [
+      "FiveWs.init",
+      "AppointmentResponse"
+    ],
+    [
+      "FiveWs.planned",
+      "Slot"
+    ]
+  ],
+  "bare": [
+    "GraphDefinition",
+    "MolecularSequence.variant",
+    "MolecularSequence.quality",
+    "MolecularSequence.structureVariant.outer",
+    "MolecularSequence.structureVariant.inner",
+    "PlanDefinition.goal"
+  ]
+}
+end: {
+  "w5": [
+    [
+      "FiveWs.done[x]",
+      "Appointment"
+    ],
+    [
+      "FiveWs.done[x]",
+      "AppointmentResponse"
+    ],
+    [
+      "FiveWs.planned",
+      "Slot"
+    ],
+    [
+      "FiveWs.done[x]",
+      "Subscription"
+    ]
+  ],
+  "bare": [
+    "MolecularSequence.variant",
+    "MolecularSequence.quality",
+    "MolecularSequence.structureVariant.outer",
+    "MolecularSequence.structureVariant.inner"
+  ]
+}
+created: {
+  "w5": [
+    [
+      "FiveWs.recorded",
+      "Basic"
+    ],
+    [
+      "FiveWs.recorded",
+      "CarePlan"
+    ],
+    [
+      "FiveWs.recorded",
+      "Claim"
+    ],
+    [
+      "FiveWs.recorded",
+      "ClaimResponse"
+    ],
+    [
+      "FiveWs.recorded",
+      "CoverageEligibilityRequest"
+    ],
+    [
+      "FiveWs.recorded",
+      "CoverageEligibilityResponse"
+    ],
+    [
+      "FiveWs.done[x]",
+      "DocumentManifest"
+    ],
+    [
+      "FiveWs.recorded",
+      "ExplanationOfBenefit"
+    ],
+    [
+      "FiveWs.recorded",
+      "PaymentNotice"
+    ],
+    [
+      "FiveWs.recorded",
+      "PaymentReconciliation"
+    ]
+  ],
+  "bare": [
+    "Appointment",
+    "EnrollmentRequest",
+    "EnrollmentResponse",
+    "VisionPrescription"
+  ]
+}
+basedOn: {
+  "w5": [
+    [
+      "FiveWs.why[x]",
+      "AuditEvent"
+    ],
+    [
+      "FiveWs.cause",
+      "ImagingStudy"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Provenance"
+    ]
+  ],
+  "bare": [
+    "Appointment",
+    "CarePlan",
+    "Communication",
+    "CommunicationRequest",
+    "DeviceDispense",
+    "DeviceRequest",
+    "DeviceUsage",
+    "DiagnosticReport",
+    "DocumentReference",
+    "Encounter",
+    "Immunization",
+    "MedicationAdministration",
+    "MedicationDispense",
+    "MedicationRequest",
+    "NutritionIntake",
+    "Observation",
+    "Procedure",
+    "QuestionnaireResponse",
+    "RequestGroup",
+    "RiskAssessment",
+    "ServiceRequest",
+    "SupplyDelivery",
+    "Task"
+  ]
+}
+subtype: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "AuditEvent"
+    ]
+  ],
+  "bare": [
+    "Contract.term.asset"
+  ]
+}
+action: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "AuditEvent"
+    ]
+  ],
+  "bare": [
+    "Consent.provision",
+    "Contract.term",
+    "DetectedIssue.mitigation",
+    "PlanDefinition",
+    "PlanDefinition.action",
+    "Procedure.focalDevice",
+    "RequestGroup",
+    "RequestGroup.action",
+    "TestReport.setup",
+    "TestReport.test",
+    "TestReport.teardown",
+    "TestScript.setup",
+    "TestScript.test",
+    "TestScript.teardown"
+  ]
+}
+agent: {
+  "w5": [
+    [
+      "FiveWs.who",
+      "AuditEvent"
+    ],
+    [
+      "FiveWs.who",
+      "Provenance"
+    ]
+  ],
+  "bare": [
+    "Provenance.entity"
+  ]
+}
+who: {
+  "w5": [
+    [
+      "FiveWs.who",
+      "AuditEvent.agent"
+    ],
+    [
+      "FiveWs.actor",
+      "Provenance.agent"
+    ],
+    [
+      "FiveWs.who",
+      "VerificationResult.primarySource"
+    ]
+  ],
+  "bare": [
+    "VerificationResult.attestation"
+  ]
+}
+requestor: {
+  "w5": [
+    [
+      "FiveWs.who",
+      "AuditEvent.agent"
+    ],
+    [
+      "FiveWs.source",
+      "ClaimResponse"
+    ],
+    [
+      "FiveWs.source",
+      "CoverageEligibilityResponse"
+    ]
+  ],
+  "bare": [
+    "PaymentReconciliation"
+  ]
+}
+policy: {
+  "w5": [
+    [
+      "FiveWs.why[x]",
+      "AuditEvent.agent"
+    ]
+  ],
+  "bare": [
+    "Consent",
+    "Provenance"
+  ]
+}
+media: {
+  "w5": [
+    [
+      "FiveWs.where[x]",
+      "AuditEvent.agent"
+    ]
+  ],
+  "bare": [
+    "DiagnosticReport"
+  ]
+}
+network: {
+  "w5": [
+    [
+      "FiveWs.where[x]",
+      "AuditEvent.agent"
+    ]
+  ],
+  "bare": [
+    "Coverage",
+    "CoverageEligibilityResponse.insurance.item",
+    "ExplanationOfBenefit.benefitBalance",
+    "InsurancePlan",
+    "InsurancePlan.coverage",
+    "InsurancePlan.plan",
+    "OrganizationAffiliation"
+  ]
+}
+address: {
+  "w5": [
+    [
+      "FiveWs.where[x]",
+      "AuditEvent.agent.network"
+    ]
+  ],
+  "bare": [
+    "CapabilityStatement.messaging.endpoint",
+    "Citation.citedArtifact.contributorship.entry",
+    "Endpoint",
+    "InsurancePlan.contact",
+    "Location",
+    "Organization",
+    "Organization.contact",
+    "Patient",
+    "Patient.contact",
+    "Person",
+    "Practitioner",
+    "RelatedPerson"
+  ]
+}
+source: {
+  "w5": [
+    [
+      "FiveWs.witness",
+      "AuditEvent"
+    ],
+    [
+      "FiveWs.source",
+      "Goal"
+    ],
+    [
+      "FiveWs.author",
+      "List"
+    ],
+    [
+      "FiveWs.actor",
+      "MessageHeader"
+    ],
+    [
+      "FiveWs.source",
+      "QuestionnaireResponse"
+    ]
+  ],
+  "bare": [
+    "BiologicallyDerivedProduct.collection",
+    "Citation.citedArtifact.contributorship.summary",
+    "ConceptMap.group",
+    "ConceptMap2.group",
+    "DeviceMetric",
+    "DocumentManifest",
+    "ImplementationGuide.definition.template",
+    "MedicationKnowledge.monograph",
+    "MedicationKnowledge.cost",
+    "OperationDefinition.parameter.referencedFrom",
+    "StructureMap.group.rule",
+    "SubstanceDefinition",
+    "SubstanceDefinition.property",
+    "SubstanceDefinition.code",
+    "SubstanceDefinition.name",
+    "SubstanceDefinition.relationship",
+    "SubstanceReferenceInformation.gene",
+    "SubstanceReferenceInformation.geneElement",
+    "SubstanceReferenceInformation.target"
+  ]
+}
+site: {
+  "w5": [
+    [
+      "FiveWs.witness",
+      "AuditEvent.source"
+    ],
+    [
+      "FiveWs.where[x]",
+      "ResearchStudy"
+    ]
+  ],
+  "bare": [
+    "Contract",
+    "Immunization",
+    "MedicationAdministration.dosage"
+  ]
+}
+entity: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "AuditEvent"
+    ]
+  ],
+  "bare": [
+    "Group.member",
+    "Provenance"
+  ]
+}
+what: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "AuditEvent.entity"
+    ]
+  ],
+  "bare": [
+    "Provenance.entity"
+  ]
+}
+securityLabel: {
+  "w5": [
+    [
+      "FiveWs.context",
+      "AuditEvent.entity"
+    ]
+  ],
+  "bare": [
+    "Consent.provision",
+    "Contract.term",
+    "DocumentReference"
+  ]
+}
+detail: {
+  "w5": [
+    [
+      "FiveWs.context",
+      "AuditEvent.entity"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Condition.evidence"
+    ],
+    [
+      "FiveWs.why[x]",
+      "DetectedIssue.evidence"
+    ]
+  ],
+  "bare": [
+    "Claim.item",
+    "ClaimResponse.item",
+    "ClaimResponse.addItem",
+    "Composition.event",
+    "CoverageEligibilityRequest.item",
+    "DetectedIssue",
+    "ExplanationOfBenefit.item",
+    "ExplanationOfBenefit.addItem",
+    "Immunization.reaction",
+    "PaymentReconciliation",
+    "TestReport.setup.action.operation",
+    "TestReport.setup.action.assert"
+  ]
+}
+productCode: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "ResearchStudy.focus"
+    ]
+  ],
+  "bare": [
+    "BiologicallyDerivedProduct"
+  ]
+}
+request: {
+  "w5": [
+    [
+      "FiveWs.why[x]",
+      "ClaimResponse"
+    ],
+    [
+      "FiveWs.why[x]",
+      "CoverageEligibilityResponse"
+    ],
+    [
+      "FiveWs.subject[x]",
+      "PaymentNotice"
+    ],
+    [
+      "FiveWs.why[x]",
+      "PaymentReconciliation"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Specimen"
+    ]
+  ],
+  "bare": [
+    "BiologicallyDerivedProduct",
+    "EnrollmentResponse",
+    "ExampleScenario.process.step.operation",
+    "MedicationAdministration",
+    "PaymentReconciliation.detail"
+  ]
+}
+collector: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "Specimen.collection"
+    ]
+  ],
+  "bare": [
+    "BiologicallyDerivedProduct.collection"
+  ]
+}
+collected[x]: {
+  "w5": [
+    [
+      "FiveWs.init",
+      "Specimen.collection"
+    ]
+  ],
+  "bare": [
+    "BiologicallyDerivedProduct.collection"
+  ]
+}
+duration: {
+  "w5": [
+    [
+      "FiveWs.init",
+      "Specimen.collection"
+    ]
+  ],
+  "bare": [
+    "BiologicallyDerivedProduct.storage",
+    "ClinicalUseIssue.indication",
+    "MedicationRequest.dispenseRequest.initialFill",
+    "VisionPrescription.lensSpecification"
+  ]
+}
+image: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "BodyStructure"
+    ]
+  ],
+  "bare": [
+    "ImplementationGuide.manifest"
+  ]
+}
+mode: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Composition.section"
+    ],
+    [
+      "FiveWs.class",
+      "List"
+    ],
+    [
+      "FiveWs.class",
+      "Location"
+    ]
+  ],
+  "bare": [
+    "CapabilityStatement.rest",
+    "CapabilityStatement.messaging.supportedMessage",
+    "CapabilityStatement.document",
+    "CapabilityStatement2.rest",
+    "Composition.attester",
+    "ConceptMap.group.unmapped",
+    "ConceptMap2.group.unmapped",
+    "DocumentReference.attester",
+    "EvidenceReport.section",
+    "StructureMap.structure",
+    "StructureMap.group.input"
+  ]
+}
+service: {
+  "w5": [
+    [
+      "FiveWs.why[x]",
+      "ChargeItem"
+    ]
+  ],
+  "bare": [
+    "CapabilityStatement.rest.security"
+  ]
+}
+careTeam: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "CarePlan"
+    ]
+  ],
+  "bare": [
+    "Claim",
+    "ExplanationOfBenefit"
+  ]
+}
+addresses: {
+  "w5": [
+    [
+      "FiveWs.why[x]",
+      "CarePlan"
+    ],
+    [
+      "FiveWs.why[x]",
+      "Goal"
+    ]
+  ],
+  "bare": [
+    "PlanDefinition.goal"
+  ]
+}
+activity: {
+  "w5": [
+    [
+      "FiveWs.why[x]",
+      "Provenance"
+    ]
+  ],
+  "bare": [
+    "CarePlan",
+    "Citation.statusDate",
+    "Citation.citedArtifact.statusDate",
+    "ResearchStudy.statusDate"
+  ]
+}
+statusReason: {
+  "w5": [
+    [
+      "FiveWs.status",
+      "Device"
+    ]
+  ],
+  "bare": [
+    "CarePlan.activity.plannedActivityDetail",
+    "ClinicalImpression",
+    "Communication",
+    "CommunicationRequest",
+    "DeviceDispense",
+    "Goal",
+    "Immunization",
+    "MedicationAdministration",
+    "MedicationDispense",
+    "MedicationRequest",
+    "NutritionIntake",
+    "Procedure",
+    "Task"
+  ]
+}
+performer: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "ClinicalImpression"
+    ],
+    [
+      "FiveWs.actor",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.actor",
+      "DiagnosticReport"
+    ],
+    [
+      "FiveWs.actor",
+      "GuidanceResponse"
+    ],
+    [
+      "FiveWs.actor",
+      "MedicationAdministration"
+    ],
+    [
+      "FiveWs.actor",
+      "MedicationRequest"
+    ],
+    [
+      "FiveWs.actor",
+      "Observation"
+    ],
+    [
+      "FiveWs.actor",
+      "RiskAssessment"
+    ],
+    [
+      "FiveWs.actor",
+      "ServiceRequest"
+    ]
+  ],
+  "bare": [
+    "CarePlan.activity.plannedActivityDetail",
+    "ChargeItem",
+    "Contract.term.action",
+    "DeviceDispense",
+    "ImagingStudy.series",
+    "Immunization",
+    "MedicationDispense",
+    "MolecularSequence",
+    "NutritionIntake",
+    "Procedure"
+  ]
+}
+member: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "CareTeam.participant"
+    ]
+  ],
+  "bare": [
+    "Group"
+  ]
+}
+relationship: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "RelatedPerson"
+    ]
+  ],
+  "bare": [
+    "CatalogEntry.relatedEntry",
+    "Claim.related",
+    "ConceptMap.group.element.target",
+    "ConceptMap2.group.element.target",
+    "Contract.term.asset",
+    "Coverage",
+    "ExplanationOfBenefit.related",
+    "FamilyMemberHistory",
+    "Patient.contact",
+    "PlanDefinition.action.relatedAction",
+    "RequestGroup.action.relatedAction",
+    "SubstanceDefinition"
+  ]
+}
+target: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Provenance"
+    ]
+  ],
+  "bare": [
+    "CatalogEntry.relatedEntry",
+    "ConceptMap.group",
+    "ConceptMap.group.element",
+    "ConceptMap2.group",
+    "ConceptMap2.group.element",
+    "DocumentReference.relatesTo",
+    "Goal",
+    "GraphDefinition.link",
+    "MessageHeader.destination",
+    "Person.link",
+    "PlanDefinition.goal",
+    "SearchParameter",
+    "StructureMap.group.rule",
+    "SubstanceReferenceInformation",
+    "SubstanceReferenceInformation.target",
+    "VerificationResult"
+  ]
+}
+context: {
+  "w5": [
+    [
+      "FiveWs.context",
+      "ChargeItem"
+    ]
+  ],
+  "bare": [
+    "Contract.term.asset",
+    "Contract.term.action",
+    "DeviceUsage",
+    "ObservationDefinition.qualifiedValue",
+    "StructureMap.group.rule.source",
+    "StructureMap.group.rule.target"
+  ]
+}
+factor: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Contract.term.asset.valuedItem"
+    ]
+  ],
+  "bare": [
+    "ChargeItemDefinition.propertyGroup.priceComponent",
+    "Claim.item",
+    "Claim.item.detail",
+    "Claim.item.detail.subDetail",
+    "ClaimResponse.addItem",
+    "ClaimResponse.addItem.detail",
+    "ClaimResponse.addItem.detail.subDetail",
+    "ExplanationOfBenefit.item",
+    "ExplanationOfBenefit.item.detail",
+    "ExplanationOfBenefit.item.detail.subDetail",
+    "ExplanationOfBenefit.addItem",
+    "ExplanationOfBenefit.addItem.detail",
+    "ExplanationOfBenefit.addItem.detail.subDetail",
+    "Invoice.lineItem.priceComponent",
+    "ResearchStudy.focus"
+  ]
+}
+statusDate: {
+  "w5": [
+    [
+      "FiveWs.recorded",
+      "Goal"
+    ]
+  ],
+  "bare": [
+    "Citation",
+    "Citation.citedArtifact",
+    "MedicinalProductDefinition",
+    "PackagedProductDefinition",
+    "RegulatedAuthorization",
+    "ResearchStudy",
+    "SubstanceDefinition.code",
+    "VerificationResult"
+  ]
+}
+actual: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Group"
+    ]
+  ],
+  "bare": [
+    "Citation.statusDate",
+    "Citation.citedArtifact.statusDate",
+    "EvidenceVariable",
+    "ResearchStudy.statusDate"
+  ]
+}
+organization: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "EnrollmentResponse"
+    ]
+  ],
+  "bare": [
+    "Citation.citedArtifact.classification.whoClassified",
+    "MedicinalProductDefinition.operation",
+    "OrganizationAffiliation",
+    "Patient.contact",
+    "PractitionerRole",
+    "VerificationResult.validator"
+  ]
+}
+subType: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Claim"
+    ],
+    [
+      "FiveWs.class",
+      "ClaimResponse"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Contract"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Contract.term"
+    ],
+    [
+      "FiveWs.class",
+      "ExplanationOfBenefit"
+    ]
+  ],
+  "bare": [
+    "Contract.contentDefinition"
+  ]
+}
+use: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Claim"
+    ],
+    [
+      "FiveWs.class",
+      "ClaimResponse"
+    ],
+    [
+      "FiveWs.class",
+      "ExplanationOfBenefit"
+    ]
+  ],
+  "bare": [
+    "CodeSystem.concept.designation",
+    "Encounter.diagnosis",
+    "GraphDefinition.link.target.compartment",
+    "OperationDefinition.parameter",
+    "ValueSet.compose.include.concept.designation"
+  ]
+}
+insurer: {
+  "w5": [
+    [
+      "FiveWs.who",
+      "CoverageEligibilityRequest"
+    ],
+    [
+      "FiveWs.author",
+      "ExplanationOfBenefit"
+    ]
+  ],
+  "bare": [
+    "Claim",
+    "ClaimResponse",
+    "CoverageEligibilityResponse",
+    "EnrollmentRequest"
+  ]
+}
+claim: {
+  "w5": [
+    [
+      "FiveWs.why[x]",
+      "ExplanationOfBenefit"
+    ]
+  ],
+  "bare": [
+    "Claim.related",
+    "ExplanationOfBenefit.related"
+  ]
+}
+facility: {
+  "w5": [
+    [
+      "FiveWs.where[x]",
+      "Claim"
+    ],
+    [
+      "FiveWs.where[x]",
+      "CoverageEligibilityRequest"
+    ],
+    [
+      "FiveWs.where[x]",
+      "ExplanationOfBenefit"
+    ]
+  ],
+  "bare": [
+    "CoverageEligibilityRequest.item"
+  ]
+}
+responsible: {
+  "w5": [
+    [
+      "FiveWs.witness",
+      "MessageHeader"
+    ],
+    [
+      "FiveWs.witness",
+      "NamingSystem"
+    ]
+  ],
+  "bare": [
+    "Claim.careTeam",
+    "Contract.term.asset.valuedItem",
+    "ExplanationOfBenefit.careTeam",
+    "PaymentReconciliation.detail"
+  ]
+}
+location[x]: {
+  "w5": [
+    [
+      "FiveWs.where[x]",
+      "Claim.item"
+    ],
+    [
+      "FiveWs.where[x]",
+      "ClaimResponse.addItem"
+    ],
+    [
+      "FiveWs.where[x]",
+      "ExplanationOfBenefit.item"
+    ],
+    [
+      "FiveWs.where[x]",
+      "ExplanationOfBenefit.addItem"
+    ]
+  ],
+  "bare": [
+    "Claim.accident",
+    "ExplanationOfBenefit.accident"
+  ]
+}
+modifier: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "NutritionOrder.oralDiet.nutrient"
+    ]
+  ],
+  "bare": [
+    "Claim.item",
+    "Claim.item.detail",
+    "Claim.item.detail.subDetail",
+    "ClaimResponse.addItem",
+    "ClaimResponse.addItem.detail",
+    "ClaimResponse.addItem.detail.subDetail",
+    "CoverageEligibilityRequest.item",
+    "CoverageEligibilityResponse.insurance.item",
+    "ExplanationOfBenefit.item",
+    "ExplanationOfBenefit.item.detail",
+    "ExplanationOfBenefit.item.detail.subDetail",
+    "ExplanationOfBenefit.addItem",
+    "ExplanationOfBenefit.addItem.detail",
+    "ExplanationOfBenefit.addItem.detail.subDetail",
+    "NutritionOrder.oralDiet.texture",
+    "SearchParameter"
+  ]
+}
+unitPrice: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Contract.term.asset.valuedItem"
+    ]
+  ],
+  "bare": [
+    "Claim.item",
+    "Claim.item.detail",
+    "Claim.item.detail.subDetail",
+    "ClaimResponse.addItem",
+    "ClaimResponse.addItem.detail",
+    "ClaimResponse.addItem.detail.subDetail",
+    "CoverageEligibilityRequest.item",
+    "ExplanationOfBenefit.item",
+    "ExplanationOfBenefit.item.detail",
+    "ExplanationOfBenefit.item.detail.subDetail",
+    "ExplanationOfBenefit.addItem",
+    "ExplanationOfBenefit.addItem.detail",
+    "ExplanationOfBenefit.addItem.detail.subDetail"
+  ]
+}
+net: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Contract.term.asset.valuedItem"
+    ]
+  ],
+  "bare": [
+    "Claim.item",
+    "Claim.item.detail",
+    "Claim.item.detail.subDetail",
+    "ClaimResponse.addItem",
+    "ClaimResponse.addItem.detail",
+    "ClaimResponse.addItem.detail.subDetail",
+    "ExplanationOfBenefit.item",
+    "ExplanationOfBenefit.item.detail",
+    "ExplanationOfBenefit.item.detail.subDetail",
+    "ExplanationOfBenefit.addItem",
+    "ExplanationOfBenefit.addItem.detail",
+    "ExplanationOfBenefit.addItem.detail.subDetail"
+  ]
+}
+recipient: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "Communication"
+    ],
+    [
+      "FiveWs.actor",
+      "CommunicationRequest"
+    ],
+    [
+      "FiveWs.cause",
+      "DocumentManifest"
+    ]
+  ],
+  "bare": [
+    "Contract.term.asset.valuedItem",
+    "Invoice",
+    "PaymentNotice",
+    "Task.restriction"
+  ]
+}
+content[x]: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Contract.friendly"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Contract.legal"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Contract.rule"
+    ]
+  ],
+  "bare": [
+    "Communication.payload",
+    "CommunicationRequest.payload"
+  ]
+}
+requester: {
+  "w5": [
+    [
+      "FiveWs.author",
+      "CommunicationRequest"
+    ],
+    [
+      "FiveWs.author",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.author",
+      "MedicationRequest"
+    ],
+    [
+      "FiveWs.author",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.author",
+      "SupplyRequest"
+    ],
+    [
+      "FiveWs.author",
+      "Task"
+    ]
+  ],
+  "bare": [
+    "Contract.term.action"
+  ]
+}
+focus: {
+  "w5": [
+    [
+      "FiveWs.subject[x]",
+      "Observation"
+    ],
+    [
+      "FiveWs.what[x]",
+      "Task"
+    ]
+  ],
+  "bare": [
+    "Composition.section",
+    "EvidenceReport.section",
+    "MessageDefinition",
+    "MessageHeader",
+    "ResearchStudy",
+    "ValueSet.scope"
+  ]
+}
+group: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Contract.term"
+    ]
+  ],
+  "bare": [
+    "ConceptMap",
+    "ConceptMap2",
+    "Ingredient",
+    "Ingredient.specifiedSubstance",
+    "Measure",
+    "MeasureReport",
+    "StructureMap"
+  ]
+}
+evidence: {
+  "w5": [
+    [
+      "FiveWs.why[x]",
+      "DetectedIssue"
+    ]
+  ],
+  "bare": [
+    "Condition",
+    "Permission.justification"
+  ]
+}
+medication: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "MedicationAdministration"
+    ],
+    [
+      "FiveWs.what[x]",
+      "MedicationDispense"
+    ],
+    [
+      "FiveWs.what[x]",
+      "MedicationRequest"
+    ],
+    [
+      "FiveWs.what[x]",
+      "MedicationUsage"
+    ]
+  ],
+  "bare": [
+    "ConditionDefinition"
+  ]
+}
+class: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Encounter"
+    ]
+  ],
+  "bare": [
+    "Consent.provision",
+    "Coverage",
+    "Encounter.classHistory",
+    "SubstancePolymer",
+    "SubstanceSourceMaterial.organism.organismGeneral"
+  ]
+}
+issued: {
+  "w5": [
+    [
+      "FiveWs.recorded",
+      "Contract.term"
+    ],
+    [
+      "FiveWs.recorded",
+      "DiagnosticReport"
+    ],
+    [
+      "FiveWs.recorded",
+      "Observation"
+    ],
+    [
+      "FiveWs.recorded",
+      "TestReport"
+    ]
+  ],
+  "bare": [
+    "Contract"
+  ]
+}
+applies: {
+  "w5": [
+    [
+      "FiveWs.done[x]",
+      "Contract.term"
+    ]
+  ],
+  "bare": [
+    "Contract"
+  ]
+}
+term: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Contract"
+    ]
+  ],
+  "bare": [
+    "CoverageEligibilityResponse.insurance.item",
+    "ExplanationOfBenefit.benefitBalance"
+  ]
+}
+condition: {
+  "w5": [
+    [
+      "FiveWs.why[x]",
+      "Encounter.diagnosis"
+    ],
+    [
+      "FiveWs.what[x]",
+      "EpisodeOfCare.diagnosis"
+    ],
+    [
+      "FiveWs.what[x]",
+      "ResearchStudy"
+    ]
+  ],
+  "bare": [
+    "Contract.term.asset",
+    "FamilyMemberHistory",
+    "ObservationDefinition.qualifiedValue",
+    "PlanDefinition.action",
+    "RequestGroup.action",
+    "RiskAssessment",
+    "Specimen",
+    "StructureMap.group.rule.source"
+  ]
+}
+performerType: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.actor",
+      "ServiceRequest"
+    ],
+    [
+      "FiveWs.actor",
+      "Task"
+    ]
+  ],
+  "bare": [
+    "Contract.term.action",
+    "MedicationRequest",
+    "ObservationDefinition"
+  ]
+}
+signature: {
+  "w5": [
+    [
+      "FiveWs.author",
+      "Contract.signer"
+    ]
+  ],
+  "bare": [
+    "Provenance"
+  ]
+}
+rule: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Contract"
+    ]
+  ],
+  "bare": [
+    "GraphDefinition.link.target.compartment",
+    "StructureMap.group",
+    "StructureMap.group.rule"
+  ]
+}
+deviceIdentifier: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Device.udiCarrier"
+    ]
+  ],
+  "bare": [
+    "DeviceDefinition.udiDeviceIdentifier",
+    "DeviceDefinition.packaging.udiDeviceIdentifier"
+  ]
+}
+manufacturer: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Device"
+    ]
+  ],
+  "bare": [
+    "Immunization",
+    "Ingredient",
+    "ManufacturedItemDefinition",
+    "NutritionProduct",
+    "PackagedProductDefinition",
+    "PackagedProductDefinition.package",
+    "SubstanceDefinition"
+  ]
+}
+expirationDate: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Device"
+    ]
+  ],
+  "bare": [
+    "Immunization",
+    "Medication.batch"
+  ]
+}
+lotNumber: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Device"
+    ]
+  ],
+  "bare": [
+    "Immunization",
+    "Medication.batch",
+    "NutritionProduct.instance"
+  ]
+}
+component: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Device.version"
+    ],
+    [
+      "FiveWs.what[x]",
+      "DeviceDefinition.version"
+    ]
+  ],
+  "bare": [
+    "Measure.group.stratifier",
+    "MeasureReport.group.stratifier.stratum",
+    "Observation",
+    "ObservationDefinition",
+    "SearchParameter"
+  ]
+}
+operationalStatus: {
+  "w5": [
+    [
+      "FiveWs.status",
+      "Location"
+    ]
+  ],
+  "bare": [
+    "Device",
+    "DeviceMetric"
+  ]
+}
+destination: {
+  "w5": [
+    [
+      "FiveWs.subject[x]",
+      "MessageHeader"
+    ]
+  ],
+  "bare": [
+    "DeviceDispense",
+    "Encounter.hospitalization",
+    "MedicationDispense",
+    "SupplyDelivery",
+    "TestScript",
+    "TestScript.metadata.capability",
+    "TestScript.setup.action.operation"
+  ]
+}
+parameter: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "DeviceRequest"
+    ],
+    [
+      "FiveWs.what[x]",
+      "SupplyRequest"
+    ]
+  ],
+  "bare": [
+    "ImplementationGuide.definition",
+    "Library",
+    "OperationDefinition",
+    "Parameters",
+    "StructureMap.group.rule.target",
+    "TerminologyCapabilities.expansion",
+    "ValueSet.expansion"
+  ]
+}
+informationSource: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "DeviceUsage"
+    ],
+    [
+      "FiveWs.source",
+      "MedicationUsage"
+    ]
+  ],
+  "bare": [
+    "MedicationRequest"
+  ]
+}
+physicalType: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "Location"
+    ]
+  ],
+  "bare": [
+    "Encounter.location"
+  ]
+}
+method: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "RiskAssessment"
+    ]
+  ],
+  "bare": [
+    "EvidenceVariable.characteristic",
+    "MedicationAdministration.dosage",
+    "MolecularSequence.quality",
+    "Observation",
+    "ObservationDefinition",
+    "Specimen.collection",
+    "SubstanceDefinition.molecularWeight",
+    "TestScript.setup.action.operation"
+  ]
+}
+receiver: {
+  "w5": [
+    [
+      "FiveWs.subject[x]",
+      "MessageHeader.destination"
+    ]
+  ],
+  "bare": [
+    "ExampleScenario.process.step.operation",
+    "MedicationDispense",
+    "SupplyDelivery"
+  ]
+}
+response: {
+  "w5": [
+    [
+      "FiveWs.subject[x]",
+      "PaymentNotice"
+    ]
+  ],
+  "bare": [
+    "ExampleScenario.process.step.operation",
+    "MessageHeader",
+    "PaymentReconciliation.detail",
+    "TestScript.setup.action.assert"
+  ]
+}
+measure: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "MeasureReport"
+    ]
+  ],
+  "bare": [
+    "Goal.target",
+    "PlanDefinition.goal.target"
+  ]
+}
+modality: {
+  "w5": [
+    [
+      "FiveWs.class",
+      "ImagingStudy"
+    ]
+  ],
+  "bare": [
+    "ImagingStudy.series"
+  ]
+}
+started: {
+  "w5": [
+    [
+      "FiveWs.init",
+      "ImagingStudy"
+    ]
+  ],
+  "bare": [
+    "ImagingStudy.series"
+  ]
+}
+vaccineCode: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "Immunization"
+    ]
+  ],
+  "bare": [
+    "ImmunizationRecommendation.recommendation"
+  ]
+}
+primarySource: {
+  "w5": [
+    [
+      "FiveWs.source",
+      "Immunization"
+    ]
+  ],
+  "bare": [
+    "VerificationResult"
+  ]
+}
+reporter: {
+  "w5": [
+    [
+      "FiveWs.source",
+      "MeasureReport"
+    ]
+  ],
+  "bare": [
+    "InventoryReport"
+  ]
+}
+sponsor: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "ResearchStudy"
+    ]
+  ],
+  "bare": [
+    "Medication",
+    "MedicationKnowledge"
+  ]
+}
+event[x]: {
+  "w5": [
+    [
+      "FiveWs.what[x]",
+      "MessageHeader"
+    ]
+  ],
+  "bare": [
+    "MessageDefinition"
+  ]
+}
+supplier: {
+  "w5": [
+    [
+      "FiveWs.actor",
+      "SupplyRequest"
+    ]
+  ],
+  "bare": [
+    "SubstanceDefinition",
+    "SupplyDelivery"
+  ]
+}
+lockedDate: {
+  "w5": [
+    [
+      "FiveWs.init",
+      "ValueSet.compose"
+    ]
+  ],
+  "bare": [
+    "TerminologyCapabilities"
+  ]
+}
+
+
+singles:
 identifier: {
   "w5": [
     [

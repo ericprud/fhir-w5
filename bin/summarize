@@ -72,15 +72,24 @@ const names = resources.reduce( (names, entry) => {
   return names
 }, {})
 
-const [all, some, none] = Object.keys(names).reduce(([all, some, none], name) => {
+const [all, some, none, singles] = Object.keys(names).reduce(([all, some, none, singles], name) => {
   if (names[name].bare.length === 0) {
-    return [all.concat([name]), some, none]
+    if (names[name].w5.length === 1) {
+      singles.push(name)
+    } else {
+      all.push(name)
+    }
   } else if (names[name].w5.length === 0) {
-    return [all, some, none.concat([name])]
+    if (names[name].bare.length === 1) {
+      singles.push(name)
+    } else {
+      none.push(name)
+    }
   } else {
-    return [all, some.concat([name]), none]
+    some.push(name)
   }
-}, [[], [], []])
+  return [all, some, none, singles]
+}, [[], [], [], []])
 
 console.log('All mapped:')
 console.log(all.map(name => `${name}: ${
@@ -93,6 +102,11 @@ JSON.stringify(names[name].bare, null, 2)
 }`).join('\n'))
 
 console.log('\n\nsome mapped:')
+console.log(some.map(name => `${name}: ${
+JSON.stringify(names[name], null, 2)
+}`).join('\n'))
+
+console.log('\n\nsingles:')
 console.log(some.map(name => `${name}: ${
 JSON.stringify(names[name], null, 2)
 }`).join('\n'))
