@@ -1,9 +1,9 @@
-# test coverage of w5 mappints
+# test coverage of w5 mappings
 
 ## summarize
 
 1. read `profiles-resources.json`
-2. emits four groups:
+2. emits four groups into [`summary.yaml`](summary.yaml)
 
 
 ### All mapped
@@ -76,19 +76,27 @@ There is no ambiguity about the use of the name, either because all uses share t
 
 ## status
 
-Works but not really vetted.
+Runs, but not really vetted.
 
-Parses mappings from property definitions (`<bundle>.entry[*].resource.differential.element[*]`), e.g.
+## [`summarize`](bin/summarize) process
+
+1. Read a `profiles-resources.json`, which is a Bundle with FHIR opperation and structure defintions in the `entry` array.
+2. Filter for structure defintions
+3. remove meta structures:
+   - `CapabilityStatement` `StructureDefintion` and anything with that `resourceType`
+   - `CompartmentDefinition` `StructureDefintion` and anything with that `resourceType`
+   - `Bundle`
+   - `StructureDefintion`
+   - `Resource`
+   - `DomainResource`
+   (The contents of last two are included in every remaining Resource).
+5. For each bundle entry (Resource StructureDefinition) `r`
+   1. For each field `f` in `r.differential.element`
+      1. extract w5 mappings, if any, from `f.mapping` , e.g.
 ``` json
-              "mapping": [
-                {
-                  "identity": "w5",
-                  "map": "FiveWs.status"
-                },
-                {
-                  "identity": "rim",
-                  "map": ".statusCode"
-                }
-              ]
+"mapping": [
+  { "identity": "w5", "map": "FiveWs.what[x]" },
+  { "identity": "v2", "map": "OBX-3" }
+]
 ```
-
+      2. index field hierarchy by property name and any w5 mappings

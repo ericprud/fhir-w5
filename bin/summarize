@@ -23,7 +23,7 @@ const lastUpdated = rootBundle.meta.lastUpdated
 
 // trim to regular-use resources 
 console.warn(`starting with ${resources.length} entries`)
-resources = resources.filter(
+resources = rootBundle.entry = resources.filter(
   e => e.fullUrl.startsWith(STRUC_DEF)
     && e.resource.resourceType !== 'CapabilityStatement'
     && e.resource.resourceType !== 'CompartmentDefinition'
@@ -38,44 +38,43 @@ resources.forEach(e => {
   delete e.resource.snapshot
 })
 
+// profiles-resources is 40M, trimmed it's 6M.
 if (WRITE_TRIMMED_FILE) {
-  rootBundle.entry = resources
   Fs.writeFileSync(WRITE_TRIMMED_FILE, JSON.stringify(rootBundle, null, 2))
 }
-delete rootBundle
-
-// console.warn(resources.map(e => `${e.resource.id} / ${e.fullUrl}`).join('\n'))
 
 const names = resources.reduce( (names, entry) => {
-  const r = entry.resource
-  const fields = r.differential.element
-  const root = fields.shift()
-  if (!root.id.match(/^[A-Za-z]+2?$/))
+  const r = entry.resource              // {resourceType: Str...ion, id: Observation, differential: {...}}
+  const fields = r.differential.element // [{id: Observation,...} ... {id: Observation.component.code, ... }]
+  const root = fields.shift() // {id: Observation,...}
+  if (!root.id.match(/^[A-Za-z]+2?$/))  // no '.'s in root name
     throw Error(`${root.id} unexpected in ${root}`)
+
   fields.forEach(f => {
-    const hier = f.id.split(/\./)
-    const name = hier.pop()
+    const hier = f.id.split(/\./)       // [Observation, component, code]
+    const name = hier.pop()             // code
     if (!(name in names))
       names[name] = {w5: {}, bare: []}
 
     let w5 = null
     if ('mapping' in f) {
       const m = f.mapping.find(m => m.identity === 'w5')
-      if (m && 'map' in m)
-        w5 = m.map
+      if (m && 'map' in m)              // {identity: w5, map: FiveWs.what[x]}
+        w5 = m.map                      // FiveWs.what[x]
     }
 
     if (w5) {
-      if (!(w5 in names[name].w5))
+      if (!(w5 in names[name].w5))      // property name `code` has a mapping
         names[name].w5[w5] = []
-      names[name].w5[w5].push(hier.join('.'))
-    } else {
-      names[name].bare.push(hier.join('.'))
+      names[name].w5[w5].push(hier.join('.')) // names['code'].w5['FiveWs.what[x]'].push('Observation.component')
+    } else {                            // property name `value[x]` has no mapping
+      names[name].bare.push(hier.join('.'))   // names['value[x]'].bare.push('Observation.component')
     }
   })
   return names
 }, {})
 
+// Categorize names by how many places they appear and whether they are mapped
 const [all, some, none, singles] = Object.keys(names).sort().reduce(([all, some, none, singles], name) => {
   const entry = names[name]
   if (entry.bare.length === 0) {
@@ -96,6 +95,7 @@ const [all, some, none, singles] = Object.keys(names).sort().reduce(([all, some,
   return [all, some, none, singles]
 }, [[], [], [], []])
 
+// Generate summary from categorized names
 const summary = { }
 summary[`All mapped (${all.length})`] = all.reduce(
   (acc, name) => appendObj(acc, name, names[name].w5), {}
@@ -109,8 +109,11 @@ summary[`Some mapped (${some.length})`] = some.reduce(
 summary[`Singles (${singles.length})`] = singles.reduce(
   (acc, name) => appendObj(acc, name, names[name]), {}
 )
+
+// Emit the summary
 console.log(Yaml.dump(summary))
 
+// appendObj should be a javascript primitive
 function appendObj (obj, key, value) {
   if (key in obj) throw new Error(`${key} already bound to ${obj[key]}`)
   obj[key] = value
