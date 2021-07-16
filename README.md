@@ -93,10 +93,10 @@ Runs, but not really vetted.
 5. For each bundle entry (Resource StructureDefinition) `r`
    1. For each field `f` in `r.differential.element`
       1. extract w5 mappings, if any, from `f.mapping` , e.g.
-``` json
-"mapping": [
-  { "identity": "w5", "map": "FiveWs.what[x]" },
-  { "identity": "v2", "map": "OBX-3" }
-]
-```
+         ``` json
+         "mapping": [
+           { "identity": "w5", "map": "FiveWs.what[x]" },
+           { "identity": "v2", "map": "OBX-3" }
+         ]
+         ```
       2. index field hierarchy by property name and any w5 mappings
