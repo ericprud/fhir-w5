@@ -1,0 +1,99 @@
+#!/usr/bin/env node
+
+const Fs = require('fs')
+const Yaml = require('js-yaml')
+
+const STRUC_DEF = 'http://hl7.org/fhir/StructureDefinition/'
+const META_DEFS = [
+  'Bundle',
+  'DomainResource',
+  'Resource',
+  'StructureDefinition',
+]
+const WRITE_TRIMMED_FILE = false // 'trimmed.json'
+
+const inFile = process.argv[2]
+const outFile = process.argv[3]
+
+// profiles-resources.json is a bundle with ~150 regular-use resources
+const rootBundle = JSON.parse(Fs.readFileSync(inFile, 'utf-8'))
+// resources will become a those regular-use resources
+let resources = rootBundle.entry
+const lastUpdated = rootBundle.meta.lastUpdated
+
+// trim to regular-use resources
+console.warn(`starting with ${resources.length} Resources`)
+resources = rootBundle.entry = resources.filter(
+  e => e.fullUrl.startsWith(STRUC_DEF)
+    && e.resource.resourceType !== 'CapabilityStatement'
+    && e.resource.resourceType !== 'CompartmentDefinition'
+    && e.resource.id !== 'CompartmentDefinition'
+    && META_DEFS.indexOf(e.resource.id) === -1
+)
+console.warn(`trimmed to ${resources.length} Resources`)
+
+// trim extra stuff that takes a lot of space
+resources.forEach(e => {
+  delete e.resource.text
+  delete e.resource.snapshot
+})
+
+// profiles-resources is 40M, trimmed it's 6M.
+if (WRITE_TRIMMED_FILE) {
+  Fs.writeFileSync(WRITE_TRIMMED_FILE, JSON.stringify(rootBundle, null, 2))
+}
+
+const {properties, defns} = resources.reduce( ({properties, defns}, entry) => {
+  const r = entry.resource              // {resourceType: Str...ion, id: Observation, differential: {...}}
+  const fields = r.differential.element // [{id: Observation,...} ... {id: Observation.component.code, ... }]
+  const root = fields.shift() // {id: Observation,...}
+  if (!root.id.match(/^[A-Za-z]+2?$/))  // no '.'s in root property
+    throw Error(`${root.id} unexpected in ${root}`)
+
+  fields.forEach(f => {
+    const hier = f.id.split(/\./)       // [Observation, component, code]
+    const property = hier.pop()             // code
+    const where = hier.join('.')
+
+    if (!(property in properties))
+      properties[property] = {}
+
+    if (!(f.definition in properties[property]))
+      properties[property][f.definition] = []
+    properties[property][f.definition].push(where)
+
+    if (!(f.definition in defns))
+      defns[f.definition] = {}
+    defns[f.definition][property] = where
+  })
+
+  return {properties, defns}
+}, {properties: {}, defns: {}})
+
+const conflictingDefns = Object.keys(defns).reduce( (conflictingDefns, defn) => {
+  const entry = defns[defn]
+  if (Object.keys(entry).length > 1)
+    conflictingDefns[defn] = entry
+  return conflictingDefns
+}, {})
+
+const {reusedProperties, singletonProperties} = Object.keys(properties).reduce( ({reusedProperties, singletonProperties}, property) => {
+  const entry = properties[property]
+  if (Object.keys(entry).length === 1)
+    singletonProperties[property] = entry
+  else
+    reusedProperties[property] = entry
+  return {reusedProperties, singletonProperties}
+}, {reusedProperties: {}, singletonProperties: {}})
+
+Fs.writeFileSync('properties.yaml', Yaml.dump(properties))
+Fs.writeFileSync('reusedProperties.yaml', Yaml.dump(reusedProperties))
+Fs.writeFileSync('singletonProperties.yaml', Yaml.dump(singletonProperties))
+Fs.writeFileSync('conflictingDefns.yaml', Yaml.dump(conflictingDefns))
+
+// Dump a markdown summary
+console.log('[Properties](properties.yaml): ', Object.keys(properties).length)
+console.log('  [reusedProperties](reusedProperties.yaml): ', Object.keys(reusedProperties).length)
+console.log('  [singletonProperties](singletonProperties.yaml): ', Object.keys(singletonProperties).length)
+console.log('[conflictingDefns](conflictingDefns.yaml): ', Object.keys(conflictingDefns).length)
+

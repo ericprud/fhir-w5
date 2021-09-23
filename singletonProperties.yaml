@@ -1,0 +1,2978 @@
+billingStatus:
+  The BillingStatus tracks the lifecycle of the account through the billing process. It indicates how transactions are treated when they are allocated to the account.:
+    - Account
+servicePeriod:
+  The date range of services associated with this account.:
+    - Account
+guarantor:
+  The parties responsible for balancing the account if other payment options fall short.:
+    - Account
+onHold:
+  A guarantor may be placed on credit hold or otherwise have their role temporarily suspended.:
+    - Account.guarantor
+specimenRequirement:
+  Defines specimen requirements for the action to be performed, such as required specimens for a lab test.:
+    - ActivityDefinition
+observationRequirement:
+  Defines observation requirements for the action to be performed, such as body weight or surface area.:
+    - ActivityDefinition
+observationResultRequirement:
+  Defines the observations that are expected to be produced by the action.:
+    - ActivityDefinition
+administrableDoseForm:
+  The administrable dose form, i.e. the dose form of the final product after necessary reconstitution or processing.:
+    - AdministrableProductDefinition
+producedFrom:
+  The manufactured item(s) that this administrable product is produced from. Either a single item, or several that are mixed before administration (e.g. a power item and a solution item). Note that these are not raw ingredients.:
+    - AdministrableProductDefinition
+routeOfAdministration:
+  The path by which the product is taken into or makes contact with the body. In some regions this is referred to as the licenced or approved route.:
+    - AdministrableProductDefinition
+firstDose:
+  The first dose (dose quantity) administered can be specified for the product, using a numerical value and its unit of measurement.:
+    - AdministrableProductDefinition.routeOfAdministration
+maxSingleDose:
+  The maximum single dose that can be administered, can be specified using a numerical value and its unit of measurement.:
+    - AdministrableProductDefinition.routeOfAdministration
+maxDosePerDay:
+  The maximum dose per day (maximum dose quantity to be administered in any one 24-h period) that can be administered.:
+    - AdministrableProductDefinition.routeOfAdministration
+maxDosePerTreatmentPeriod:
+  The maximum dose per treatment period that can be administered.:
+    - AdministrableProductDefinition.routeOfAdministration
+maxTreatmentPeriod:
+  The maximum treatment period during which an Investigational Medicinal Product can be administered.:
+    - AdministrableProductDefinition.routeOfAdministration
+targetSpecies:
+  A species for which this route applies.:
+    - AdministrableProductDefinition.routeOfAdministration
+withdrawalPeriod:
+  A species specific time during which consumption of animal product is not appropriate.:
+    - AdministrableProductDefinition.routeOfAdministration.targetSpecies
+tissue:
+  Coded expression for the type of tissue for which the withdrawal period applues, e.g. meat, milk.:
+    - >-
+      AdministrableProductDefinition.routeOfAdministration.targetSpecies.withdrawalPeriod
+actuality:
+  Whether the event actually happened, or just had the potential to. Note that this is independent of whether anyone was affected or harmed or how severely.:
+    - AdverseEvent
+detected:
+  Estimated or actual date the AdverseEvent began, in the opinion of the reporter.:
+    - AdverseEvent
+resultingCondition:
+  Information about the condition that occurred as a result of the adverse event, such as hives due to the exposure to a substance (for example, a drug or a chemical) or a broken leg as a result of the fall.:
+    - AdverseEvent
+seriousness:
+  Assessment whether this event, or averted event, was of clinical importance.:
+    - AdverseEvent
+suspectEntity:
+  Describes the entity that is suspected to have caused the adverse event.:
+    - AdverseEvent
+instance[x]:
+  Identifies the actual instance of what caused the adverse event.  May be a substance, medication, medication administration, medication statement or a device.:
+    - AdverseEvent.suspectEntity
+causality:
+  Information on the possible cause of the event.:
+    - AdverseEvent.suspectEntity
+assessmentMethod:
+  The method of evaluating the relatedness of the suspected entity to the event.:
+    - AdverseEvent.suspectEntity.causality
+entityRelatedness:
+  The result of the assessment regarding the relatedness of the suspected entity to the event.:
+    - AdverseEvent.suspectEntity.causality
+contributingFactor:
+  The contributing factors suspected to have increased the probability or severity of the adverse event.:
+    - AdverseEvent
+preventiveAction:
+  Preventive actions that contributed to avoiding the adverse event.:
+    - AdverseEvent
+mitigatingAction:
+  The ameliorating action taken after the adverse event occured in order to reduce the extent of harm.:
+    - AdverseEvent
+criticality:
+  Estimate of the potential clinical harm, or seriousness, of the reaction to the identified substance.:
+    - AllergyIntolerance
+lastOccurrence:
+  Represents the date and/or time of the last known occurrence of a reaction event.:
+    - AllergyIntolerance
+manifestation:
+  Clinical symptoms and/or signs that are observed or associated with the adverse reaction event.:
+    - AllergyIntolerance.reaction
+onset:
+  Record of the date and/or time of the onset of the Reaction.:
+    - AllergyIntolerance.reaction
+exposureRoute:
+  Identification of the route by which the subject was exposed to the substance.:
+    - AllergyIntolerance.reaction
+cancellationReason:
+  The coded reason for the appointment being cancelled. This is often used in reporting/billing/futher processing to determine if further actions are required, or specific fees apply.:
+    - Appointment
+serviceCategory:
+  A broad categorization of the service that is to be performed during this appointment.:
+    - Appointment
+    - Schedule
+    - Slot
+minutesDuration:
+  Number of minutes that the appointment is to take. This can be less than the duration between the start and end times.  For example, where the actual time of appointment is only an estimate or if a 30 minute appointment is being requested, but any time would work.  Also, if there is, for example, a planned 15 minute break in the middle of a long appointment, the duration may be 15 minutes less than the difference between the start and end.:
+    - Appointment
+slot:
+  The slots from the participants' schedules that will be filled by the appointment.:
+    - Appointment
+requestedPeriod:
+  "A set of date ranges (potentially including times) that the appointment is preferred to be scheduled within.\n\nThe duration (usually in minutes) could also be provided to indicate the length of the appointment to fill and populate the start/end times for the actual allocated time. However, in other situations the duration may be calculated by the scheduling system.":
+    - Appointment
+participantType:
+  Role of participant in the appointment.:
+    - AppointmentResponse
+participantStatus:
+  Participation status of the participant. When the status is declined or tentative if the start/end times are different to the appointment, then these times should be interpreted as a requested time change. When the status is accepted, the times can either be the time of the appointment (as a confirmation of the time) or can be empty.:
+    - AppointmentResponse
+purposeOfEvent:
+  The purposeOfUse (reason) that was used during the event being recorded.:
+    - AuditEvent
+altId:
+  Alternative agent Identifier. For a human, this should be a user identifier text string from authentication system. This identifier would be one known to a common authentication system (e.g. single sign-on), if available.:
+    - AuditEvent.agent
+purposeOfUse:
+  The reason (purpose of use), specific to this agent, that was used during the event being recorded.:
+    - AuditEvent.agent
+observer:
+  Identifier of the source where the event was detected.:
+    - AuditEvent.source
+lifecycle:
+  Identifier for the data life-cycle stage for the entity.:
+    - AuditEvent.entity
+query:
+  The query parameters for a query-type entities.:
+    - AuditEvent.entity
+securityContext:
+  This element identifies another resource that can be used as a proxy of the security sensitivity to use when deciding and enforcing access control rules for the Binary resource. Given that the Binary resource contains very few elements that can be used to determine the sensitivity of the data and relationships to individuals, the referenced resource stands in as a proxy equivalent for this purpose. This referenced resource may be related to the Binary (e.g. DocumentReference), or may be some non-related Resource purely as a security proxy. E.g. to identify that the binary resource relates to a patient, and access should only be granted to applications that have access to the patient.:
+    - Binary
+productCategory:
+  Broad category of this product.:
+    - BiologicallyDerivedProduct
+manipulation:
+  Any manipulation of product post-collection that is intended to alter the product.  For example a buffy-coat enrichment or CD8 reduction of Peripheral Blood Stem Cells to make it more suitable for infusion.:
+    - BiologicallyDerivedProduct
+storage:
+  Product storage.:
+    - BiologicallyDerivedProduct
+temperature:
+  Storage temperature.:
+    - BiologicallyDerivedProduct.storage
+scale:
+  Temperature scale used.:
+    - BiologicallyDerivedProduct.storage
+morphology:
+  The kind of structure being represented by the body structure at `BodyStructure.location`.  This can define both normal and abnormal morphologies.:
+    - BodyStructure
+locationQualifier:
+  Qualifier to refine the anatomical location.  These include qualifiers for laterality, relative location, directionality, number, and plane.:
+    - BodyStructure
+releaseDate:
+  Date this version of the software was released.:
+    - CapabilityStatement.software
+    - CapabilityStatement2.software
+patchFormat:
+  A list of the patch formats supported by this implementation using their content types.:
+    - CapabilityStatement
+    - CapabilityStatement2
+implementationGuide:
+  A list of implementation guides that the server does (or should) support in their entirety.:
+    - CapabilityStatement
+    - CapabilityStatement2
+rest:
+  A definition of the restful capabilities of the solution, if any.:
+    - CapabilityStatement
+    - CapabilityStatement2
+security:
+  Information about security implementation from an interface perspective - what a client needs to know.:
+    - CapabilityStatement.rest
+cors:
+  Server adds CORS headers when responding to requests - this enables Javascript applications to use the server.:
+    - CapabilityStatement.rest.security
+supportedProfile:
+  A list of profiles that represent different use cases supported by the system. For a server, "supported by the system" means the system hosts/produces a set of resources that are conformant to a particular profile, and allows clients that use its services to search using this profile and to find appropriate data. For a client, it means the system will search by this profile and process data according to the guidance implicit in the profile. See further discussion in [Using Profiles](profiling.html#profile-uses).:
+    - CapabilityStatement.rest.resource
+    - CapabilityStatement2.rest.resource
+versioning:
+  This field is set to no-version to specify that the system does not support (server) or use (client) versioning for this resource type. If this has some other value, the server must at least correctly track and populate the versionId meta-property on resources. If the value is 'versioned-update', then the server supports all the versioning features, including using e-tags for version integrity in the API.:
+    - CapabilityStatement.rest.resource
+readHistory:
+  A flag for whether the server is able to return past versions as part of the vRead operation.:
+    - CapabilityStatement.rest.resource
+updateCreate:
+  A flag to indicate that the server allows or needs to allow the client to create new identities on the server (that is, the client PUTs to a location where there is no existing resource). Allowing this operation means that the server allows the client to create new identities on the server.:
+    - CapabilityStatement.rest.resource
+conditionalCreate:
+  A flag that indicates that the server supports conditional create.:
+    - CapabilityStatement.rest.resource
+conditionalRead:
+  A code that indicates how the server supports conditional read.:
+    - CapabilityStatement.rest.resource
+conditionalUpdate:
+  A flag that indicates that the server supports conditional update.:
+    - CapabilityStatement.rest.resource
+conditionalDelete:
+  A code that indicates how the server supports conditional delete.:
+    - CapabilityStatement.rest.resource
+referencePolicy:
+  A set of flags that defines how references are supported.:
+    - CapabilityStatement.rest.resource
+searchInclude:
+  A list of _include values supported by the server.:
+    - CapabilityStatement.rest.resource
+searchRevInclude:
+  A list of _revinclude (reverse include) values supported by the server.:
+    - CapabilityStatement.rest.resource
+messaging:
+  A description of the messaging capabilities of the solution.:
+    - CapabilityStatement
+reliableCache:
+  Length if the receiver's reliable messaging cache in minutes (if a receiver) or how long the cache length on the receiver should be (if a sender).:
+    - CapabilityStatement.messaging
+supportedMessage:
+  References to message definitions for messages this system can send or receive.:
+    - CapabilityStatement.messaging
+contributor:
+  Identifies the individual(s) or organization who provided the contents of the care plan.:
+    - CarePlan
+performedActivity:
+  Identifies the activity that was performed. For example, an activity could be patient education, exercise, or a medication administration. The reference to an "event" resource, such as Procedure or Encounter or Observation, represents the activity that was performed. The requested activity can be conveyed using CarePlan.activity.plannedActivityDetail OR using the CarePlan.activity.plannedActivityReference (a reference to a “request” resource).:
+    - CarePlan.activity
+plannedActivityReference:
+  The details of the proposed activity represented in a specific resource.:
+    - CarePlan.activity
+plannedActivityDetail:
+  A simple summary of a planned activity suitable for a general care plan system (e.g. form driven) that doesn't know about specific resources such as procedure etc.:
+    - CarePlan.activity
+scheduled[x]:
+  The period, timing or frequency upon which the described activity is to occur.:
+    - CarePlan.activity.plannedActivityDetail
+dailyAmount:
+  Identifies the quantity expected to be consumed in a given day.:
+    - CarePlan.activity.plannedActivityDetail
+coverage[x]:
+  When the member is generally available within this care team.:
+    - CareTeam.participant
+orderable:
+  Indicates whether or not the entry represents an item that is orderable.:
+    - CatalogEntry
+referencedItem:
+  The item (resource) that this entry of the catalog represents.:
+    - CatalogEntry
+relatedEntry:
+  Used for example, to point to a substance, or to a device used to administer a medication.:
+    - CatalogEntry
+updatedBy:
+  Last actor who recorded (created or updated) this catalog entry.:
+    - CatalogEntry
+estimatedDuration:
+  Estimated duration of the orderable item of this  entry of the catalog.:
+    - CatalogEntry
+billingCode:
+  Billing code associated to the  item in the context of this  entry of the catalog.:
+    - CatalogEntry
+billingSummary:
+  Billing summary attached to the  item in the context of this  entry of the catalog.:
+    - CatalogEntry
+scheduleSummary:
+  Schedule summary for the  item in the context of this  entry of the catalog.:
+    - CatalogEntry
+limitationSummary:
+  Summary of limitations for the  item in the context of this  entry of the catalog.:
+    - CatalogEntry
+regulatorySummary:
+  Regulatory summary for the  item in the context of this  entry of the catalog.:
+    - CatalogEntry
+definitionUri:
+  References the (external) source of pricing information, rules of application for the code this ChargeItem uses.:
+    - ChargeItem
+definitionCanonical:
+  References the source of pricing information, rules of application for the code this ChargeItem uses.:
+    - ChargeItem
+performingOrganization:
+  The organization requesting the service.:
+    - ChargeItem
+requestingOrganization:
+  The organization performing the service.:
+    - ChargeItem
+costCenter:
+  The financial cost center permits the tracking of charge attribution.:
+    - ChargeItem
+bodysite:
+  The anatomical location where the related service has been applied.:
+    - ChargeItem
+factorOverride:
+  Factor overriding the factor determined by the rules associated with the code.:
+    - ChargeItem
+priceOverride:
+  Total price of the charge overriding the list price associated with the code.:
+    - ChargeItem
+overrideReason:
+  If the list price or the rule-based factor associated with the code is overridden, this attribute can capture a text to indicate the  reason for this action.:
+    - ChargeItem
+enteredDate:
+  Date the charge item was entered.:
+    - ChargeItem
+propertyGroup:
+  Group of properties which are applicable under the same conditions. If no applicability rules are established for the group, then all properties always apply.:
+    - ChargeItemDefinition
+targetClassifier:
+  The clasification of the related artifact.:
+    - Citation.relatesTo
+    - Citation.citedArtifact.relatesTo
+citedArtifact:
+  The article or artifact being described.:
+    - Citation
+dateAccessed:
+  When the cited artifact was accessed.:
+    - Citation.citedArtifact
+publicationForm:
+  If multiple, used to represent alternative forms of the article that are not separate citations.:
+    - Citation.citedArtifact
+publishedIn:
+  The collection the cited article or artifact is published in.:
+    - Citation.citedArtifact.publicationForm
+publisherLocation:
+  Geographic location of the publisher.:
+    - Citation.citedArtifact.publicationForm.publishedIn
+periodicRelease:
+  The specific issue in which the cited article resides.:
+    - Citation.citedArtifact.publicationForm
+citedMedium:
+  Describes the form of the medium cited. Common codes are "Internet" or "Print".:
+    - Citation.citedArtifact.publicationForm.periodicRelease
+volume:
+  Volume number of journal in which the article is published.:
+    - Citation.citedArtifact.publicationForm.periodicRelease
+dateOfPublication:
+  Defining the date on which the issue of the journal was published.:
+    - Citation.citedArtifact.publicationForm.periodicRelease
+year:
+  Year on which the issue of the journal was published.:
+    - Citation.citedArtifact.publicationForm.periodicRelease.dateOfPublication
+month:
+  Month on which the issue of the journal was published.:
+    - Citation.citedArtifact.publicationForm.periodicRelease.dateOfPublication
+day:
+  Day on which the issue of the journal was published.:
+    - Citation.citedArtifact.publicationForm.periodicRelease.dateOfPublication
+season:
+  Spring, Summer, Fall/Autumn, Winter.:
+    - Citation.citedArtifact.publicationForm.periodicRelease.dateOfPublication
+articleDate:
+  The date the article was added to the database, or the date the article was released (which may differ from the journal issue publication date).:
+    - Citation.citedArtifact.publicationForm
+lastRevisionDate:
+  The date the article was last revised or updated in the database.:
+    - Citation.citedArtifact.publicationForm
+accessionNumber:
+  Entry number or identifier for inclusion in a database.:
+    - Citation.citedArtifact.publicationForm
+pageString:
+  Used for full display of pagination.:
+    - Citation.citedArtifact.publicationForm
+firstPage:
+  Used for isolated representation of first page.:
+    - Citation.citedArtifact.publicationForm
+lastPage:
+  Used for isolated representation of last page.:
+    - Citation.citedArtifact.publicationForm
+pageCount:
+  Actual or approximate number of pages or screens.:
+    - Citation.citedArtifact.publicationForm
+whoClassified:
+  Provenance and copyright of classification.:
+    - Citation.citedArtifact.classification
+person:
+  Person who created the classification.:
+    - Citation.citedArtifact.classification.whoClassified
+classifierCopyright:
+  Rights management statement for the classification.:
+    - Citation.citedArtifact.classification.whoClassified
+freeToShare:
+  Acceptable to re-use the classification.:
+    - Citation.citedArtifact.classification.whoClassified
+contributorship:
+  This element is used to list authors and other contributors, their contact information, specific contributions, and summary statements.:
+    - Citation.citedArtifact
+complete:
+  Indicates if the list includes all authors and/or contributors.:
+    - Citation.citedArtifact.contributorship
+initials:
+  Initials for forename.:
+    - Citation.citedArtifact.contributorship.entry
+collectiveName:
+  Used for collective or corporate name as an author.:
+    - Citation.citedArtifact.contributorship.entry
+affiliationInfo:
+  Organization affiliated with the entity.:
+    - Citation.citedArtifact.contributorship.entry
+affiliation:
+  Display for the organization.:
+    - Citation.citedArtifact.contributorship.entry.affiliationInfo
+contributionType:
+  This element identifies the specific nature of an individual’s contribution with respect to the cited work.:
+    - Citation.citedArtifact.contributorship.entry
+contributionInstance:
+  Contributions with accounting for time or number.:
+    - Citation.citedArtifact.contributorship.entry
+correspondingContact:
+  Indication of which contributor is the corresponding contributor for the role.:
+    - Citation.citedArtifact.contributorship.entry
+listOrder:
+  Used to code order of authors.:
+    - Citation.citedArtifact.contributorship.entry
+billablePeriod:
+  The period for which charges are being submitted.:
+    - Claim
+    - ExplanationOfBenefit
+prescription:
+  Prescription to support the dispensing of pharmacy, device or vision products.:
+    - Claim
+    - ExplanationOfBenefit
+originalPrescription:
+  Original prescription which has been superseded by this prescription to support the dispensing of pharmacy services, medications or products.:
+    - Claim
+    - ExplanationOfBenefit
+referral:
+  A reference to a referral resource.:
+    - Claim
+    - ExplanationOfBenefit
+diagnosis[x]:
+  The nature of illness or problem in a coded form or as a reference to an external defined Condition.:
+    - Claim.diagnosis
+    - CoverageEligibilityRequest.item.diagnosis
+    - ExplanationOfBenefit.diagnosis
+onAdmission:
+  Indication of whether the diagnosis was present on admission to a facility.:
+    - Claim.diagnosis
+    - ExplanationOfBenefit.diagnosis
+packageCode:
+  A package billing code or bundle code used to group products and services to a particular health condition (such as heart attack) which is based on a predetermined grouping code system.:
+    - Claim.diagnosis
+    - ExplanationOfBenefit.diagnosis
+procedure[x]:
+  The code or reference to a Procedure resource which identifies the clinical intervention performed.:
+    - Claim.procedure
+    - ExplanationOfBenefit.procedure
+udi:
+  Unique Device Identifiers associated with this line item.:
+    - Claim.procedure
+    - Claim.item
+    - Claim.item.detail
+    - Claim.item.detail.subDetail
+    - ExplanationOfBenefit.procedure
+    - ExplanationOfBenefit.item
+    - ExplanationOfBenefit.item.detail
+    - ExplanationOfBenefit.item.detail.subDetail
+businessArrangement:
+  A business agreement number established between the provider and the insurer for special business processing purposes.:
+    - Claim.insurance
+    - ClaimResponse.insurance
+    - CoverageEligibilityRequest.insurance
+procedureSequence:
+  Procedures applicable for this service or product.:
+    - Claim.item
+    - ExplanationOfBenefit.item
+informationSequence:
+  Exceptions, special conditions and supporting information applicable for this service or product.:
+    - Claim.item
+    - ExplanationOfBenefit.item
+revenue:
+  The type of revenue or cost center providing the product and/or service.:
+    - Claim.item
+    - Claim.item.detail
+    - Claim.item.detail.subDetail
+    - ExplanationOfBenefit.item
+    - ExplanationOfBenefit.item.detail
+    - ExplanationOfBenefit.item.detail.subDetail
+programCode:
+  Identifies the program under which this may be recovered.:
+    - Claim.item
+    - Claim.item.detail
+    - Claim.item.detail.subDetail
+    - ClaimResponse.addItem
+    - ExplanationOfBenefit.item
+    - ExplanationOfBenefit.item.detail
+    - ExplanationOfBenefit.item.detail.subDetail
+    - ExplanationOfBenefit.addItem
+subSite:
+  A region or surface of the bodySite, e.g. limb region or tooth surface(s).:
+    - Claim.item
+    - ClaimResponse.addItem
+    - ExplanationOfBenefit.item
+    - ExplanationOfBenefit.addItem
+preAuthPeriod:
+  The time frame during which this authorization is effective.:
+    - ClaimResponse
+payeeType:
+  'Type of Party to be reimbursed: subscriber, provider, other.':
+    - ClaimResponse
+noteNumber:
+  The numbers associated with notes below which apply to the adjudication of this item.:
+    - ClaimResponse.item
+    - ClaimResponse.item.detail
+    - ClaimResponse.item.detail.subDetail
+    - ClaimResponse.addItem
+    - ClaimResponse.addItem.detail
+    - ClaimResponse.addItem.detail.subDetail
+    - ExplanationOfBenefit.item
+    - ExplanationOfBenefit.item.detail
+    - ExplanationOfBenefit.item.detail.subDetail
+    - ExplanationOfBenefit.addItem
+    - ExplanationOfBenefit.addItem.detail
+    - ExplanationOfBenefit.addItem.detail.subDetail
+addItem:
+  The first-tier service adjudications for payor added product or service lines.:
+    - ClaimResponse
+    - ExplanationOfBenefit
+subdetailSequence:
+  The sequence number of the sub-details within the details within the claim item which this line is intended to replace.:
+    - ClaimResponse.addItem
+adjustment:
+  Total amount of all adjustments to this payment included in this transaction which are not related to this claim's adjudication.:
+    - ClaimResponse.payment
+    - ExplanationOfBenefit.payment
+adjustmentReason:
+  Reason for the payment adjustment.:
+    - ClaimResponse.payment
+    - ExplanationOfBenefit.payment
+formCode:
+  A code for the form to be used for printing the content.:
+    - ClaimResponse
+    - ExplanationOfBenefit
+    - PaymentReconciliation
+communicationRequest:
+  Request for additional supporting or authorizing information.:
+    - ClaimResponse
+problem:
+  A list of the relevant problems/conditions for a patient.:
+    - ClinicalImpression
+finding:
+  Specific findings or diagnoses that were considered likely or relevant to ongoing treatment.:
+    - ClinicalImpression
+prognosisCodeableConcept:
+  Estimate of likely outcome.:
+    - ClinicalImpression
+prognosisReference:
+  RiskAssessment expressing likely outcome.:
+    - ClinicalImpression
+therapy:
+  Reference to a specific medication (active substance, medicinal product or class of products) as part of an indication or contraindication.:
+    - ClinicalUseIssue.contraindication.otherTherapy
+intendedEffect:
+  The intended effect, aim or strategy to be achieved.:
+    - ClinicalUseIssue.indication
+interactant:
+  The specific medication, food, substance or laboratory test that interacts.:
+    - ClinicalUseIssue.interaction
+effect:
+  The effect of the interaction, for example "reduced gastric absorption of primary medication".:
+    - ClinicalUseIssue.interaction
+incidence:
+  The incidence of the interaction, e.g. theoretical, observed.:
+    - ClinicalUseIssue.interaction
+management:
+  Actions for managing the interaction.:
+    - ClinicalUseIssue.interaction
+symptomConditionEffect:
+  The situation in which the undesirable effect may manifest.:
+    - ClinicalUseIssue.undesirableEffect
+frequencyOfOccurrence:
+  How often the effect is seen.:
+    - ClinicalUseIssue.undesirableEffect
+caseSensitive:
+  If code comparison is case sensitive when codes within this system are compared to each other.:
+    - CodeSystem
+hierarchyMeaning:
+  The meaning of the hierarchy of concepts as represented in this resource.:
+    - CodeSystem
+versionNeeded:
+  This flag is used to signify that the code system does not commit to concept permanence across versions. If true, a version must be specified when referencing this code system.:
+    - CodeSystem
+supplements:
+  The canonical URL of the code system that this code system supplement is adding designations and properties to.:
+    - CodeSystem
+inResponseTo:
+  Prior communication that this communication is in response to.:
+    - Communication
+medium:
+  A channel that was used for this communication (e.g. email, fax).:
+    - Communication
+    - CommunicationRequest
+sent:
+  The time when this communication was sent.:
+    - Communication
+received:
+  The time when this communication arrived at the destination.:
+    - Communication
+informationProvider:
+  The entity (e.g. person, organization, clinical information system, or device) which is to be the source of the communication.:
+    - CommunicationRequest
+attester:
+  A participant who has attested to the accuracy of the composition/document.:
+    - Composition
+    - DocumentReference
+source[x]:
+  Identifier for the source value set that contains the concepts that are being mapped and provides context for the mappings.:
+    - ConceptMap
+    - ConceptMap2
+noMap:
+  If noMap = true this indicates that no mapping to a target concept exists for this source concept.:
+    - ConceptMap.group.element
+    - ConceptMap2.group.element
+unmapped:
+  What to do when there is no mapping to a target concept from the source concept.  This provides the "default" to be applied when there is no target concept mapping specified.  The 'unmapped' element is ignored if a code is specified to have relationship = not-related-to.:
+    - ConceptMap.group
+    - ConceptMap2.group
+abatement[x]:
+  The date or estimated date that the condition resolved or went into remission. This is called "abatement" because of the many overloaded connotations associated with "remission" or "resolution" - Some conditions, such as chronic conditions, are never really resolved, but they can abate.:
+    - Condition
+assessment:
+  Reference to a formal record of the evidence on which the staging assessment is based.:
+    - Condition.stage
+hasSeverity:
+  Whether Severity is appropriate to collect for this condition.:
+    - ConditionDefinition
+hasBodySite:
+  Whether bodySite is appropriate to collect for this condition.:
+    - ConditionDefinition
+hasStage:
+  Whether stage is appropriate to collect for this condition.:
+    - ConditionDefinition
+observation:
+  Observations particularly relevant to this condition.:
+    - ConditionDefinition
+precondition:
+  An observation that suggests that this condition applies.:
+    - ConditionDefinition
+grantor:
+  The entity responsible for granting the rights listed in a Consent Directive.:
+    - Consent
+grantee:
+  The entity responsible for complying with the Consent Directive, including any obligations or limitations on authorizations and enforcement of prohibitions.:
+    - Consent
+manager:
+  The actor that manages the consent through its lifecycle.:
+    - Consent
+controller:
+  The actor that controls/enforces the access according to the consent.:
+    - Consent
+sourceAttachment:
+  The source on which this consent statement is based. The source might be a scanned original paper form.:
+    - Consent
+sourceReference:
+  A reference to a consent that links back to such a source, a reference to a document repository (e.g. XDS) that stores the original consent document.:
+    - Consent
+policyRule:
+  A reference to the specific base computable regulation or policy.:
+    - Consent
+verification:
+  Whether a treatment instruction (e.g. artificial respiration yes or no) was verified with the patient, his/her family or another authorized person.:
+    - Consent
+verified:
+  Has the instruction been verified.:
+    - Consent.verification
+verificationType:
+  Extensible list of verification type starting with verification and re-validation.:
+    - Consent.verification
+verifiedBy:
+  The person who conducted the verification/validation of the Grantee decision.:
+    - Consent.verification
+verifiedWith:
+  Who verified the instruction (Patient, Relative or other Authorized Person).:
+    - Consent.verification
+verificationDate:
+  Date(s) verification was collected.:
+    - Consent.verification
+dataPeriod:
+  Clinical or Operational Relevant period of time that bounds the data controlled by this rule.:
+    - Consent.provision
+meaning:
+  How the resource reference is interpreted when testing consent restrictions.:
+    - Consent.provision.data
+legalState:
+  Legal states of the formation of a legal instrument, which is a formally executed written document that can be formally attributed to its author, records and formally expresses a legally enforceable act, process, or contractual duty, obligation, or right, and therefore evidences that act, process, or agreement.:
+    - Contract
+contentDerivative:
+  The minimal content derived from the basal information source at a specific stage in its lifecycle.:
+    - Contract
+expirationType:
+  Event resulting in discontinuation or termination of this Contract instance by one or more parties to the contract.:
+    - Contract
+contentDefinition:
+  Precusory content developed with a focus and intent of supporting the formation a Contract instance, which may be associated with and transformable into a Contract.:
+    - Contract
+publicationStatus:
+  amended | appended | cancelled | disputed | entered-in-error | executable +.:
+    - Contract.contentDefinition
+control:
+  Security label privacy tag that species the manner in which term and/or term elements are to be protected.:
+    - Contract.term.securityLabel
+offer:
+  The matter of concern in the context of this provision of the agrement.:
+    - Contract.term
+decision:
+  Type of choice made by accepting party with respect to an offer made by an offeror/ grantee.:
+    - Contract.term.offer
+decisionMode:
+  How the decision about a Contract was conveyed.:
+    - Contract.term.offer
+asset:
+  Contract Term Asset List.:
+    - Contract.term
+periodType:
+  Type of Asset availability for use or ownership.:
+    - Contract.term.asset
+usePeriod:
+  Time period of asset use.:
+    - Contract.term.asset
+valuedItem:
+  Contract Valued Item List.:
+    - Contract.term.asset
+entity[x]:
+  Specific type of Contract Valued Item that may be priced.:
+    - Contract.term.asset.valuedItem
+effectiveTime:
+  Indicates the time during which this Contract ValuedItem information is effective.:
+    - Contract.term.asset.valuedItem
+points:
+  An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the Contract Valued Item delivered. The concept of Points allows for assignment of point values for a Contract Valued Item, such that a monetary amount can be assigned to each point.:
+    - Contract.term.asset.valuedItem
+contextLinkId:
+  Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse.:
+    - Contract.term.action
+requesterLinkId:
+  Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse.:
+    - Contract.term.action
+performerRole:
+  The type of role or competency of an individual desired or required to perform or not perform the action.:
+    - Contract.term.action
+performerLinkId:
+  Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse.:
+    - Contract.term.action
+reasonLinkId:
+  Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse.:
+    - Contract.term.action
+signer:
+  Parties with legal standing in the Contract, including the principal parties, the grantor(s) and grantee(s), which are any person or organization bound by the contract, and any ancillary parties, which facilitate the execution of the contract such as a notary or witness.:
+    - Contract
+friendly:
+  The "patient friendly language" versionof the Contract in whole or in parts. "Patient friendly language" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement.:
+    - Contract
+legal:
+  List of Legal expressions or representations of this Contract.:
+    - Contract
+legallyBinding[x]:
+  'Legally binding Contract: This is the signed and legally recognized representation of the Contract, which is considered the "source of truth" and which would be the basis for legal action related to enforcement of this Contract.':
+    - Contract
+policyHolder:
+  The party who 'owns' the insurance policy.:
+    - Coverage
+subscriber:
+  The party who has signed-up for or 'owns' the contractual relationship to the policy or to whom the benefit of the policy for services rendered to them or their family is due.:
+    - Coverage
+subscriberId:
+  The insurer assigned ID for the Subscriber.:
+    - Coverage
+beneficiary:
+  The party who benefits from the insurance coverage; the patient when products and/or services are provided.:
+    - Coverage
+payor:
+  The program or plan underwriter or payor including both insurance and non-insurance agreements, such as patient-pay agreements.:
+    - Coverage
+costToBeneficiary:
+  A suite of codes indicating the cost category and associated amount which have been detailed in the policy and may have been  included on the health card.:
+    - Coverage
+exception:
+  A suite of codes indicating exceptions or reductions to patient costs and their effective periods.:
+    - Coverage.costToBeneficiary
+subrogation:
+  When 'subrogation=true' this insurance instance has been included not for adjudication but to provide insurers with the details to recover costs.:
+    - Coverage
+contract:
+  The policy(s) which constitute this insurance coverage.:
+    - Coverage
+information:
+  Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.:
+    - CoverageEligibilityRequest.supportingInfo
+appliesToAll:
+  The supporting materials are applicable for all detail items, product/servce categories and specific billing codes.:
+    - CoverageEligibilityRequest.supportingInfo
+supportingInfoSequence:
+  Exceptions, special conditions and supporting information applicable for this service or product line.:
+    - CoverageEligibilityRequest.item
+inforce:
+  Flag indicating if the coverage provided is inforce currently if no service date(s) specified or for the whole duration of the service dates.:
+    - CoverageEligibilityResponse.insurance
+benefitPeriod:
+  The term of the benefits documented in this response.:
+    - CoverageEligibilityResponse.insurance
+    - ExplanationOfBenefit
+excluded:
+  True if the indicated class of service is excluded from the plan, missing or False indicates the product or service is included in the coverage.:
+    - CoverageEligibilityResponse.insurance.item
+    - ExplanationOfBenefit.benefitBalance
+used[x]:
+  The quantity of the benefit which have been consumed to date.:
+    - CoverageEligibilityResponse.insurance.item.benefit
+    - ExplanationOfBenefit.benefitBalance.financial
+authorizationRequired:
+  A boolean flag indicating whether a preauthorization is required prior to actual service delivery.:
+    - CoverageEligibilityResponse.insurance.item
+authorizationSupporting:
+  Codes or comments regarding information or actions associated with the preauthorization.:
+    - CoverageEligibilityResponse.insurance.item
+authorizationUrl:
+  A web location for obtaining requirements or descriptive information regarding the preauthorization.:
+    - CoverageEligibilityResponse.insurance.item
+identified[x]:
+  The date or period when the detected issue was initially identified.:
+    - DetectedIssue
+implicated:
+  Indicates the resource representing the current activity or proposed activity that is potentially problematic.:
+    - DetectedIssue
+displayName:
+  The name used to display by default when the device is referenced. Based on intent of use by the resource creator, this may reflect one of the names in Device.deviceName, or may be another simple name.:
+    - Device
+udiCarrier:
+  Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.:
+    - Device
+carrierAIDC:
+  The full UDI carrier of the Automatic Identification and Data Capture (AIDC) technology representation of the barcode string as printed on the packaging of the device - e.g., a barcode or RFID.   Because of limitations on character sets in XML and the need to round-trip JSON data through XML, AIDC Formats *SHALL* be base64 encoded.:
+    - Device.udiCarrier
+carrierHRF:
+  The full UDI carrier as the human readable form (HRF) representation of the barcode string as printed on the packaging of the device.:
+    - Device.udiCarrier
+entryType:
+  A coded entry to indicate how the data was entered.:
+    - Device.udiCarrier
+distinctIdentifier:
+  The distinct identification string as required by regulation for a human cell, tissue, or cellular and tissue-based product.:
+    - Device
+manufactureDate:
+  The date and time when the device was manufactured.:
+    - Device
+serialNumber:
+  The serial number assigned by the organization when the device was manufactured.:
+    - Device
+partNumber:
+  The part number or catalog number of the device.:
+    - Device
+systemType:
+  The standard that is used to operate and communicate.:
+    - Device.specialization
+    - DeviceDefinition.specialization
+associationStatus:
+  The state of the usage or application of the device - whether the device is implanted, or explanted, or attached to the patient.:
+    - Device
+relation:
+  The type indicates the relationship of the related device to the device instance.:
+    - Device.link
+    - DeviceDefinition.link
+relatedDevice:
+  A reference to the linked device.:
+    - Device.link
+    - DeviceDefinition.link
+manufacturer[x]:
+  A name of the manufacturer  or legal representative e.g. labeler. Whether this is the actual manufacturer or the labeler or responsible depends on implementation and jurisdiction.:
+    - DeviceDefinition
+hasPart:
+  A device that is part (for example a component) of the present device.:
+    - DeviceDefinition
+distributor:
+  An organization that distributes the packaged device.:
+    - DeviceDefinition.packaging
+organizationReference:
+  Distributor as an Organization resource.:
+    - DeviceDefinition.packaging.distributor
+shelfLifeStorage:
+  Shelf Life and storage information.:
+    - DeviceDefinition
+    - PackagedProductDefinition.package
+physicalCharacteristics:
+  Physical characteristics to define or specify the product - for example dimensions, color etc. These can be defined by the manufacturer or labeler, or can be used to specify characteristics when ordering.:
+    - DeviceDefinition
+languageCode:
+  Language code for the human-readable text strings produced by the device (all supported).:
+    - DeviceDefinition
+valueQuantity:
+  Property value as a quantity.:
+    - DeviceDefinition.property
+valueCode:
+  Property value as a code, e.g., NTP4 (synced to NTP).:
+    - DeviceDefinition.property
+parentDevice:
+  The parent device it can be part of.:
+    - DeviceDefinition
+alternate:
+  Indicates an alternative material of the device.:
+    - DeviceDefinition.material
+guideline:
+  Information aimed at providing directions for the usage of this model of device.:
+    - DeviceDefinition
+warning:
+  Specific hazard alert information that a user needs to know before using the device.:
+    - DeviceDefinition.guideline
+chargeItem:
+  Billing code or reference associated with the device.:
+    - DeviceDefinition
+chargeItemCode:
+  The code or reference for the charge item.:
+    - DeviceDefinition.chargeItem
+preparedDate:
+  The time when the dispensed product was packaged and reviewed.:
+    - DeviceDispense
+measurementPeriod:
+  Describes the measurement repetition time. This is not necessarily the same as the update period. The measurement repetition time can range from milliseconds up to hours. An example for a measurement repetition time in the range of milliseconds is the sampling rate of an ECG. An example for a measurement repetition time in the range of hours is a NIBP that is triggered automatically every hour. The update period may be different than the measurement repetition time, if the device does not update the published observed value with the same frequency as it was measured.:
+    - DeviceMetric
+calibration:
+  Describes the calibrations that have been performed or that are required to be performed.:
+    - DeviceMetric
+state:
+  Describes the state of the calibration.:
+    - DeviceMetric.calibration
+priorRequest:
+  The request takes the place of the referenced completed or terminated request(s).:
+    - DeviceRequest
+usageStatus:
+  The status of the device usage, for example always, sometimes, never. This is not the same as the status of the statement.:
+    - DeviceUsage
+usageReason:
+  The reason for asserting the usage status - for example forgot, lost, stolen, broken.:
+    - DeviceUsage
+resultsInterpreter:
+  The practitioner or organization that is responsible for the report's conclusions and interpretations.:
+    - DiagnosticReport
+imagingStudy:
+  One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images.:
+    - DiagnosticReport
+composition:
+  Reference to a Composition resource instance that provides structure for organizing the contents of the DiagnosticReport.:
+    - DiagnosticReport
+conclusion:
+  Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.:
+    - DiagnosticReport
+conclusionCode:
+  One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.:
+    - DiagnosticReport
+presentedForm:
+  Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.:
+    - DiagnosticReport
+masterIdentifier:
+  A single identifier that uniquely identifies this manifest. Principally used to refer to the manifest in non-FHIR contexts.:
+    - DocumentManifest
+ref:
+  Related Resource to this DocumentManifest. For example, Order, ServiceRequest,  Procedure, EligibilityRequest, etc.:
+    - DocumentManifest.related
+docStatus:
+  The status of the underlying document.:
+    - DocumentReference
+facilityType:
+  The kind of facility where the patient was seen.:
+    - DocumentReference
+practiceSetting:
+  This property may convey specifics about the practice setting where the content was created, often reflecting the clinical specialty.:
+    - DocumentReference
+sourcePatientInfo:
+  The Patient Information as known when the document was published. May be a reference to a version specific, or contained.:
+    - DocumentReference
+classHistory:
+  The class history permits the tracking of the encounters transitions without needing to go  through the resource history.  This would be used for a case where an admission starts of as an emergency encounter, then transitions into an inpatient scenario. Doing this and not restarting a new encounter ensures that any lab/diagnostic results can more easily follow the patient and not require re-processing and not get lost or cancelled during a kind of discharge from emergency to inpatient.:
+    - Encounter
+subjectStatus:
+  The subjectStatus value can be used to track the patient's status within the encounter. It details whether the patient has arrived or departed, has been triaged or is currently in a waiting status.:
+    - Encounter
+episodeOfCare:
+  Where a specific encounter should be classified as a part of a specific episode(s) of care this field should be used. This association can facilitate grouping of related encounters together for a specific purpose, such as government reporting, issue tracking, association via a common problem.  The association is recorded on the encounter as these are typically created after the episode of care and grouped on entry rather than editing the episode of care to append another encounter to it (the episode of care could span years).:
+    - Encounter
+rank:
+  Ranking of the diagnosis (for each role type).:
+    - Encounter.diagnosis
+    - EpisodeOfCare.diagnosis
+hospitalization:
+  Details about the admission to a healthcare service.:
+    - Encounter
+preAdmissionIdentifier:
+  Pre-admission identifier.:
+    - Encounter.hospitalization
+admitSource:
+  From where patient was admitted (physician referral, transfer).:
+    - Encounter.hospitalization
+reAdmission:
+  Whether this hospitalization is a readmission and why if known.:
+    - Encounter.hospitalization
+dietPreference:
+  Diet preferences reported by the patient.:
+    - Encounter.hospitalization
+specialCourtesy:
+  Special courtesies (VIP, board member).:
+    - Encounter.hospitalization
+specialArrangement:
+  Any special requests that have been made for this hospitalization encounter, such as the provision of specific equipment or other things.:
+    - Encounter.hospitalization
+dischargeDisposition:
+  Category or kind of location after discharge.:
+    - Encounter.hospitalization
+serviceProvider:
+  The organization that is primarily responsible for this Encounter's services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy.:
+    - Encounter
+connectionType:
+  A coded value that represents the technical details of the usage of this endpoint, such as what WSDLs should be used in what way. (e.g. XDS.b/DICOM/cds-hook).:
+    - Endpoint
+payloadType:
+  The payload type describes the acceptable content that can be communicated on the endpoint.:
+    - Endpoint
+payloadMimeType:
+  The mime type to send the payload in - e.g. application/fhir+xml, application/fhir+json. If the mime type is not specified, then the sender could send any content (including no content depending on the connectionType).:
+    - Endpoint
+header:
+  Additional headers / information to send as part of the notification.:
+    - Endpoint
+    - Subscription
+candidate:
+  Patient Resource.:
+    - EnrollmentRequest
+requestProvider:
+  The practitioner who is responsible for the services rendered to the patient.:
+    - EnrollmentResponse
+referralRequest:
+  Referral Request(s) that are fulfilled by this EpisodeOfCare, incoming referrals.:
+    - EpisodeOfCare
+careManager:
+  The practitioner that is the care manager/care coordinator for this patient.:
+    - EpisodeOfCare
+assertion:
+  Declarative description of the Evidence.:
+    - Evidence
+variableDefinition:
+  Evidence variable such as population, exposure, or outcome.:
+    - Evidence
+variableRole:
+  population | subpopulation | exposure | referenceExposure | measuredVariable | confounder.:
+    - Evidence.variableDefinition
+observed:
+  Definition of the actual variable related to the statistic(s).:
+    - Evidence.variableDefinition
+intended:
+  Definition of the intended variable related to the Evidence.:
+    - Evidence.variableDefinition
+directnessMatch:
+  Indication of quality of match between intended variable to actual variable.:
+    - Evidence.variableDefinition
+synthesisType:
+  The method to combine studies.:
+    - Evidence
+studyType:
+  The type of study that produced this evidence.:
+    - Evidence
+statistic:
+  Values and parameters for a single statistic.:
+    - Evidence
+distribution:
+  An ordered group of statistics.:
+    - Evidence
+certainty:
+  Assessment of certainty, confidence in the estimates, or quality of the evidence.:
+    - Evidence
+rating:
+  Assessment or judgement of the aspect.:
+    - Evidence.certainty
+rater:
+  Individual or group who did the rating.:
+    - Evidence.certainty
+subcomponent:
+  A domain or subdomain of certainty.:
+    - Evidence.certainty
+focusReference:
+  A definitional Resource identifying the kind of content contained within the section. This should be consistent with the section title.:
+    - EvidenceReport.section
+entryClassifier:
+  Specifies any type of classification of the evidence report.:
+    - EvidenceReport.section
+entryReference:
+  A reference to the actual resource from which the narrative in the section is derived.:
+    - EvidenceReport.section
+entryQuantity:
+  Quantity as content.:
+    - EvidenceReport.section
+shortTitle:
+  The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.:
+    - EvidenceVariable
+characteristicCombination:
+  Used to specify if two or more characteristics are combined with OR or AND.:
+    - EvidenceVariable
+timeFromStart:
+  Indicates duration, period, or point of observation from the participant's study entry.:
+    - EvidenceVariable.characteristic
+groupMeasure:
+  Indicates how elements are aggregated within the study effective period.:
+    - EvidenceVariable.characteristic
+containedInstance:
+  Resources contained in the instance (e.g. the observations contained in a bundle).:
+    - ExampleScenario.instance
+preConditions:
+  Description of initial status before the process starts.:
+    - ExampleScenario.process
+postConditions:
+  Description of final status after the process ends.:
+    - ExampleScenario.process
+pause:
+  If there is a pause in the flow.:
+    - ExampleScenario.process.step
+initiator:
+  Who starts the transaction.:
+    - ExampleScenario.process.step.operation
+initiatorActive:
+  Whether the initiator is deactivated right after the transaction.:
+    - ExampleScenario.process.step.operation
+receiverActive:
+  Whether the receiver is deactivated right after the transaction.:
+    - ExampleScenario.process.step.operation
+alternative:
+  Indicates an alternative step that can be taken instead of the operations on the base step in exceptional/atypical circumstances.:
+    - ExampleScenario.process.step
+workflow:
+  Another nested workflow.:
+    - ExampleScenario
+fundsReserveRequested:
+  A code to indicate whether and for whom funds are to be reserved for future claims.:
+    - ExplanationOfBenefit
+preAuthRefPeriod:
+  The timeframe during which the supplied preauthorization reference may be quoted on claims to obtain the adjudication as provided.:
+    - ExplanationOfBenefit
+precedence:
+  This indicates the relative order of a series of EOBs related to different coverages for the same suite of services.:
+    - ExplanationOfBenefit
+benefitBalance:
+  Balance by Benefit Category.:
+    - ExplanationOfBenefit
+financial:
+  Benefits Used to date.:
+    - ExplanationOfBenefit.benefitBalance
+sex:
+  The birth sex of the family member.:
+    - FamilyMemberHistory
+born[x]:
+  The actual or approximate date of birth of the relative.:
+    - FamilyMemberHistory
+age[x]:
+  The age of the relative at the time the family member history is recorded.:
+    - FamilyMemberHistory
+estimatedAge:
+  If true, indicates that the age value specified is an estimated value.:
+    - FamilyMemberHistory
+performed[x]:
+  Estimated or actual date, date-time, period, or age when the procedure was performed. Allows a period to support complex procedures that span more than one date, and also allows for the length of the procedure to be captured.:
+    - FamilyMemberHistory.procedure
+lifecycleStatus:
+  The state of the goal throughout its lifecycle.:
+    - Goal
+achievementStatus:
+  Describes the progression, or lack thereof, towards the goal against the target.:
+    - Goal
+continuous:
+  After meeting the goal, ongoing activity is needed to sustain the goal objective.:
+    - Goal
+start[x]:
+  The date or event after which the goal should begin being pursued.:
+    - Goal
+due[x]:
+  Indicates either the date or the duration after start by which the goal should be met.:
+    - Goal.target
+sliceName:
+  Which slice (if profiled).:
+    - GraphDefinition.link
+managingEntity:
+  Entity responsible for defining and maintaining Group characteristics and/or registered members.:
+    - Group
+requestIdentifier:
+  The identifier of the request associated with this response. If an identifier was given as part of the request, it will be reproduced here to enable the requester to more easily identify the response in a multi-request scenario.:
+    - GuidanceResponse
+module[x]:
+  An identifier, CodeableConcept or canonical reference to the guidance that was requested.:
+    - GuidanceResponse
+occurrenceDateTime:
+  Indicates when the guidance response was processed.:
+    - GuidanceResponse
+evaluationMessage:
+  Messages resulting from the evaluation of the artifact or artifacts. As part of evaluating the request, the engine may produce informational or warning messages. These messages will be provided by this element.:
+    - GuidanceResponse
+outputParameters:
+  The output parameters of the evaluation, if any. Many modules will result in the return of specific resources such as procedure or communication requests that are returned as part of the operation result. However, modules may define specific outputs that would be returned as the result of the evaluation, and these would be returned in this element.:
+    - GuidanceResponse
+providedBy:
+  The organization that provides this healthcare service.:
+    - HealthcareService
+extraDetails:
+  Extra details about the service that can't be placed in the other fields.:
+    - HealthcareService
+serviceProvisionCode:
+  The code(s) that detail the conditions under which the healthcare service is available/offered.:
+    - HealthcareService
+program:
+  Programs that this service is applicable to.:
+    - HealthcareService
+referralMethod:
+  Ways that the service accepts referrals, if this is not provided then it is implied that no referral is required.:
+    - HealthcareService
+appointmentRequired:
+  Indicates whether or not a prospective consumer will require an appointment for a particular service at a site to be provided by the Organization. Indicates if an appointment is required for access to this service.:
+    - HealthcareService
+availableStartTime:
+  'The opening time of day. Note: If the AllDay flag is set, then this time is ignored.':
+    - HealthcareService.availableTime
+    - PractitionerRole.availableTime
+availableEndTime:
+  'The closing time of day. Note: If the AllDay flag is set, then this time is ignored.':
+    - HealthcareService.availableTime
+    - PractitionerRole.availableTime
+during:
+  Service is not available (seasonally or for a public holiday) from this date.:
+    - HealthcareService.notAvailable
+    - PractitionerRole.notAvailable
+referrer:
+  The requesting/referring physician.:
+    - ImagingStudy
+interpreter:
+  Who read the study and interpreted the images or other content.:
+    - ImagingStudy
+numberOfSeries:
+  Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present.:
+    - ImagingStudy
+laterality:
+  The laterality of the (possibly paired) anatomic structures examined. E.g., the left knee, both lungs, or unpaired abdomen. If present, shall be consistent with any laterality information indicated in ImagingStudy.series.bodySite.:
+    - ImagingStudy.series
+sopClass:
+  DICOM instance  type.:
+    - ImagingStudy.series.instance
+informationSource[x]:
+  Typically the source of the data when the report of the immunization event is not based on information from the person who administered the vaccine.:
+    - Immunization
+doseQuantity:
+  The quantity of vaccine product that was administered.:
+    - Immunization
+isSubpotent:
+  Indication if a dose is considered to be subpotent. By default, a dose should be considered to be potent.:
+    - Immunization
+subpotentReason:
+  Reason why a dose is considered to be subpotent.:
+    - Immunization
+education:
+  Educational material presented to the patient (or guardian) at the time of vaccine administration.:
+    - Immunization
+documentType:
+  Identifier of the material presented to the patient.:
+    - Immunization.education
+presentationDate:
+  Date the educational material was given to the patient.:
+    - Immunization.education
+programEligibility:
+  Indicates a patient's eligibility for a funding program.:
+    - Immunization
+fundingSource:
+  Indicates the source of the vaccine actually administered. This may be different than the patient eligibility (e.g. the patient may be eligible for a publically purchased vaccine but due to inventory issues, vaccine purchased with private funds was actually administered).:
+    - Immunization
+protocolApplied:
+  The protocol (set of recommendations) being followed by the provider who administered the dose.:
+    - Immunization
+immunizationEvent:
+  The vaccine administration event being evaluated.:
+    - ImmunizationEvaluation
+doseStatus:
+  Indicates if the dose is valid or not valid with respect to the published recommendations.:
+    - ImmunizationEvaluation
+doseStatusReason:
+  Provides an explanation as to why the vaccine administration event is valid or not relative to the published recommendations.:
+    - ImmunizationEvaluation
+recommendation:
+  Vaccine administration recommendations.:
+    - ImmunizationRecommendation
+contraindicatedVaccineCode:
+  Vaccine(s) which should not be used to fulfill the recommendation.:
+    - ImmunizationRecommendation.recommendation
+forecastStatus:
+  Indicates the patient status with respect to the path to immunity for the target disease.:
+    - ImmunizationRecommendation.recommendation
+forecastReason:
+  The reason for the assigned forecast status.:
+    - ImmunizationRecommendation.recommendation
+dateCriterion:
+  Vaccine date recommendations.  For example, earliest date to administer, latest date to administer, etc.:
+    - ImmunizationRecommendation.recommendation
+supportingImmunization:
+  Immunization event history and/or evaluation that supports the status and recommendation.:
+    - ImmunizationRecommendation.recommendation
+supportingPatientInformation:
+  Patient Information that supports the status and recommendation.  This includes patient observations, adverse reactions and allergy/intolerance information.:
+    - ImmunizationRecommendation.recommendation
+license:
+  The license that applies to this Implementation Guide, using an SPDX license code, or 'not-open-source'.:
+    - ImplementationGuide
+global:
+  A set of profiles that all resources covered by this implementation guide must conform to.:
+    - ImplementationGuide
+grouping:
+  A logical group of resources. Logical groups can be used when building pages.:
+    - ImplementationGuide.definition
+example[x]:
+  If true or a reference, indicates the resource is an example instance.  If a reference is present, indicates that the example is an example of the specified profile.:
+    - ImplementationGuide.definition.resource
+    - ImplementationGuide.manifest.resource
+groupingId:
+  Reference to the id of the grouping this resource appears in.:
+    - ImplementationGuide.definition.resource
+name[x]:
+  The source address for the page.:
+    - ImplementationGuide.definition.page
+generation:
+  A code that indicates how the page is generated.:
+    - ImplementationGuide.definition.page
+template:
+  A template for building resources.:
+    - ImplementationGuide.definition
+manifest:
+  Information about an assembled implementation guide, created by the publication tooling.:
+    - ImplementationGuide
+rendering:
+  A pointer to official web page, PDF or other rendering of the implementation guide.:
+    - ImplementationGuide.manifest
+relativePath:
+  The relative path for primary page for this resource within the IG.:
+    - ImplementationGuide.manifest.resource
+anchor:
+  The name of an anchor available on the page.:
+    - ImplementationGuide.manifest.page
+presentation[x]:
+  The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item.:
+    - Ingredient.substance.strength
+presentationHighLimit[x]:
+  An upper limit for the quantity of substance in the unit of presentation. When there is a range of strengths, this represents the upper limit.:
+    - Ingredient.substance.strength
+presentationText:
+  A textual represention of either the whole of the presentation strength or a part of it - with the rest being in Strength.presentation as a ratio.:
+    - Ingredient.substance.strength
+concentration[x]:
+  The strength per unitary volume (or mass).:
+    - Ingredient.substance.strength
+concentrationHighLimit[x]:
+  An upper limit for the strength per unitary volume (or mass), for when there is a range. The concentration attribute then becomes the lower limit.:
+    - Ingredient.substance.strength
+concentrationText:
+  A textual represention of either the whole of the concentration strength or a part of it - with the rest being in Strength.concentration as a ratio.:
+    - Ingredient.substance.strength
+measurementPoint:
+  For when strength is measured at a particular point or distance.:
+    - Ingredient.substance.strength
+    - Ingredient.substance.strength.referenceStrength
+referenceStrength:
+  Strength expressed in terms of a reference substance.:
+    - Ingredient.substance.strength
+strengthHighLimit[x]:
+  Strength expressed in terms of a reference substance. When there is a range of strengths, this represents the upper limit.:
+    - Ingredient.substance.strength.referenceStrength
+specifiedSubstance:
+  A specified substance that comprises this ingredient.:
+    - Ingredient
+ownedBy:
+  The entity that is providing  the health insurance product and underwriting the risk.  This is typically an insurance carriers, other third-party payers, or health plan sponsors comonly referred to as 'payers'.:
+    - InsurancePlan
+administeredBy:
+  An organization which administer other services such as underwriting, customer service and/or claims processing on behalf of the health insurance product owner.:
+    - InsurancePlan
+limit:
+  The specific limits on the benefit.:
+    - InsurancePlan.coverage.benefit
+generalCost:
+  Overall costs associated with the plan.:
+    - InsurancePlan.plan
+groupSize:
+  Number of participants enrolled in the plan.:
+    - InsurancePlan.plan.generalCost
+specificCost:
+  Costs associated with the coverage provided by the product.:
+    - InsurancePlan.plan
+qualifiers:
+  Additional information about the cost, such as information about funding sources (e.g. HSA, HRA, FSA, RRA).:
+    - InsurancePlan.plan.specificCost.benefit.cost
+countType:
+  Whether the report is about the current inventory count (snapshot) or a differential change in inventory (change).:
+    - InventoryReport
+operationType:
+  What type of operation is being performed - addition or subtraction.:
+    - InventoryReport
+operationTypeReason:
+  The reason for this count - regular count, ad-hoc count, new arrivals, etc.:
+    - InventoryReport
+reportedDateTime:
+  When the report has been submitted.:
+    - InventoryReport
+reportingPeriod:
+  The period the report refers to.:
+    - InventoryReport
+inventoryListing:
+  An inventory listing section (grouped by any of the attributes).:
+    - InventoryReport
+itemStatus:
+  The status of the items.:
+    - InventoryReport.inventoryListing
+countingDateTime:
+  The date and time when the items were counted.:
+    - InventoryReport.inventoryListing
+items:
+  The item or items in this listing.:
+    - InventoryReport.inventoryListing
+lot:
+  The lot number of the item or items.:
+    - InventoryReport.inventoryListing.items
+serial:
+  The serial number of the item.:
+    - InventoryReport.inventoryListing.items
+manufacturingDate:
+  The manufacturingDate of the item or items.:
+    - InventoryReport.inventoryListing.items
+cancelledReason:
+  In case of Invoice cancellation a reason must be given (entered in error, superseded by corrected invoice etc.).:
+    - Invoice
+lineItem:
+  Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.:
+    - Invoice
+chargeItem[x]:
+  The ChargeItem contains information such as the billing code, date, amount etc. If no further details are required for the lineItem, inline billing codes can be added using the CodeableConcept data type instead of the Reference.:
+    - Invoice.lineItem
+totalPriceComponent:
+  The total amount for the Invoice may be calculated as the sum of the line items with surcharges/deductions that apply in certain conditions.  The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the total price was calculated.:
+    - Invoice
+totalNet:
+  Invoice total , taxes excluded.:
+    - Invoice
+totalGross:
+  Invoice total, tax included.:
+    - Invoice
+paymentTerms:
+  Payment details such as banking details, period of payment, deductibles, methods of payment.:
+    - Invoice
+flag:
+  The flag allows the system constructing the list to indicate the role and significance of the item in the list.:
+    - List.entry
+deleted:
+  True if this item is marked as deleted in the list.:
+    - List.entry
+position:
+  The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).:
+    - Location
+longitude:
+  Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below).:
+    - Location.position
+latitude:
+  Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below).:
+    - Location.position
+altitude:
+  Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below).:
+    - Location.position
+hoursOfOperation:
+  What days/times during a week is this location usually open.:
+    - Location
+openingTime:
+  Time that the Location opens.:
+    - Location.hoursOfOperation
+closingTime:
+  Time that the Location closes.:
+    - Location.hoursOfOperation
+manufacturedDoseForm:
+  Dose form as manufactured and before any transformation into the pharmaceutical product.:
+    - ManufacturedItemDefinition
+disclaimer:
+  Notices and disclaimers regarding the use of the measure or related to intellectual property (such as code systems) referenced by the measure.:
+    - Measure
+scoringUnit:
+  Defines the expected units of measure for the measure score. This element SHOULD be specified as a UCUM unit.:
+    - Measure
+    - Measure.group
+compositeScoring:
+  If this is a composite measure, the scoring method used to combine the component measures to determine the composite score.:
+    - Measure
+riskAdjustment:
+  A description of the risk adjustment factors that may impact the resulting score for the measure and how they may be accounted for when computing and reporting measure results.:
+    - Measure
+rateAggregation:
+  Describes how to combine the information calculated, based on logic in each of several populations, into one summarized result.:
+    - Measure
+clinicalRecommendationStatement:
+  Provides a summary of relevant clinical guidelines or other clinical recommendations supporting the measure.:
+    - Measure
+guidance:
+  Additional guidance for the measure including how it can be used in a clinical context, and the intent of the measure.:
+    - Measure
+inputPopulationId:
+  The id of a population element in this measure that provides the input for this population criteria. In most cases, the scoring structure of the measure implies specific relationships (e.g. the Numerator uses the Denominator as the source in a proportion scoring). In some cases, however, multiple possible choices exist and must be resolved explicitly. For example in a ratio measure with multiple initial populations, the denominator must specify which population should be used as the starting point.:
+    - Measure.group.population
+aggregateMethod:
+  Specifies which method should be used to aggregate measure observation values. For most scoring types, this is implied by scoring (e.g. a proportion measure counts members of the populations). For continuous variables, however, this information must be specified to ensure correct calculation.:
+    - Measure.group.population
+supplementalData:
+  The supplemental data criteria for the measure report, specified as either the name of a valid CQL expression within a referenced library, or a valid FHIR Resource Path.:
+    - Measure
+dataUpdateType:
+  Indicates whether the data submitted in an data-exchange report represents a snapshot or incremental update. A snapshot update replaces all previously submitted data for the receiver, whereas an incremental update represents only updated and/or changed data and should be applied as a differential update to the existing submitted data for the receiver.:
+    - MeasureReport
+reportingVendor:
+  A reference to the vendor who queried the data, calculated results and/or generated the report. The ‘reporting vendor’ is intended to represent the submitting entity when it is not the same as the reporting entity. This extension is used when the Receiver is interested in getting vendor information in the report.:
+    - MeasureReport
+stratum:
+  This element contains the results for a single stratum within the stratifier. For example, when stratifying on administrative gender, there will be four strata, one for each possible gender value.:
+    - MeasureReport.group.stratifier
+evaluatedResource:
+  A reference to a Bundle containing the Resources that were used in the calculation of this measure.:
+    - MeasureReport
+doseForm:
+  Describes the form of the item.  Powder; tablets; capsule.:
+    - Medication
+    - MedicationKnowledge
+isActive:
+  Indication of whether this ingredient affects the therapeutic action of the drug.:
+    - Medication.ingredient
+    - MedicationKnowledge.ingredient
+batch:
+  Information that only applies to packages (not products).:
+    - Medication
+occurence[x]:
+  A specific date/time or interval of time during which the administration took place (or did not take place). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.:
+    - MedicationAdministration
+dose:
+  The amount of the medication given at one administration event.   Use this value when the administration is essentially an instantaneous event such as a swallowing a tablet or giving an injection.:
+    - MedicationAdministration.dosage
+authorizingPrescription:
+  Indicates the medication order that is being dispensed against.:
+    - MedicationDispense
+daysSupply:
+  The amount of medication expressed as a timing amount.:
+    - MedicationDispense
+whenPrepared:
+  The time when the dispensed product was packaged and reviewed.:
+    - MedicationDispense
+renderedDosageInstruction:
+  The full representation of the dose of the medication included in all dosage instructions.  To be used when multiple dosage instructions are included to represent complex dosing such as increasing or tapering doses.:
+    - MedicationDispense
+    - MedicationRequest
+    - MedicationUsage
+dosageInstruction:
+  Indicates how the medication is to be used by the patient.:
+    - MedicationDispense
+    - MedicationRequest
+wasSubstituted:
+  True if the dispenser dispensed a different drug or product from what was prescribed.:
+    - MedicationDispense.substitution
+responsibleParty:
+  The person or organization that has primary responsibility for the substitution.:
+    - MedicationDispense.substitution
+relatedMedicationKnowledge:
+  Associated or related medications. For example, if the medication is a branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor.:
+    - MedicationKnowledge
+associatedMedication:
+  Links to associated medications that could be prescribed, dispensed or administered.:
+    - MedicationKnowledge
+associatedDefinition:
+  Associated definitions for this medication.:
+    - MedicationKnowledge
+productType:
+  Category of the medication or product (e.g. branded product, therapeutic moeity, generic product, innovator product, etc.).:
+    - MedicationKnowledge
+monograph:
+  Associated documentation about the medication.:
+    - MedicationKnowledge
+preparationInstruction:
+  The instructions for preparing the medication.:
+    - MedicationKnowledge
+intendedRoute:
+  The intended or approved route of administration.:
+    - MedicationKnowledge
+cost[x]:
+  The price or representation of the cost (for example, Band A, Band B or $, $$) of the medication.:
+    - MedicationKnowledge.cost
+monitoringProgram:
+  The program under which the medication is reviewed.:
+    - MedicationKnowledge
+indicationGuideline:
+  Guidelines or protocols that are applicable for the administration of the medication based on indication.:
+    - MedicationKnowledge
+dosingGuideline:
+  The guidelines for the dosage of the medication for the indication.:
+    - MedicationKnowledge.indicationGuideline
+treatmentIntent:
+  The overall intention of the treatment, for example, prophylactic, supporative, curative, etc.:
+    - MedicationKnowledge.indicationGuideline.dosingGuideline
+administrationTreatment:
+  The type of the treatment that the guideline applies to, for example, long term therapy, first line treatment, etc.:
+    - MedicationKnowledge.indicationGuideline.dosingGuideline
+patientCharacteristic:
+  Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).:
+    - MedicationKnowledge.indicationGuideline.dosingGuideline
+medicineClassification:
+  Categorization of the medication within a formulary or classification system.:
+    - MedicationKnowledge
+drugCharacteristic:
+  Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.:
+    - MedicationKnowledge
+clinicalUseIssue:
+  Potential clinical issue with or between medication(s) (for example, drug-drug interaction, drug-disease contraindication, drug-allergy interaction, etc.).:
+    - MedicationKnowledge
+regulatory:
+  Regulatory information about a medication.:
+    - MedicationKnowledge
+regulatoryAuthority:
+  The authority that is specifying the regulations.:
+    - MedicationKnowledge.regulatory
+allowed:
+  Specifies if regulation allows for changes in the medication when dispensing.:
+    - MedicationKnowledge.regulatory.substitution
+maxDispense:
+  The maximum number of units of the medication that can be dispensed in a period.:
+    - MedicationKnowledge.regulatory
+kineticCharacteristic:
+  The time course of drug absorption, distribution, metabolism and excretion of a medication from the body.:
+    - MedicationKnowledge
+courseOfTherapyType:
+  The description of the overall pattern of the administration of the medication to the patient.:
+    - MedicationRequest
+dispenseRequest:
+  Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department.:
+    - MedicationRequest
+initialFill:
+  Indicates the quantity or duration for the first dispense of the medication.:
+    - MedicationRequest.dispenseRequest
+dispenseInterval:
+  The minimum period of time that must occur between dispenses of the medication.:
+    - MedicationRequest.dispenseRequest
+numberOfRepeatsAllowed:
+  'An integer indicating the number of times, in addition to the original dispense, (aka refills or repeats) that the patient can receive the prescribed medication. Usage Notes: This integer does not include the original order dispense. This means that if an order indicates dispense 30 tablets plus "3 repeats", then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.  A prescriber may explicitly say that zero refills are permitted after the initial dispense.':
+    - MedicationRequest.dispenseRequest
+expectedSupplyDuration:
+  Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last.:
+    - MedicationRequest.dispenseRequest
+dispenser:
+  Indicates the intended performing Organization that will dispense the medication as specified by the prescriber.:
+    - MedicationRequest.dispenseRequest
+dispenserInstruction:
+  Provides additional information to the dispenser, for example, counselling to be provided to the patient.:
+    - MedicationRequest.dispenseRequest
+doseAdministrationAid:
+  Provides information about the type of adherence packaging to be supplied for the medication dispense.:
+    - MedicationRequest.dispenseRequest
+priorPrescription:
+  A link to a resource representing an earlier order related order or prescription.:
+    - MedicationRequest
+adherence:
+  Indicates if the medication is being consumed or administered as instructed.:
+    - MedicationUsage
+combinedPharmaceuticalDoseForm:
+  The dose form for a single part product, or combined form of a multiple part product.:
+    - MedicinalProductDefinition
+additionalMonitoringIndicator:
+  Whether the Medicinal Product is subject to additional monitoring for regulatory reasons.:
+    - MedicinalProductDefinition
+specialMeasures:
+  Whether the Medicinal Product is subject to special measures for regulatory reasons.:
+    - MedicinalProductDefinition
+paediatricUseIndicator:
+  If authorised for use in children.:
+    - MedicinalProductDefinition
+impurity:
+  Any component of the drug product which is not the chemical entity defined as the drug substance or an excipient in the drug product. This includes process-related impurities and contaminants, product-related impurities including degradation products.:
+    - MedicinalProductDefinition
+masterFile:
+  A master file for to the medicinal product (e.g. Pharmacovigilance System Master File).:
+    - MedicinalProductDefinition
+clinicalTrial:
+  Clinical trials or studies that this product is involved in.:
+    - MedicinalProductDefinition
+namePart:
+  Coding words or phrases of the name.:
+    - MedicinalProductDefinition.name
+countryLanguage:
+  Country where the name applies.:
+    - MedicinalProductDefinition.name
+crossReference:
+  Reference to another product, e.g. for linking authorised to investigational product.:
+    - MedicinalProductDefinition
+authorization:
+  An authorization for this process, either as a logical reference, holding just an identifier, or a full reference to a resource that captures the details. The authorization may possibly apply to several products or a wider scope of process of which this is a part.:
+    - MedicinalProductDefinition.operation
+confidentialityIndicator:
+  Specifies whether this particular business or manufacturing process is considered proprietary or confidential.:
+    - MedicinalProductDefinition.operation
+size[x]:
+  The amount of items, or of substance, in the package.:
+    - MedicinalProductDefinition.package
+administrableProduct:
+  The product in its final form, mixed from its components if necessary, and ready to be administered to the patient. Also known as the 'Pharmaceutical Product'. Can repeat, for cases where the product has components that result in more than one administrable item.:
+    - MedicinalProductDefinition
+responseRequired:
+  Declare at a message definition level whether a response is required or only upon error or success, or never.:
+    - MessageDefinition
+allowedResponse:
+  Indicates what types of messages may be sent as an application-level response to this message.:
+    - MessageDefinition
+situation:
+  Provides a description of the circumstances in which this response should be used (as opposed to one of the alternative responses).:
+    - MessageDefinition.allowedResponse
+graph:
+  Canonical reference to a GraphDefinition. If a URL is provided, it is the canonical reference to a [GraphDefinition](graphdefinition.html) that it controls what resources are to be added to the bundle when building the document. The GraphDefinition can also specify profiles that apply to the various resources.:
+    - MessageDefinition
+coordinateSystem:
+  Whether the sequence is numbered starting at 0 (0-based numbering or coordinates, inclusive start, exclusive end) or starting at 1 (1-based numbering, inclusive start and inclusive end).:
+    - MolecularSequence
+referenceSeq:
+  A sequence that is used as a reference to describe variants that are present in a sequence analyzed.:
+    - MolecularSequence
+chromosome:
+  Structural unit composed of a nucleic acid molecule which controls its own replication through the interaction of specific proteins at one or more origins of replication ([SO:0000340](http://www.sequenceontology.org/browser/current_svn/term/SO:0000340)).:
+    - MolecularSequence.referenceSeq
+genomeBuild:
+  The Genome Build used for reference, following GRCh build versions e.g. 'GRCh 37'.  Version number must be included if a versioned release of a primary build was used.:
+    - MolecularSequence.referenceSeq
+referenceSeqId:
+  Reference identifier of reference sequence submitted to NCBI. It must match the type in the MolecularSequence.type field. For example, the prefix, “NG_” identifies reference sequence for genes, “NM_” for messenger RNA transcripts, and “NP_” for amino acid sequences.:
+    - MolecularSequence.referenceSeq
+referenceSeqPointer:
+  A pointer to another MolecularSequence entity as reference sequence.:
+    - MolecularSequence.referenceSeq
+referenceSeqString:
+  A string like "ACGT".:
+    - MolecularSequence.referenceSeq
+strand:
+  An absolute reference to a strand. The Watson strand is the strand whose 5'-end is on the short arm of the chromosome, and the Crick strand as the one whose 5'-end is on the long arm.:
+    - MolecularSequence.referenceSeq
+windowStart:
+  Start position of the window on the reference sequence. If the coordinate system is either 0-based or 1-based, then start position is inclusive.:
+    - MolecularSequence.referenceSeq
+windowEnd:
+  End position of the window on the reference sequence. If the coordinate system is 0-based then end is exclusive and does not include the last position. If the coordinate system is 1-base, then end is inclusive and includes the last position.:
+    - MolecularSequence.referenceSeq
+variant:
+  The definition of variant here originates from Sequence ontology ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This element can represent amino acid or nucleic sequence change(including insertion,deletion,SNP,etc.)  It can represent some complex mutation or segment variation with the assist of CIGAR string.:
+    - MolecularSequence
+observedAllele:
+  An allele is one of a set of coexisting sequence variants of a gene ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)).  Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the observed  sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.:
+    - MolecularSequence.variant
+referenceAllele:
+  An allele is one of a set of coexisting sequence variants of a gene ([SO:0001023](http://www.sequenceontology.org/browser/current_svn/term/SO:0001023)). Nucleotide(s)/amino acids from start position of sequence to stop position of sequence on the positive (+) strand of the reference sequence. When the sequence  type is DNA, it should be the sequence on the positive (+) strand. This will lay in the range between variant.start and variant.end.:
+    - MolecularSequence.variant
+cigar:
+  Extended CIGAR string for aligning the sequence with reference bases. See detailed documentation [here](http://support.illumina.com/help/SequencingAnalysisWorkflow/Content/Vault/Informatics/Sequencing_Analysis/CASAVA/swSEQ_mCA_ExtendedCIGARFormat.htm).:
+    - MolecularSequence.variant
+variantPointer:
+  A pointer to an Observation containing variant information.:
+    - MolecularSequence.variant
+observedSeq:
+  Sequence that was observed. It is the result marked by referenceSeq along with variant records on referenceSeq. This shall start from referenceSeq.windowStart and end by referenceSeq.windowEnd.:
+    - MolecularSequence
+quality:
+  An experimental feature attribute that defines the quality of the feature in a quantitative way, such as a phred quality score ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).:
+    - MolecularSequence
+standardSequence:
+  Gold standard sequence used for comparing against.:
+    - MolecularSequence.quality
+truthTP:
+  True positives, from the perspective of the truth data, i.e. the number of sites in the Truth Call Set for which there are paths through the Query Call Set that are consistent with all of the alleles at this site, and for which there is an accurate genotype call for the event.:
+    - MolecularSequence.quality
+queryTP:
+  True positives, from the perspective of the query data, i.e. the number of sites in the Query Call Set for which there are paths through the Truth Call Set that are consistent with all of the alleles at this site, and for which there is an accurate genotype call for the event.:
+    - MolecularSequence.quality
+truthFN:
+  False negatives, i.e. the number of sites in the Truth Call Set for which there is no path through the Query Call Set that is consistent with all of the alleles at this site, or sites for which there is an inaccurate genotype call for the event. Sites with correct variant but incorrect genotype are counted here.:
+    - MolecularSequence.quality
+queryFP:
+  False positives, i.e. the number of sites in the Query Call Set for which there is no path through the Truth Call Set that is consistent with this site. Sites with correct variant but incorrect genotype are counted here.:
+    - MolecularSequence.quality
+gtFP:
+  The number of false positives where the non-REF alleles in the Truth and Query Call Sets match (i.e. cases where the truth is 1/1 and the query is 0/1 or similar).:
+    - MolecularSequence.quality
+recall:
+  TRUTH.TP / (TRUTH.TP + TRUTH.FN).:
+    - MolecularSequence.quality
+fScore:
+  'Harmonic mean of Recall and Precision, computed as: 2 * precision * recall / (precision + recall).':
+    - MolecularSequence.quality
+roc:
+  Receiver Operator Characteristic (ROC) Curve  to give sensitivity/specificity tradeoff.:
+    - MolecularSequence.quality
+numTP:
+  The number of true positives if the GQ score threshold was set to "score" field value.:
+    - MolecularSequence.quality.roc
+numFP:
+  The number of false positives if the GQ score threshold was set to "score" field value.:
+    - MolecularSequence.quality.roc
+numFN:
+  The number of false negatives if the GQ score threshold was set to "score" field value.:
+    - MolecularSequence.quality.roc
+sensitivity:
+  Calculated sensitivity if the GQ score threshold was set to "score" field value.:
+    - MolecularSequence.quality.roc
+fMeasure:
+  Calculated fScore if the GQ score threshold was set to "score" field value.:
+    - MolecularSequence.quality.roc
+readCoverage:
+  Coverage (read depth or depth) is the average number of reads representing a given nucleotide in the reconstructed sequence.:
+    - MolecularSequence
+repository:
+  Configurations of the external repository. The repository shall store target's observedSeq or records related with target's observedSeq.:
+    - MolecularSequence
+datasetId:
+  Id of the variant in this external repository. The server will understand how to use this id to call for more info about datasets in external repository.:
+    - MolecularSequence.repository
+variantsetId:
+  Id of the variantset in this external repository. The server will understand how to use this id to call for more info about variantsets in external repository.:
+    - MolecularSequence.repository
+readsetId:
+  Id of the read in this external repository.:
+    - MolecularSequence.repository
+pointer:
+  Pointer to next atomic sequence which at most contains one variant.:
+    - MolecularSequence
+structureVariant:
+  Information about chromosome structure variation.:
+    - MolecularSequence
+variantType:
+  Information about chromosome structure variation DNA change type.:
+    - MolecularSequence.structureVariant
+exact:
+  Used to indicate if the outer and inner start-end values have the same meaning.:
+    - MolecularSequence.structureVariant
+outer:
+  Structural variant outer.:
+    - MolecularSequence.structureVariant
+inner:
+  Structural variant inner.:
+    - MolecularSequence.structureVariant
+uniqueId:
+  Indicates how the system may be identified when referenced in electronic exchange.:
+    - NamingSystem
+authoritative:
+  Indicates whether this identifier ie endorsed by the official owner of the associated naming system.:
+    - NamingSystem.uniqueId
+consumedItem:
+  What food or fluid product or item was consumed.:
+    - NutritionIntake
+nutritionProduct:
+  Identifies the food or fluid product that was consumed. This is potentially a link to a resource representing the details of the food product (TBD) or a simple attribute carrying a code that identifies the food from a known list of foods.:
+    - NutritionIntake.consumedItem
+rate:
+  Rate at which enteral feeding was administered.:
+    - NutritionIntake.consumedItem
+notConsumed:
+  Indicator when a patient is in a setting where it is helpful to know if food was not consumed, such as it was refused, held (as in tube feedings), or otherwise not provided. If a consumption is being recorded from an app, such as MyFitnessPal, this indicator will likely not be used.:
+    - NutritionIntake.consumedItem
+notConsumedReason:
+  Document the reason the food or fluid was not consumed, such as refused, held, etc.:
+    - NutritionIntake.consumedItem
+ingredientLabel:
+  Total nutrient amounts for the whole meal, product, serving, etc.:
+    - NutritionIntake
+orderer:
+  The practitioner that holds legal responsibility for ordering the diet, nutritional supplement, or formula feedings.:
+    - NutritionOrder
+allergyIntolerance:
+  A link to a record of allergies or intolerances  which should be included in the nutrition order.:
+    - NutritionOrder
+foodPreferenceModifier:
+  This modifier is used to convey order-specific modifiers about the type of food that should be given. These can be derived from patient allergies, intolerances, or preferences such as Halal, Vegan or Kosher. This modifier applies to the entire nutrition order inclusive of the oral diet, nutritional supplements and enteral formula feedings.:
+    - NutritionOrder
+excludeFoodModifier:
+  This modifier is used to convey Order-specific modifier about the type of oral food or oral fluids that should not be given. These can be derived from patient allergies, intolerances, or preferences such as No Red Meat, No Soy or No Wheat or  Gluten-Free.  While it should not be necessary to repeat allergy or intolerance information captured in the referenced AllergyIntolerance resource in the excludeFoodModifier, this element may be used to convey additional specificity related to foods that should be eliminated from the patient’s diet for any reason.  This modifier applies to the entire nutrition order inclusive of the oral diet, nutritional supplements and enteral formula feedings.:
+    - NutritionOrder
+oralDiet:
+  Diet given orally in contrast to enteral (tube) feeding.:
+    - NutritionOrder
+texture:
+  Class that describes any texture modifications required for the patient to safely consume various types of solid foods.:
+    - NutritionOrder.oralDiet
+foodType:
+  The food type(s) (e.g. meats, all foods)  that the texture modification applies to.  This could be all foods types.:
+    - NutritionOrder.oralDiet.texture
+fluidConsistencyType:
+  The required consistency (e.g. honey-thick, nectar-thick, thin, thickened.) of liquids or fluids served to the patient.:
+    - NutritionOrder.oralDiet
+supplement:
+  Oral nutritional products given in order to add further nutritional value to the patient's diet.:
+    - NutritionOrder
+enteralFormula:
+  Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.:
+    - NutritionOrder
+baseFormulaType:
+  The type of enteral or infant formula such as an adult standard formula with fiber or a soy-based infant formula.:
+    - NutritionOrder.enteralFormula
+baseFormulaProductName:
+  The product or brand name of the enteral or infant formula product such as "ACME Adult Standard Formula".:
+    - NutritionOrder.enteralFormula
+additiveType:
+  Indicates the type of modular component such as protein, carbohydrate, fat or fiber to be provided in addition to or mixed with the base formula.:
+    - NutritionOrder.enteralFormula
+additiveProductName:
+  The product or brand name of the type of modular component to be added to the formula.:
+    - NutritionOrder.enteralFormula
+caloricDensity:
+  The amount of energy (calories) that the formula should provide per specified volume, typically per mL or fluid oz.  For example, an infant may require a formula that provides 24 calories per fluid ounce or an adult may require an enteral formula that provides 1.5 calorie/mL.:
+    - NutritionOrder.enteralFormula
+routeofAdministration:
+  The route or physiological path of administration into the patient's gastrointestinal  tract for purposes of providing the formula feeding, e.g. nasogastric tube.:
+    - NutritionOrder.enteralFormula
+administration:
+  Formula administration instructions as structured data.  This repeating structure allows for changing the administration rate or volume over time for both bolus and continuous feeding.  An example of this would be an instruction to increase the rate of continuous feeding every 2 hours.:
+    - NutritionOrder.enteralFormula
+maxVolumeToDeliver:
+  The maximum total quantity of formula that may be administered to a subject over the period of time, e.g. 1440 mL over 24 hours.:
+    - NutritionOrder.enteralFormula
+administrationInstruction:
+  Free text formula administration, feeding instructions or additional instructions or information.:
+    - NutritionOrder.enteralFormula
+knownAllergen:
+  Allergens that are known or suspected to be a part of this nutrition product.:
+    - NutritionProduct
+productCharacteristic:
+  Specifies descriptive properties of the nutrition product.:
+    - NutritionProduct
+useBy:
+  The time after which the product is no longer expected to be in proper condition, or its use is not advised or not allowed.:
+    - NutritionProduct.instance
+instantiates[x]:
+  The reference to a FHIR ObservationDefinition resource that provides the definition that is adhered to in whole or in part by this Observation instance.:
+    - Observation
+interpretation:
+  A categorical assessment of an observation value.  For example, high, low, normal.:
+    - Observation
+    - Observation.component
+multipleResultsAllowed:
+  Multiple results allowed for observations conforming to this ObservationDefinition.:
+    - ObservationDefinition
+preferredReportName:
+  The preferred name to be used when reporting the results of observations conforming to this ObservationDefinition.:
+    - ObservationDefinition
+customaryUnit:
+  Secondary unit used to report quantitative results of observations conforming to this ObservationDefinition.:
+    - ObservationDefinition.quantitativeDetails
+conversionFactor:
+  Factor for converting value expressed with primary unit to value expressed with secondary unit.:
+    - ObservationDefinition.quantitativeDetails
+decimalPrecision:
+  Number of digits after decimal separator when the results of such observations are of type Quantity.:
+    - ObservationDefinition.quantitativeDetails
+qualifiedValue:
+  A set of qualified values associated with a context and a set of conditions -  provides a range for quantitative and ordinal observations and a collection of value sets for qualitative observations.:
+    - ObservationDefinition
+    - ObservationDefinition.component
+gestationalAge:
+  The gestational age this  set of qualified values applies to.:
+    - ObservationDefinition.qualifiedValue
+rangeCategory:
+  The category of range of values for continuous or ordinal observations that match the criteria of this set of qualified values.:
+    - ObservationDefinition.qualifiedValue
+validCodedValueSet:
+  The set of valid coded results for qualitative observations  that match the criteria of this set of qualified values.:
+    - ObservationDefinition.qualifiedValue
+normalCodedValueSet:
+  The set of normal coded results for qualitative observations  that match the criteria of this set of qualified values.:
+    - ObservationDefinition.qualifiedValue
+abnormalCodedValueSet:
+  The set of abnormal coded results for qualitative observations  that match the criteria of this set of qualified values.:
+    - ObservationDefinition.qualifiedValue
+criticalCodedValueSet:
+  The set of critical coded results for qualitative observations  that match the criteria of this set of qualified values.:
+    - ObservationDefinition.qualifiedValue
+affectsState:
+  Whether the operation affects state. Side effects such as producing audit trail entries do not count as 'affecting  state'.:
+    - OperationDefinition
+inputProfile:
+  Additional validation information for the in parameters - a single profile that covers all the parameters. The profile is a constraint on the parameters resource as a whole.:
+    - OperationDefinition
+outputProfile:
+  Additional validation information for the out parameters - a single profile that covers all the parameters. The profile is a constraint on the parameters resource.:
+    - OperationDefinition
+targetProfile:
+  Used when the type is "Reference" or "canonical", and identifies a profile structure or implementation Guide that applies to the target of the reference this parameter refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.:
+    - OperationDefinition.parameter
+searchType:
+  How the parameter is understood as a search parameter. This is only used if the parameter type is 'string'.:
+    - OperationDefinition.parameter
+binding:
+  Binds to a value set if this parameter is coded (code, Coding, CodeableConcept).:
+    - OperationDefinition.parameter
+referencedFrom:
+  Identifies other resource parameters within the operation invocation that are expected to resolve to this resource.:
+    - OperationDefinition.parameter
+overload:
+  Defines an appropriate combination of parameters to use when invoking this operation, to help code generators when generating overloaded parameter sets for this operation.:
+    - OperationDefinition
+parameterName:
+  Name of parameter to include in overload.:
+    - OperationDefinition.overload
+diagnostics:
+  Additional diagnostic information about the issue.:
+    - OperationOutcome.issue
+participatingOrganization:
+  The Participating Organization provides/performs the role(s) defined by the code to the Primary Organization (e.g. providing services or is a member of).:
+    - OrganizationAffiliation
+containedItemQuantity:
+  A total of the amount of items in the package, per item type. This can be considered as the pack size. This attribite is repeatable so that the different item types in one pack type can be counted (e.g. a count of vials and count of syringes). Repeats are not to be used to represent differerent pack sizes (e.g. 20 pack vs 50 pack) - which would be different resource instances. This attribute differs from  containedItem.amount in that it can give a single count of all tablet types in a pack, even when these are different manufactured items.:
+    - PackagedProductDefinition
+copackagedIndicator:
+  States whether a drug product is supplied with another item such as a diluent or adjuvant.:
+    - PackagedProductDefinition
+alternateMaterial:
+  A possible alternate material for the packaging.:
+    - PackagedProductDefinition.package
+containedItem:
+  The item(s) within the packaging.:
+    - PackagedProductDefinition.package
+multipleBirth[x]:
+  Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer).:
+    - Patient
+generalPractitioner:
+  Patient's nominated care provider.:
+    - Patient
+paymentStatus:
+  A code indicating whether payment has been sent or cleared.:
+    - PaymentNotice
+paymentIssuer:
+  The party who generated the payment.:
+    - PaymentReconciliation
+paymentAmount:
+  Total payment amount as indicated on the financial instrument.:
+    - PaymentReconciliation
+paymentIdentifier:
+  Issuer's unique identifier for the payment instrument.:
+    - PaymentReconciliation
+predecessor:
+  Unique identifier for the prior payment item for the referenced payable.:
+    - PaymentReconciliation.detail
+submitter:
+  The party which submitted the claim or financial transaction.:
+    - PaymentReconciliation.detail
+assertionDate:
+  The date that permission was asserted.:
+    - Permission
+validity:
+  The period in which the permission is active.:
+    - Permission
+dataScope:
+  This can be 1) the definition of data elements, or 2) a category or label) e.g. “sensitive”. It could also be a c) graph-like definition of a set of data elements.:
+    - Permission
+processingActivity:
+  A description or definition of which activities are allowed to be done on the data.:
+    - Permission
+partyReference:
+  If the processing is a transfer, we must capture where it the data allowed or expected to be shared - with a party or person.:
+    - Permission.processingActivity
+partyCodeableConcept:
+  "If the processing is a transfer, or involves another party, we must capture where it the data allowed or expected to be shared - with a party or person. This can be a party instance or party type\n§ Purpose – a specific purpose of the data.":
+    - Permission.processingActivity
+grounds:
+  This would be a codeableconcept, or a coding, which can be constrained to , for example, the 6 grounds for processing in GDPR.:
+    - Permission.justification
+usageLimitations:
+  What limits apply to the use of the data.:
+    - Permission
+assurance:
+  Level of assurance that this link is associated with the target resource.:
+    - Person.link
+due:
+  Indicates the timeframe after the start of the goal in which the goal should be met.:
+    - PlanDefinition.goal.target
+option:
+  The characteristics of the candidates that could serve as the actor.:
+    - PlanDefinition.actor
+textEquivalent:
+  A text equivalent of the action to be performed. This provides a human-interpretable description of the action when the definition is consumed by a system that might not be capable of interpreting it dynamically.:
+    - PlanDefinition.action
+    - RequestGroup.action
+goalId:
+  Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition. In pharmaceutical quality, a goal represents acceptance criteria (Goal) for a given action (Test), so the goalId would be the unique id of a defined goal element establishing the acceptance criteria for the action.:
+    - PlanDefinition.action
+relatedAction:
+  A relationship to another action such as "before" or "30-60 minutes after start of".:
+    - PlanDefinition.action
+    - RequestGroup.action
+offset[x]:
+  A duration or range of durations to apply to the relationship. For example, 30-60 minutes before.:
+    - PlanDefinition.action.relatedAction
+    - RequestGroup.action.relatedAction
+groupingBehavior:
+  Defines the grouping behavior for the action and its children.:
+    - PlanDefinition.action
+    - RequestGroup.action
+selectionBehavior:
+  Defines the selection behavior for the action and its children.:
+    - PlanDefinition.action
+    - RequestGroup.action
+precheckBehavior:
+  Defines whether the action should usually be preselected.:
+    - PlanDefinition.action
+    - RequestGroup.action
+cardinalityBehavior:
+  Defines whether the action can be selected multiple times.:
+    - PlanDefinition.action
+    - RequestGroup.action
+practitioner:
+  Practitioner that is able to provide the defined services for the organization.:
+    - PractitionerRole
+report:
+  This could be a histology result, pathology report, surgical report, etc.:
+    - Procedure
+complication:
+  Any complications that occurred during the procedure, or in the immediate post-performance period. These are generally tracked separately from the notes, which will typically describe the procedure itself rather than any 'post procedure' issues.:
+    - Procedure
+complicationDetail:
+  Any complications that occurred during the procedure, or in the immediate post-performance period.:
+    - Procedure
+followUp:
+  If the procedure required specific follow up - e.g. removal of sutures. The follow up may be represented as a simple note or could potentially be more complex, in which case the CarePlan resource can be used.:
+    - Procedure
+focalDevice:
+  A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.:
+    - Procedure
+manipulated:
+  The device that was manipulated (changed) during the procedure.:
+    - Procedure.focalDevice
+used:
+  Identifies medications, devices and any other substance used as part of the procedure.:
+    - Procedure
+occurred[x]:
+  The period during which the activity occurred.:
+    - Provenance
+subjectType:
+  The types of subjects that can be the subject of responses created for the questionnaire.:
+    - Questionnaire
+enableWhen:
+  A constraint indicating that this item should only be enabled (displayed/allow answers to be captured) when the specified condition is true.:
+    - Questionnaire.item
+question:
+  The linkId for the question whose answer (or lack of answer) governs whether this item is enabled.:
+    - Questionnaire.item.enableWhen
+answer[x]:
+  A value that the referenced question is tested using the specified operator in order for the item to be enabled.  If there are multiple answers, a match on any of the answers suffices.  If different behavior is desired (all must match, at least 2 must match, etc.), consider using the enableWhenExpression extension.:
+    - Questionnaire.item.enableWhen
+enableBehavior:
+  Controls how multiple enableWhen values are interpreted -  whether all or any must be true.:
+    - Questionnaire.item
+disabledDisplay:
+  Indicates if and how items that are disabled (because enableWhen evaluates to 'false') should be displayed.:
+    - Questionnaire.item
+repeats:
+  An indication, if true, that the item may occur multiple times in the response, collecting multiple answers for questions or multiple sets of answers for groups.:
+    - Questionnaire.item
+readOnly:
+  An indication, when true, that the value cannot be changed by a human respondent to the Questionnaire.:
+    - Questionnaire.item
+maxLength:
+  The maximum number of characters that are permitted in the answer to be considered a "valid" QuestionnaireResponse.:
+    - Questionnaire.item
+answerConstraint:
+  For items that have a defined set of allowed answers (via answerOption or answerValueset), indicates whether values *other* than those specified can be selected.:
+    - Questionnaire.item
+answerValueSet:
+  A reference to a value set containing a list of values representing permitted answers for a question.:
+    - Questionnaire.item
+answerOption:
+  One of the permitted answers for the question.:
+    - Questionnaire.item
+initialSelected:
+  Indicates whether the answer value is selected when the list of possible answers is initially shown.:
+    - Questionnaire.item.answerOption
+initial:
+  One or more values that should be pre-populated in the answer when initially rendering the questionnaire for user input.:
+    - Questionnaire.item
+authored:
+  The date and/or time that this set of answers were last changed.:
+    - QuestionnaireResponse
+region:
+  The territory (e.g., country, jurisdiction etc.) in which the authorization has been granted.:
+    - RegulatedAuthorization
+relatedDate:
+  Other dates associated with the authorization. It is common for an authorization to have renewal dates, initial time limited phases and so on.:
+    - RegulatedAuthorization
+jurisdictionalAuthorization:
+  Authorization in areas within a country.:
+    - RegulatedAuthorization
+holder:
+  The organization that holds the granted authorization.:
+    - RegulatedAuthorization
+regulator:
+  The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.:
+    - RegulatedAuthorization
+case:
+  'The case or regulatory procedure for granting or amending a marketing authorization. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).':
+    - RegulatedAuthorization
+application:
+  Applications submitted to obtain a marketing authorization. Steps within the longer running case or procedure.:
+    - RegulatedAuthorization.case
+primaryPurposeType:
+  The type of study based upon the intent of the study activities. A classification of the intent of the study.:
+    - ResearchStudy
+focusType:
+  Indicates whether the focus is a medication, a device, a procedure, a specific factor or some other intervention or characteristic.:
+    - ResearchStudy.focus
+keyword:
+  Key terms to aid in searching for or filtering the study.:
+    - ResearchStudy
+descriptionSummary:
+  A brief summary of the study description.:
+    - ResearchStudy
+principalInvestigator:
+  A researcher in a study who oversees multiple aspects of the study, such as concept development, protocol writing, protocol submission for IRB approval, participant recruitment, informed consent, data collection, analysis, interpretation and presentation.:
+    - ResearchStudy
+associatedParty:
+  Sponsors, collaborators, and other parties.:
+    - ResearchStudy
+whyStopped:
+  A description and/or code explaining the premature termination of the study.:
+    - ResearchStudy
+recruitment:
+  Target or actual group of participants enrolled in study.:
+    - ResearchStudy
+targetNumber:
+  Estimated total number of participants to be enrolled.:
+    - ResearchStudy.recruitment
+actualNumber:
+  Actual total number of participants enrolled in study.:
+    - ResearchStudy.recruitment
+actualGroup:
+  Group of participants who were enrolled in study.:
+    - ResearchStudy.recruitment
+comparisonGroup:
+  Describes an expected sequence of events for one of the participants of a study.  E.g. Exposure to drug A, wash-out, exposure to drug B, wash-out, follow-up.:
+    - ResearchStudy
+identifier[x]:
+  Allows the comparisonGroup for the study and the comparisonGroup for the subject to be linked easily.:
+    - ResearchStudy.comparisonGroup
+intendedExposure:
+  Interventions or exposures in this comparisonGroup or cohort.:
+    - ResearchStudy.comparisonGroup
+observedGroup:
+  Group of participants who were enrolled in study comparisonGroup.:
+    - ResearchStudy.comparisonGroup
+objective:
+  A goal that the study is aiming to achieve in terms of a scientific question to be answered by the analysis of data collected during the study.:
+    - ResearchStudy
+outcomeMeasure:
+  An outcome or planned variable to measure during the study.:
+    - ResearchStudy
+subjectState:
+  The current state of the subject.:
+    - ResearchSubject.progress
+milestone:
+  The milestones the subject has passed through.:
+    - ResearchSubject.progress
+startDate:
+  The date when the new status started.:
+    - ResearchSubject.progress
+endDate:
+  The date when the state ended.:
+    - ResearchSubject.progress
+assignedArm:
+  The name of the arm in the study the subject is expected to follow as part of this study.:
+    - ResearchSubject
+actualArm:
+  The name of the arm in the study the subject actually followed as part of this study.:
+    - ResearchSubject
+consent:
+  A record of the patient's informed agreement to participate in the study.:
+    - ResearchSubject
+prediction:
+  Describes the expected outcome for the subject.:
+    - RiskAssessment
+probability[x]:
+  Indicates how likely the outcome is (in the specified timeframe).:
+    - RiskAssessment.prediction
+qualitativeRisk:
+  Indicates how likely the outcome is (in the specified timeframe), expressed as a qualitative value (e.g. low, medium, or high).:
+    - RiskAssessment.prediction
+relativeRisk:
+  Indicates the risk for this particular subject (with their specific characteristics) divided by the risk of the population in general.  (Numbers greater than 1 = higher risk than the population, numbers less than 1 = lower risk.).:
+    - RiskAssessment.prediction
+when[x]:
+  Indicates the period of time or age range of the subject to which the specified probability applies.:
+    - RiskAssessment.prediction
+planningHorizon:
+  The period of time that the slots that reference this Schedule resource cover (even if none exist). These  cover the amount of time that an organization's planning horizon; the interval for which they are currently accepting appointments. This does not define a "template" for planning outside these dates.:
+    - Schedule
+xpath:
+  An XPath expression that returns a set of elements for the search parameter.:
+    - SearchParameter
+xpathUsage:
+  How the search parameter relates to the set of elements returned by evaluating the xpath query.:
+    - SearchParameter
+multipleOr:
+  Whether multiple values are allowed for each time the parameter exists. Values are separated by commas, and the parameter matches if any of the values match.:
+    - SearchParameter
+multipleAnd:
+  Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match.:
+    - SearchParameter
+comparator:
+  Comparators supported for the search parameter.:
+    - SearchParameter
+chain:
+  Contains the names of any search parameters which may be chained to the containing search parameter. Chained parameters may be added to search parameters of type reference and specify that resources will only be returned if they contain a reference to a resource which matches the chained parameter value. Values for this field should be drawn from SearchParameter.code for a parameter on the target resource type.:
+    - SearchParameter
+requisition:
+  A shared identifier common to all service requests that were authorized more or less simultaneously by a single author, representing the composite or group identifier.:
+    - ServiceRequest
+orderDetail:
+  Additional details and instructions about the how the services are to be delivered.   For example, and order for a urinary catheter may have an order detail for an external or indwelling catheter, or an order for a bandage may require additional instructions specifying how the bandage should be applied.:
+    - ServiceRequest
+quantity[x]:
+  An amount of service being requested which can be a quantity ( for example $1,500 home modification), a ratio ( for example, 20 half day visits per month), or a range (2.0 to 1.8 Gy per fraction).:
+    - ServiceRequest
+asNeeded[x]:
+  If a CodeableConcept is present, it indicates the pre-condition for performing the service.  For example "pain", "on flare-up", etc.:
+    - ServiceRequest
+overbooked:
+  This slot has already been overbooked, appointments are unlikely to be accepted for this time.:
+    - Slot
+accessionIdentifier:
+  The identifier assigned by the lab when accessioning specimen(s). This is not necessarily the same as the specimen identifier, depending on local lab procedures.:
+    - Specimen
+receivedTime:
+  Time when specimen was received for processing or testing.:
+    - Specimen
+fastingStatus[x]:
+  Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection.:
+    - Specimen.collection
+specimenQuantity:
+  The quantity of specimen in the container; may be volume, dimensions, or other appropriate measurements, depending on the specimen type.:
+    - Specimen.container
+typeCollected:
+  The kind of material to be collected.:
+    - SpecimenDefinition
+patientPreparation:
+  Preparation of the patient for specimen collection.:
+    - SpecimenDefinition
+timeAspect:
+  Time aspect of specimen collection (duration or offset).:
+    - SpecimenDefinition
+typeTested:
+  Specimen conditioned in a container as expected by the testing laboratory.:
+    - SpecimenDefinition
+isDerived:
+  Primary of secondary specimen.:
+    - SpecimenDefinition.typeTested
+preference:
+  The preference for this type of conditioned specimen.:
+    - SpecimenDefinition.typeTested
+cap:
+  Color of container cap.:
+    - SpecimenDefinition.typeTested.container
+minimumVolume[x]:
+  The minimum volume to be conditioned in the container.:
+    - SpecimenDefinition.typeTested.container
+preparation:
+  Special processing that should be applied to the container for this kind of specimen.:
+    - SpecimenDefinition.typeTested.container
+retentionTime:
+  The usual time that a specimen of this kind is retained after the ordered tests are completed, for the purpose of additional testing.:
+    - SpecimenDefinition.typeTested
+singleUse:
+  Specimen can be used by only one test or panel if the value is "true".:
+    - SpecimenDefinition.typeTested
+rejectionCriterion:
+  Criterion for rejection of the specimen in its container by the laboratory.:
+    - SpecimenDefinition.typeTested
+temperatureQualifier:
+  It qualifies the interval of temperature, which characterizes an occurrence of handling. Conditions that are not related to temperature may be handled in the instruction element.:
+    - SpecimenDefinition.typeTested.handling
+temperatureRange:
+  The temperature interval for this set of handling instructions.:
+    - SpecimenDefinition.typeTested.handling
+maxDuration:
+  The maximum time interval of preservation of the specimen with these conditions.:
+    - SpecimenDefinition.typeTested.handling
+testingDestination:
+  'Where the specimen will be tested: e.g., lab, sector, device or any combination of these.':
+    - SpecimenDefinition.typeTested
+import:
+  Other maps used by this map (canonical URLs).:
+    - StructureMap
+extends:
+  Another group that this group adds rules to.:
+    - StructureMap.group
+typeMode:
+  If this is the default rule set to apply for the source type or this combination of types.:
+    - StructureMap.group
+defaultValue[x]:
+  A value to use if there is no existing value in the source object.:
+    - StructureMap.group.rule.source
+check:
+  FHIRPath expression  - must be true or the mapping engine throws an error instead of completing.:
+    - StructureMap.group.rule.source
+logMessage:
+  A FHIRPath expression which specifies a message to put in the transform log when content matching the source rule is found.:
+    - StructureMap.group.rule.source
+listRuleId:
+  Internal rule reference for shared list items.:
+    - StructureMap.group.rule.target
+filterBy:
+  The filter properties to be applied to narrow the subscription topic stream.  When multiple filters are applied, evaluates to true if all the conditions are met; otherwise it returns false.   (i.e., logical AND).:
+    - Subscription
+channelType:
+  The type of channel to send notifications on.:
+    - Subscription
+heartbeatPeriod:
+  If present,  a 'hearbeat" notification (keepalive) is sent via this channel with an the interval period equal to this elements integer value in seconds.    If not present, a heartbeat notification is not sent.:
+    - Subscription
+timeout:
+  If present, the maximum amount of time a server will allow before failing a notification attempt.:
+    - Subscription
+notificationUrlLocation:
+  If present, where to place URLs of resources in notifications.:
+    - Subscription
+maxCount:
+  If present, the maximum number of triggering resources that will be included in a notification bundle (e.g., a server will not include more than this number of trigger resources in a single notification).  Note that this is not a strict limit on the number of entries in a bundle, as dependent resources can be included.:
+    - Subscription
+eventsSinceSubscriptionStart:
+  The total number of actual events which have been generated since the Subscription was created (inclusive of this notification) - regardless of how many have been successfully communicated.  This number is NOT incremented for handshake and heartbeat notifications.:
+    - SubscriptionStatus
+eventsInNotification:
+  The total number of actual events represented within this notification.  For handshake and heartbeat notifications, this will be zero or not present.  For event-notifications, this number may be one or more, depending on server batching.:
+    - SubscriptionStatus
+subscription:
+  The reference to the Subscription which generated this notification.:
+    - SubscriptionStatus
+resourceTrigger:
+  The criteria for including updates to a nominated resource in the subscription topic.  Thie criteria may be just a human readable description and/or a full FHIR search string or FHIRPath expression.:
+    - SubscriptionTopic
+methodCriteria:
+  The REST interaction based rules that the server should use to determine when to trigger a notification for this topic.:
+    - SubscriptionTopic.resourceTrigger
+queryCriteria:
+  The FHIR query based rules that the server should use to determine when to trigger a notification for this subscription topic.:
+    - SubscriptionTopic.resourceTrigger
+resultForCreate:
+  What behavior a server will exhibit if the previous state of a resource does NOT exist (e.g., during a CREATE).:
+    - SubscriptionTopic.resourceTrigger.queryCriteria
+current:
+  The FHIR query based rules are applied to the current resource state.:
+    - SubscriptionTopic.resourceTrigger.queryCriteria
+resultForDelete:
+  What behavior a server will exhibit if the current state of a resource does NOT exist (e.g., during a DELETE).:
+    - SubscriptionTopic.resourceTrigger.queryCriteria
+requireBoth:
+  If set to true, both current and previous criteria must evaluate true to  trigger a notification for this topic.  Otherwise a notification for this topic will be triggered if either one evaluates to true.:
+    - SubscriptionTopic.resourceTrigger.queryCriteria
+fhirPathCriteria:
+  The FHIRPath based rules that the server should use to determine when to trigger a notification for this topic.  If there are multiple, FHIRPath filters are joined with AND.:
+    - SubscriptionTopic.resourceTrigger
+canFilterBy:
+  List of properties by which Subscriptions on the subscription topic can be filtered.:
+    - SubscriptionTopic.resourceTrigger
+substance[x]:
+  Another substance that is a component of this substance.:
+    - Substance.ingredient
+grade:
+  The quality standard, established benchmark, to which substance complies (e.g. USP/NF, Ph. Eur, JP, BP, Company Standard).:
+    - SubstanceDefinition
+moiety:
+  Moiety, for structural modifications.:
+    - SubstanceDefinition
+stereochemistry:
+  Stereochemistry type.:
+    - SubstanceDefinition.moiety
+    - SubstanceDefinition.structure
+opticalActivity:
+  Optical activity type.:
+    - SubstanceDefinition.moiety
+    - SubstanceDefinition.structure
+parameters:
+  'Parameters that were used in the measurement of a property (e.g. for viscosity: measured at 20C with a pH of 7.1).':
+    - SubstanceDefinition.property
+definingSubstance:
+  'A substance upon which a defining property depends (e.g. for solubility: in water, in alcohol).':
+    - SubstanceDefinition.property
+referenceInformation:
+  General information detailing this substance.:
+    - SubstanceDefinition
+molecularWeight:
+  The molecular weight or weight range (for proteins, polymers or nucleic acids).:
+    - SubstanceDefinition
+    - SubstanceDefinition.structure
+molecularFormulaByMoiety:
+  Specified per moiety according to the Hill system, i.e. first C, then H, then alphabetical, each moiety separated by a dot.:
+    - SubstanceDefinition.structure
+technique:
+  'The method used to elucidate the structure or characterization of the drug substance. Examples: X-ray, HPLC, NMR, Peptide mapping, Ligand binding assay.':
+    - SubstanceDefinition.structure
+sourceDocument:
+  Supporting literature about the source of information.:
+    - SubstanceDefinition.structure
+official:
+  Details of the official nature of this name.:
+    - SubstanceDefinition.name
+substanceDefinition[x]:
+  A pointer to another substance, as a resource or just a representational code.:
+    - SubstanceDefinition.relationship
+amountRatioHighLimit:
+  For use when the numeric has an uncertain range.:
+    - SubstanceDefinition.relationship
+nucleicAcid:
+  Data items specific to nucleic acids.:
+    - SubstanceDefinition
+polymer:
+  Data items specific to polymers.:
+    - SubstanceDefinition
+protein:
+  Data items specific to proteins.:
+    - SubstanceDefinition
+sourceMaterial:
+  Material or taxonomic/anatomical source for the substance.:
+    - SubstanceDefinition
+areaOfHybridisation:
+  'The area of hybridisation shall be described if applicable for double stranded RNA or DNA. The number associated with the subunit followed by the number associated to the residue shall be specified in increasing order. The underscore “” shall be used as separator as follows: “Subunitnumber Residue”.':
+    - SubstanceNucleicAcid
+oligoNucleotideType:
+  (TBC).:
+    - SubstanceNucleicAcid
+fivePrime:
+  The nucleotide present at the 5’ terminal shall be specified based on a controlled vocabulary. Since the sequence is represented from the 5' to the 3' end, the 5’ prime nucleotide is the letter at the first position in the sequence. A separate representation would be redundant.:
+    - SubstanceNucleicAcid.subunit
+threePrime:
+  The nucleotide present at the 3’ terminal shall be specified based on a controlled vocabulary. Since the sequence is represented from the 5' to the 3' end, the 5’ prime nucleotide is the letter at the last position in the sequence. A separate representation would be redundant.:
+    - SubstanceNucleicAcid.subunit
+linkage:
+  The linkages between sugar residues will also be captured.:
+    - SubstanceNucleicAcid.subunit
+connectivity:
+  The entity that links the sugar residues together should also be captured for nearly all naturally occurring nucleic acid the linkage is a phosphate group. For many synthetic oligonucleotides phosphorothioate linkages are often seen. Linkage connectivity is assumed to be 3’-5’. If the linkage is either 3’-3’ or 5’-5’ this should be specified.:
+    - SubstanceNucleicAcid.subunit.linkage
+sugar:
+  5.3.6.8.1 Sugar ID (Mandatory).:
+    - SubstanceNucleicAcid.subunit
+geometry:
+  Polymer geometry, e.g. linear, branched, cross-linked, network or dendritic.:
+    - SubstancePolymer
+copolymerConnectivity:
+  Descrtibes the copolymer sequence type (polymer connectivity).:
+    - SubstancePolymer
+modification:
+  Todo - this is intended to connect to a repeating full modification structure, also used by Protein and Nucleic Acid . String is just a placeholder.:
+    - SubstancePolymer
+monomerSet:
+  Todo.:
+    - SubstancePolymer
+ratioType:
+  Captures the type of ratio to the entire polymer, e.g. Monomer/Polymer ratio, SRU/Polymer Ratio.:
+    - SubstancePolymer.monomerSet
+startingMaterial:
+  The starting materials - monomer(s) used in the synthesis of the polymer.:
+    - SubstancePolymer.monomerSet
+repeat:
+  Specifies and quantifies the repeated units and their configuration.:
+    - SubstancePolymer
+averageMolecularFormula:
+  A representation of an (average) molecular formula from a polymer.:
+    - SubstancePolymer.repeat
+repeatUnitAmountType:
+  How the quantitative amount of Structural Repeat Units is captured (e.g. Exact, Numeric, Average).:
+    - SubstancePolymer.repeat
+repeatUnit:
+  An SRU - Structural Repeat Unit.:
+    - SubstancePolymer.repeat
+degreeOfPolymerisation:
+  Applies to homopolymer and block co-polymers where the degree of polymerisation within a block can be described.:
+    - SubstancePolymer.repeat.repeatUnit
+average:
+  An average amount of polymerisation.:
+    - SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation
+structuralRepresentation:
+  A graphical structure for this SRU.:
+    - SubstancePolymer.repeat.repeatUnit
+disulfideLinkage:
+  The disulphide bond between two cysteine residues either on the same subunit or on two different subunits shall be described. The position of the disulfide bonds in the SubstanceProtein shall be listed in increasing order of subunit number and position within subunit followed by the abbreviation of the amino acids involved. The disulfide linkage positions shall actually contain the amino acid Cysteine at the respective positions.:
+    - SubstanceProtein
+nTerminalModificationId:
+  Unique identifier for molecular fragment modification based on the ISO 11238 Substance ID.:
+    - SubstanceProtein.subunit
+nTerminalModification:
+  The name of the fragment modified at the N-terminal of the SubstanceProtein shall be specified.:
+    - SubstanceProtein.subunit
+cTerminalModificationId:
+  Unique identifier for molecular fragment modification based on the ISO 11238 Substance ID.:
+    - SubstanceProtein.subunit
+cTerminalModification:
+  The modification at the C-terminal shall be specified.:
+    - SubstanceProtein.subunit
+gene:
+  Todo.:
+    - SubstanceReferenceInformation
+    - SubstanceReferenceInformation.gene
+geneSequenceOrigin:
+  Todo.:
+    - SubstanceReferenceInformation.gene
+geneElement:
+  Todo.:
+    - SubstanceReferenceInformation
+organismType:
+  Todo.:
+    - SubstanceReferenceInformation.target
+sourceMaterialClass:
+  General high level classification of the source material specific to the origin of the material.:
+    - SubstanceSourceMaterial
+sourceMaterialType:
+  The type of the source material shall be specified based on a controlled vocabulary. For vaccines, this subclause refers to the class of infectious agent.:
+    - SubstanceSourceMaterial
+sourceMaterialState:
+  The state of the source material when extracted.:
+    - SubstanceSourceMaterial
+organismId:
+  The unique identifier associated with the source material parent organism shall be specified.:
+    - SubstanceSourceMaterial
+organismName:
+  The organism accepted Scientific name shall be provided based on the organism taxonomy.:
+    - SubstanceSourceMaterial
+parentSubstanceId:
+  The parent of the herbal drug Ginkgo biloba, Leaf is the substance ID of the substance (fresh) of Ginkgo biloba L. or Ginkgo biloba L. (Whole plant).:
+    - SubstanceSourceMaterial
+parentSubstanceName:
+  The parent substance of the Herbal Drug, or Herbal preparation.:
+    - SubstanceSourceMaterial
+geographicalLocation:
+  The place/region where the plant is harvested or the places/regions where the animal source material has its habitat.:
+    - SubstanceSourceMaterial
+developmentStage:
+  Stage of life for animals, plants, insects and microorganisms. This information shall be provided only when the substance is significantly different in these stages (e.g. foetal bovine serum).:
+    - SubstanceSourceMaterial
+fractionDescription:
+  Many complex materials are fractions of parts of plants, animals, or minerals. Fraction elements are often necessary to define both Substances and Specified Group 1 Substances. For substances derived from Plants, fraction information will be captured at the Substance information level ( . Oils, Juices and Exudates). Additional information for Extracts, such as extraction solvent composition, will be captured at the Specified Substance Group 1 information level. For plasma-derived products fraction information will be captured at the Substance and the Specified Substance Group 1 levels.:
+    - SubstanceSourceMaterial
+fraction:
+  This element is capturing information about the fraction of a plant part, or human plasma for fractionation.:
+    - SubstanceSourceMaterial.fractionDescription
+materialType:
+  The specific type of the material constituting the component. For Herbal preparations the particulars of the extracts (liquid/dry) is described in Specified Substance Group 1.:
+    - SubstanceSourceMaterial.fractionDescription
+family:
+  The family of an organism shall be specified.:
+    - SubstanceSourceMaterial.organism
+intraspecificType:
+  The Intraspecific type of an organism shall be specified.:
+    - SubstanceSourceMaterial.organism
+intraspecificDescription:
+  The intraspecific description of an organism shall be specified based on a controlled vocabulary. For Influenza Vaccine, the intraspecific description shall contain the syntax of the antigen in line with the WHO convention.:
+    - SubstanceSourceMaterial.organism
+authorType:
+  The type of author of an organism species shall be specified. The parenthetical author of an organism species refers to the first author who published the plant/animal name (of any rank). The primary author of an organism species refers to the first author(s), who validly published the plant/animal name.:
+    - SubstanceSourceMaterial.organism.author
+authorDescription:
+  The author of an organism species shall be specified. The author year of an organism shall also be specified when applicable; refers to the year in which the first author(s) published the infraspecific plant/animal name (of any rank).:
+    - SubstanceSourceMaterial.organism.author
+hybrid:
+  4.9.13.8.1 Hybrid species maternal organism ID (Optional).:
+    - SubstanceSourceMaterial.organism
+maternalOrganismId:
+  The identifier of the maternal species constituting the hybrid organism shall be specified based on a controlled vocabulary. For plants, the parents aren’t always known, and it is unlikely that it will be known which is maternal and which is paternal.:
+    - SubstanceSourceMaterial.organism.hybrid
+maternalOrganismName:
+  The name of the maternal species constituting the hybrid organism shall be specified. For plants, the parents aren’t always known, and it is unlikely that it will be known which is maternal and which is paternal.:
+    - SubstanceSourceMaterial.organism.hybrid
+paternalOrganismId:
+  The identifier of the paternal species constituting the hybrid organism shall be specified based on a controlled vocabulary.:
+    - SubstanceSourceMaterial.organism.hybrid
+paternalOrganismName:
+  The name of the paternal species constituting the hybrid organism shall be specified.:
+    - SubstanceSourceMaterial.organism.hybrid
+hybridType:
+  The hybrid type of an organism shall be specified.:
+    - SubstanceSourceMaterial.organism.hybrid
+organismGeneral:
+  4.9.13.7.1 Kingdom (Conditional).:
+    - SubstanceSourceMaterial.organism
+kingdom:
+  The kingdom of an organism shall be specified.:
+    - SubstanceSourceMaterial.organism.organismGeneral
+phylum:
+  The phylum of an organism shall be specified.:
+    - SubstanceSourceMaterial.organism.organismGeneral
+partDescription:
+  To do.:
+    - SubstanceSourceMaterial
+partLocation:
+  The detailed anatomic location when the part can be extracted from different anatomical locations of the organism. Multiple alternative locations may apply.:
+    - SubstanceSourceMaterial.partDescription
+suppliedItem:
+  The item that is being delivered or has been supplied.:
+    - SupplyDelivery
+deliverFrom:
+  Where the supply is expected to come from.:
+    - SupplyRequest
+deliverTo:
+  Where the supply is destined to go.:
+    - SupplyRequest
+businessStatus:
+  Contains business-specific nuances of the business state.:
+    - Task
+for:
+  The entity who benefits from the performance of the service specified in the task (e.g., the patient).:
+    - Task
+executionPeriod:
+  Identifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end).:
+    - Task
+lastModified:
+  The date and time of last modification to this task.:
+    - Task
+reasonCode:
+  A description or code indicating why this task needs to be performed.:
+    - Task
+reasonReference:
+  A resource reference indicating why this task needs to be performed.:
+    - Task
+restriction:
+  If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.:
+    - Task
+repetitions:
+  Indicates the number of times the requested action should occur.:
+    - Task.restriction
+codeSystem:
+  Identifies a code system that is supported by the server. If there is a no code system URL, then this declares the general assumptions a client can make about support for any CodeSystem resource.:
+    - TerminologyCapabilities
+isDefault:
+  If this is the default version for this code system.:
+    - TerminologyCapabilities.codeSystem.version
+subsumption:
+  True if subsumption is supported for this version of the code system.:
+    - TerminologyCapabilities.codeSystem
+hierarchical:
+  Whether the server can return nested value sets.:
+    - TerminologyCapabilities.expansion
+paging:
+  Whether the server supports paging on expansion.:
+    - TerminologyCapabilities.expansion
+incomplete:
+  True if requests for incomplete expansions are allowed.:
+    - TerminologyCapabilities.expansion
+textFilter:
+  Documentation about text searching works.:
+    - TerminologyCapabilities.expansion
+codeSearch:
+  The degree to which the server supports the code search parameter on ValueSet, if it is supported.:
+    - TerminologyCapabilities
+validateCode:
+  Information about the [ValueSet/$validate-code](valueset-operation-validate-code.html) operation.:
+    - TerminologyCapabilities
+translations:
+  Whether translations are validated.:
+    - TerminologyCapabilities.validateCode
+needsMap:
+  Whether the client must identify the map.:
+    - TerminologyCapabilities.translation
+closure:
+  Whether the $closure operation is supported.:
+    - TerminologyCapabilities
+testScript:
+  Ideally this is an absolute URL that is used to identify the version-specific TestScript that was executed, matching the `TestScript.url`.:
+    - TestReport
+tester:
+  Name of the tester producing this report (Organization or individual).:
+    - TestReport
+metadata:
+  The required capability must exist and are assumed to function correctly on the FHIR server being tested.:
+    - TestScript
+validated:
+  Whether or not the test execution will validate the given capabilities of the server in order for this test script to execute.:
+    - TestScript.metadata.capability
+capabilities:
+  Minimum capabilities required of server for test script to execute successfully.   If server does not meet at a minimum the referenced capability statement, then all tests in this script are skipped.:
+    - TestScript.metadata.capability
+artifact:
+  The specific conformance artifact being tested. The canonical reference can be version-specific.:
+    - TestScript.scope
+conformance:
+  'The expectation of whether the test must pass for the system to be considered conformant with the artifact: required - all tests must pass, optional - all test are expected to pass but non-pass status may be allowed.':
+    - TestScript.scope
+fixture:
+  Fixture in the test script - by reference (uri). All fixtures are required for the test script to execute.:
+    - TestScript
+autocreate:
+  Whether or not to implicitly create the fixture during setup. If true, the fixture is automatically created on each server being tested during setup, therefore no create operation is required for this fixture in the TestScript.setup section.:
+    - TestScript.fixture
+autodelete:
+  Whether or not to implicitly delete the fixture during teardown. If true, the fixture is automatically deleted on each server being tested during teardown, therefore no delete operation is required for this fixture in the TestScript.teardown section.:
+    - TestScript.fixture
+defaultValue:
+  A default, hard-coded, or user-defined value for this variable.:
+    - TestScript.variable
+hint:
+  Displayable text string with hint help information to the user when entering a default value.:
+    - TestScript.variable
+accept:
+  The mime-type to use for RESTful operation in the 'Accept' header.:
+    - TestScript.setup.action.operation
+encodeRequestUrl:
+  Whether or not to implicitly send the request url in encoded format. The default is true to match the standard RESTful client behavior. Set to false when communicating with a server that does not support encoded url paths.:
+    - TestScript.setup.action.operation
+requestHeader:
+  Header elements would be used to set HTTP headers.:
+    - TestScript.setup.action.operation
+field:
+  The HTTP header field e.g. "Accept".:
+    - TestScript.setup.action.operation.requestHeader
+requestId:
+  The fixture id (maybe new) to map to the request.:
+    - TestScript.setup.action.operation
+responseId:
+  The fixture id (maybe new) to map to the response.:
+    - TestScript.setup.action.operation
+direction:
+  The direction to use for the assertion.:
+    - TestScript.setup.action.assert
+compareToSourceId:
+  Id of the source fixture used as the contents to be evaluated by either the "source/expression" or "sourceId/path" definition.:
+    - TestScript.setup.action.assert
+compareToSourceExpression:
+  The FHIRPath expression to evaluate against the source fixture. When compareToSourceId is defined, either compareToSourceExpression or compareToSourcePath must be defined, but not both.:
+    - TestScript.setup.action.assert
+compareToSourcePath:
+  XPath or JSONPath expression to evaluate against the source fixture. When compareToSourceId is defined, either compareToSourceExpression or compareToSourcePath must be defined, but not both.:
+    - TestScript.setup.action.assert
+minimumId:
+  The ID of a fixture.  Asserts that the response contains at a minimum the fixture specified by minimumId.:
+    - TestScript.setup.action.assert
+navigationLinks:
+  Whether or not the test execution performs validation on the bundle navigation links.:
+    - TestScript.setup.action.assert
+requestMethod:
+  The request method or HTTP operation code to compare against that used by the client system under test.:
+    - TestScript.setup.action.assert
+requestURL:
+  The value to use in a comparison against the request URL path string.:
+    - TestScript.setup.action.assert
+responseCode:
+  The value of the HTTP response code to be tested.:
+    - TestScript.setup.action.assert
+stopTestOnFail:
+  Whether or not the current test execution will stop on failure for this assert.:
+    - TestScript.setup.action.assert
+validateProfileId:
+  The ID of the Profile to validate against.:
+    - TestScript.setup.action.assert
+warningOnly:
+  Whether or not the test execution will produce a warning only on error for this assert.:
+    - TestScript.setup.action.assert
+immutable:
+  'If this is set to ''true'', then no new versions of the content logical definition can be created.  Note: Other metadata might still change.':
+    - ValueSet
+compose:
+  A set of criteria that define the contents of the value set by including or excluding codes selected from the specified code system(s) that the value set draws from. This is also known as the Content Logical Definition (CLD).:
+    - ValueSet
+include:
+  Include one or more codes from a code system or other value set(s).:
+    - ValueSet.compose
+timestamp:
+  The time at which the expansion was produced by the expanding system.:
+    - ValueSet.expansion
+offset:
+  If paging is being used, the offset at which this resource starts.  I.e. this resource is a partial view into the expansion. If paging is not being used, this element SHALL NOT be present.:
+    - ValueSet.expansion
+inclusionCriteria:
+  Criteria describing which concepts or codes should be included and why.:
+    - ValueSet.scope
+exclusionCriteria:
+  Criteria describing which concepts or codes should be excluded and why.:
+    - ValueSet.scope
+targetLocation:
+  The fhirpath location(s) within the resource that was validated.:
+    - VerificationResult
+need:
+  The frequency with which the target must be validated (none; initial; periodic).:
+    - VerificationResult
+validationType:
+  What the target is validated against (nothing; primary source; multiple sources).:
+    - VerificationResult
+validationProcess:
+  The primary process by which the target is validated (edit check; value set; primary source; multiple sources; standalone; in context).:
+    - VerificationResult
+frequency:
+  Frequency of revalidation.:
+    - VerificationResult
+lastPerformed:
+  The date/time validation was last completed (including failed validations).:
+    - VerificationResult
+nextScheduled:
+  The date when target is next validated, if appropriate.:
+    - VerificationResult
+failureAction:
+  The result if validation fails (fatal; warning; record only; none).:
+    - VerificationResult
+validationStatus:
+  Status of the validation of the target against the primary source (successful; failed; unknown).:
+    - VerificationResult.primarySource
+validationDate:
+  When the target was validated against the primary source.:
+    - VerificationResult.primarySource
+canPushUpdates:
+  Ability of the primary source to push updates/alerts (yes; no; undetermined).:
+    - VerificationResult.primarySource
+pushTypeAvailable:
+  Type of alerts/updates the primary source can send (specific requested changes; any changes; as defined by source).:
+    - VerificationResult.primarySource
+attestation:
+  Information about the entity attesting to information.:
+    - VerificationResult
+sourceIdentityCertificate:
+  A digital identity certificate associated with the attestation source.:
+    - VerificationResult.attestation
+proxyIdentityCertificate:
+  A digital identity certificate associated with the proxy entity submitting attested information on behalf of the attestation source.:
+    - VerificationResult.attestation
+proxySignature:
+  Signed assertion by the proxy entity indicating that they have the right to submit attested information on behalf of the attestation source.:
+    - VerificationResult.attestation
+sourceSignature:
+  Signed assertion by the attestation source that they have attested to the information.:
+    - VerificationResult.attestation
+validator:
+  Information about the entity validating information.:
+    - VerificationResult
+identityCertificate:
+  A digital identity certificate associated with the validator.:
+    - VerificationResult.validator
+attestationSignature:
+  Signed assertion by the validator that they have validated the information.:
+    - VerificationResult.validator
+dateWritten:
+  The date (and perhaps time) when the prescription was written.:
+    - VisionPrescription
+prescriber:
+  The healthcare professional responsible for authorizing the prescription.:
+    - VisionPrescription
+lensSpecification:
+  Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.:
+    - VisionPrescription
+eye:
+  The eye for which the lens specification applies.:
+    - VisionPrescription.lensSpecification
+sphere:
+  Lens power measured in dioptres (0.25 units).:
+    - VisionPrescription.lensSpecification
+cylinder:
+  Power adjustment for astigmatism measured in dioptres (0.25 units).:
+    - VisionPrescription.lensSpecification
+axis:
+  Adjustment for astigmatism measured in integer degrees.:
+    - VisionPrescription.lensSpecification
+prism:
+  Allows for adjustment on two axis.:
+    - VisionPrescription.lensSpecification
+add:
+  Power adjustment for multifocal lenses measured in dioptres (0.25 units).:
+    - VisionPrescription.lensSpecification
+power:
+  Contact lens power measured in dioptres (0.25 units).:
+    - VisionPrescription.lensSpecification
+backCurve:
+  Back curvature measured in millimetres.:
+    - VisionPrescription.lensSpecification
+diameter:
+  Contact lens diameter measured in millimetres.:
+    - VisionPrescription.lensSpecification
+brand:
+  Brand recommendations or restrictions.:
+    - VisionPrescription.lensSpecification

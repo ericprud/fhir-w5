@@ -1,4 +1,19 @@
+# test coverage by definition
+
+
+**~/checkouts/ericprud/fhir-w5$** [./bin/summarizeDefinitions](bin/summarizeDefinitions) fhir-definitions/profiles-resources.json<br/>
+starting with 218 Resources<br/>
+trimmed to 149 Resources<br/>
+[Properties](properties.yaml):  1444
+* [reusedProperties](reusedProperties.yaml):  484
+* [singletonProperties](singletonProperties.yaml):  960
+
+[conflictingDefns](conflictingDefns.yaml):  36
+
+
 # test coverage of w5 mappings
+
+This was an old strategy that I've (ericP) somewhat abandoned in favor of analyzing definitions.
 
 ## summarize
 

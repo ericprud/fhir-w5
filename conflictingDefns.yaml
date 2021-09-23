@@ -1,0 +1,122 @@
+The type of participant in the action.:
+  type: RequestGroup.action.participant
+  typeReference: RequestGroup.action.participant
+The path by which the product is taken into or makes contact with the body. In some regions this is referred to as the licenced or approved route.:
+  routeOfAdministration: AdministrableProductDefinition
+  route: MedicinalProductDefinition.administrableProduct
+The ameliorating action taken after the adverse event occured in order to reduce the extent of harm.:
+  mitigatingAction: AdverseEvent
+  item[x]: AdverseEvent.mitigatingAction
+Role of participant in the appointment.:
+  type: Appointment.participant
+  participantType: AppointmentResponse
+The period during which the activity occurred.:
+  period: AuditEvent
+  occurred[x]: Provenance
+Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report.:
+  reported[x]: Procedure
+  reported: MedicationRequest
+Indicates who or what performed or participated in the charged service.:
+  performer: ChargeItem
+  participant: Invoice
+A finer grained suite of claim type codes which may convey additional information such as Inpatient vs Outpatient and/or a specialty service.:
+  subType: ExplanationOfBenefit
+  type: ClaimResponse
+The provider which is responsible for the claim, predetermination or preauthorization.:
+  provider: ExplanationOfBenefit
+  requestor: ClaimResponse
+A code to indicate whether and for whom funds are to be reserved for future claims.:
+  fundsReserve: Claim
+  fundsReserveRequested: ExplanationOfBenefit
+'Type of Party to be reimbursed: subscriber, provider, other.':
+  type: Claim.payee
+  payeeType: ClaimResponse
+Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.:
+  value[x]: ExplanationOfBenefit.supportingInfo
+  information: CoverageEligibilityRequest.supportingInfo
+A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.:
+  detail: Claim.item
+  subDetail: Claim.item.detail
+  sequence: ExplanationOfBenefit.item.detail.subDetail
+Issuer's unique identifier for the payment instrument.:
+  identifier: ExplanationOfBenefit.payment
+  paymentIdentifier: PaymentReconciliation
+A code for the form to be used for printing the content.:
+  formCode: PaymentReconciliation
+  form: CoverageEligibilityResponse
+A reference to the actual resource from which the narrative in the section is derived.:
+  entry: Composition.section
+  entryReference: EvidenceReport.section
+A simple summary of the stage such as "Stage 3" or "Early Onset". The determination of the stage is disease-specific, such as cancer, retinopathy of prematurity, kidney diseases, Alzheimer's, or Parkinson disease.:
+  stage: Condition
+  summary: Condition.stage
+The references to the policies that are included in this consent scope. Policies may be organizational, but are often defined jurisdictionally, or in law.:
+  policy: Consent
+  uri: Consent.policy
+Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse.:
+  contextLinkId: Contract.term.action
+  requesterLinkId: Contract.term.action
+Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse.:
+  performerLinkId: Contract.term.action
+  reasonLinkId: Contract.term.action
+The provider which is responsible for the request.:
+  provider: CoverageEligibilityRequest
+  requestor: CoverageEligibilityResponse
+Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.:
+  udiCarrier: Device
+  udiDeviceIdentifier: DeviceDefinition
+The time when the dispensed product was packaged and reviewed.:
+  preparedDate: DeviceDispense
+  whenPrepared: MedicationDispense
+The request takes the place of the referenced completed or terminated request(s).:
+  priorRequest: DeviceRequest
+  replaces: ServiceRequest
+The practitioner who is responsible for the services rendered to the patient.:
+  provider: PaymentNotice
+  requestProvider: EnrollmentResponse
+  requestor: PaymentReconciliation
+The actions, if any, produced by the evaluation of the artifact.:
+  result: GuidanceResponse
+  action: RequestGroup
+Information that only applies to packages (not products).:
+  batch: Medication
+  packaging: MedicationKnowledge
+Associated documentation about the medication.:
+  monograph: MedicationKnowledge
+  source: MedicationKnowledge.monograph
+Reference to another product, e.g. for linking authorised to investigational product.:
+  crossReference: MedicinalProductDefinition
+  product: MedicinalProductDefinition.crossReference
+URI of an external repository which contains further details about the genetics data.:
+  url: MolecularSequence.repository
+  name: MolecularSequence.repository
+The time after which the product is no longer expected to be in proper condition, or its use is not advised or not allowed.:
+  expiry: NutritionProduct.instance
+  useBy: NutritionProduct.instance
+'Substance introduced in the kind of container to preserve, maintain or enhance the specimen. Examples: Formalin, Citrate, EDTA.':
+  additive: SpecimenDefinition.typeTested.container
+  additive[x]: SpecimenDefinition.typeTested.container.additive
+(TBC).:
+  oligoNucleotideType: SubstanceNucleicAcid
+  sequenceAttachment: SubstanceNucleicAcid.subunit
+Todo.:
+  monomerSet: SubstancePolymer
+  comment: SubstanceReferenceInformation
+  gene: SubstanceReferenceInformation.gene
+  geneSequenceOrigin: SubstanceReferenceInformation.gene
+  source: SubstanceReferenceInformation.target
+  geneElement: SubstanceReferenceInformation
+  type: SubstanceReferenceInformation.target
+  element: SubstanceReferenceInformation.geneElement
+  target: SubstanceReferenceInformation.target
+  interaction: SubstanceReferenceInformation.target
+  organism: SubstanceReferenceInformation.target
+  organismType: SubstanceReferenceInformation.target
+  amount[x]: SubstanceReferenceInformation.target
+  amountType: SubstanceReferenceInformation.target
+The sequence information shall be provided enumerating the amino acids from N- to C-terminal end using standard single-letter amino acid codes. Uppercase shall be used for L-amino acids and lowercase for D-amino acids. Transcribed SubstanceProteins will always be described using the translated sequence; for synthetic peptide containing amino acids that are not represented with a single letter code an X should be used within the sequence. The modified amino acids will be distinguished by their position in the sequence.:
+  sequence: SubstanceProtein.subunit
+  sequenceAttachment: SubstanceProtein.subunit
+Unique identifier for molecular fragment modification based on the ISO 11238 Substance ID.:
+  nTerminalModificationId: SubstanceProtein.subunit
+  cTerminalModificationId: SubstanceProtein.subunit
