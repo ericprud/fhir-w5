@@ -10,6 +10,31 @@ trimmed to 149 Resources<br/>
 
 [conflictingDefns](conflictingDefns.yaml):  36
 
+## How to read
+### reusedProperties
+
+``` yaml
+display:
+  A human readable string that is the recommended default way to present this concept to a user.:
+    - CodeSystem.concept
+  The display for the code. The display is only provided to help editors when editing the concept map.:
+    - ConceptMap.group.element
+    - ConceptMap.group.element.target
+    - ConceptMap.group.element.target.dependsOn
+    - ConceptMap.group.unmapped
+    - ConceptMap2.group.element
+    - ConceptMap2.group.element.target
+    - ConceptMap2.group.element.target.dependsOn
+    - ConceptMap2.group.unmapped
+  The display name of the participant.:
+    - TestReport.participant
+  The text to display to the user for this concept in the context of this valueset. If no display is provided, then applications using the value set use the display specified for the code by the system.:
+    - ValueSet.compose.include.concept
+  The recommended display for this item in the expansion.:
+    - ValueSet.expansion.contains
+```
+This says that there are 12 uses of the property `display`. Of them, eight share the same definition and all the others have unique definitions.
+
 
 # test coverage of w5 mappings
 
